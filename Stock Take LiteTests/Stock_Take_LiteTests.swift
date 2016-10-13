@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Stock_Take_Lite
 
 class Stock_Take_LiteTests: XCTestCase {
     

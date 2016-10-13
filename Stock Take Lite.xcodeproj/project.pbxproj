@@ -7,13 +7,244 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
+		BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
+		BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
+		BF33F4E21D20E82800A49C0B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33F4E11D20E82800A49C0B /* MessageUI.framework */; };
+		BF33F4E31D20E84800A49C0B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33F4E11D20E82800A49C0B /* MessageUI.framework */; };
+		BF33F4E41D20E85200A49C0B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF33F4E11D20E82800A49C0B /* MessageUI.framework */; };
+		BF33F4EC1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */; };
+		BF33F4ED1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */; };
+		BF33F4EE1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */; };
+		BF3A38C31C27DCC50009A89F /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421091BBBDD6F0045F300 /* NSArray+MASAdditions.m */; };
+		BF3A38C41C27DCC50009A89F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A971BBA77260019C604 /* FMResultSet.m */; };
+		BF3A38C51C27DCC50009A89F /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0B4161BE1D64300470545 /* FileDataModel.swift */; };
+		BF3A38C61C27DCC50009A89F /* CountingEnquiryDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */; };
+		BF3A38C71C27DCC50009A89F /* ImportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC481BC8DE3200451902 /* ImportSuccessView.swift */; };
+		BF3A38C81C27DCC50009A89F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FC1BBBDD6F0045F300 /* MASCompositeConstraint.m */; };
+		BF3A38C91C27DCC50009A89F /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF922BA11BD60F3900C97B30 /* DatePickerViewController.swift */; };
+		BF3A38CA1C27DCC50009A89F /* ExportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B401BD0D8A3000FDAF1 /* ExportSuccessViewController.swift */; };
+		BF3A38CB1C27DCC50009A89F /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41711BDF4FFB00BC37CE /* FTPManager.m */; };
+		BF3A38CC1C27DCC50009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		BF3A38CD1C27DCC50009A89F /* QuantityImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */; };
+		BF3A38CE1C27DCC50009A89F /* CountingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */; };
+		BF3A38CF1C27DCC50009A89F /* CountingEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */; };
+		BF3A38D01C27DCC50009A89F /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B91BF5B243007542B4 /* HelpView.swift */; };
+		BF3A38D11C27DCC50009A89F /* QuantityExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD21BC75F9700026817 /* QuantityExportViewController.swift */; };
+		BF3A38D21C27DCC50009A89F /* CountingEnquiryDetalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5D1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift */; };
+		BF3A38D31C27DCC50009A89F /* QuantityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */; };
+		BF3A38D41C27DCC50009A89F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A941BBA77260019C604 /* FMDatabaseQueue.m */; };
+		BF3A38D51C27DCC50009A89F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7061C22A120007AEA2B /* CameraView.swift */; };
+		BF3A38D61C27DCC50009A89F /* UserAccountsSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F51BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift */; };
+		BF3A38D71C27DCC50009A89F /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B311BBA86DF0019C604 /* CurrentUser.swift */; };
+		BF3A38D81C27DCC50009A89F /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FF1BBBDD6F0045F300 /* MASConstraintMaker.m */; };
+		BF3A38D91C27DCC50009A89F /* ExportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B421BD0DAD7000FDAF1 /* ExportSuccessView.swift */; };
+		BF3A38DA1C27DCC50009A89F /* QuantityExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B3E1BD0D04D000FDAF1 /* QuantityExportView.swift */; };
+		BF3A38DB1C27DCC50009A89F /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */; };
+		BF3A38DC1C27DCC50009A89F /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
+		BF3A38DD1C27DCC50009A89F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B491BBA8BF00019C604 /* BaseViewController.swift */; };
+		BF3A38DE1C27DCC50009A89F /* INFOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */; };
+		BF3A38DF1C27DCC50009A89F /* UserAccountsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F71BD4F5480091CE82 /* UserAccountsAddViewController.swift */; };
+		BF3A38E01C27DCC50009A89F /* RecordsRemovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD41BC75FA800026817 /* RecordsRemovalViewController.swift */; };
+		BF3A38E11C27DCC50009A89F /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
+		BF3A38E21C27DCC50009A89F /* CountingEnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCE1BC75F6B00026817 /* CountingEnquiryViewController.swift */; };
+		BF3A38E31C27DCC50009A89F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A5C1BBA70650019C604 /* AppDelegate.swift */; };
+		BF3A38E41C27DCC50009A89F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421071BBBDD6F0045F300 /* MASViewConstraint.m */; };
+		BF3A38E51C27DCC50009A89F /* ImportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */; };
+		BF3A38E61C27DCC50009A89F /* INFOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */; };
+		BF3A38E71C27DCC50009A89F /* RecordsRemoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F91BD4F82A0091CE82 /* RecordsRemoveView.swift */; };
+		BF3A38E81C27DCC50009A89F /* LogonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B401BBA8AEF0019C604 /* LogonView.swift */; };
+		BF3A38E91C27DCC50009A89F /* QuantityImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */; };
+		BF3A38EA1C27DCC50009A89F /* FTPServerConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD01BC75F8200026817 /* FTPServerConnectionViewController.swift */; };
+		BF3A38EB1C27DCC50009A89F /* CountingEnquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */; };
+		BF3A38EC1C27DCC50009A89F /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9A1BBA77260019C604 /* FTPHelper.m */; };
+		BF3A38ED1C27DCC50009A89F /* INFODropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */; };
+		BF3A38EE1C27DCC50009A89F /* BluetoothScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */; };
+		BF3A38EF1C27DCC50009A89F /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B2A1BBA85EC0019C604 /* DataBase.swift */; };
+		BF3A38F01C27DCC50009A89F /* INFODrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */; };
+		BF3A38F11C27DCC50009A89F /* EnquiryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5B1BE8934E00F43D4F /* EnquiryModel.swift */; };
+		BF3A38F21C27DCC50009A89F /* CameraScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */; };
+		BF3A38F31C27DCC50009A89F /* BluetoothScannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */; };
+		BF3A38F41C27DCC50009A89F /* LogonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3A1BBA8AE10019C604 /* LogonViewController.swift */; };
+		BF3A38F51C27DCC50009A89F /* BluetoothScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */; };
+		BF3A38F61C27DCC50009A89F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3C1BBA8AE10019C604 /* MainViewController.swift */; };
+		BF3A38F71C27DCC50009A89F /* UserAccountsSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */; };
+		BF3A38F81C27DCC50009A89F /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
+		BF3A38F91C27DCC50009A89F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE5D021BC66D1300DD0C90 /* BaseView.swift */; };
+		BF3A38FA1C27DCC50009A89F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */; };
+		BF3A38FB1C27DCC50009A89F /* CountingEnquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */; };
+		BF3A38FC1C27DCC50009A89F /* CountingEnquiryDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */; };
+		BF3A38FD1C27DCC50009A89F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A921BBA77260019C604 /* FMDatabasePool.m */; };
+		BF3A38FE1C27DCC50009A89F /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421011BBBDD6F0045F300 /* MASLayoutConstraint.m */; };
+		BF3A38FF1C27DCC50009A89F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A8E1BBA77260019C604 /* FMDatabase.m */; };
+		BF3A39001C27DCC50009A89F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B421BBA8AEF0019C604 /* MainView.swift */; };
+		BF3A39011C27DCC50009A89F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A901BBA77260019C604 /* FMDatabaseAdditions.m */; };
+		BF3A39021C27DCC50009A89F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B301BBA86DF0019C604 /* UserModel.swift */; };
+		BF3A39031C27DCC50009A89F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9D1BBA77260019C604 /* MBProgressHUD.m */; };
+		BF3A39041C27DCC50009A89F /* CurrentFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */; };
+		BF3A39051C27DCC50009A89F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421051BBBDD6F0045F300 /* MASViewAttribute.m */; };
+		BF3A39061C27DCC50009A89F /* QuantityImportBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */; };
+		BF3A39071C27DCC50009A89F /* CountingEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */; };
+		BF3A39091C27DCC50009A89F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA04AAC1BBA782E0019C604 /* libsqlite3.tbd */; };
+		BF3A390B1C27DCC50009A89F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A651BBA70650019C604 /* LaunchScreen.storyboard */; };
+		BF3A390C1C27DCC50009A89F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
+		BF3A390D1C27DCC50009A89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A631BBA70650019C604 /* Assets.xcassets */; };
+		BF3A390E1C27DCC50009A89F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A601BBA70650019C604 /* Main.storyboard */; };
+		BF3A39151C27DE0E0009A89F /* Stock Take Pro-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A39141C27DE0E0009A89F /* Stock Take Pro-Info.plist */; };
+		BF3A391A1C27E01F0009A89F /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421091BBBDD6F0045F300 /* NSArray+MASAdditions.m */; };
+		BF3A391B1C27E01F0009A89F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A971BBA77260019C604 /* FMResultSet.m */; };
+		BF3A391C1C27E01F0009A89F /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0B4161BE1D64300470545 /* FileDataModel.swift */; };
+		BF3A391D1C27E01F0009A89F /* CountingEnquiryDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */; };
+		BF3A391E1C27E01F0009A89F /* ImportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC481BC8DE3200451902 /* ImportSuccessView.swift */; };
+		BF3A391F1C27E01F0009A89F /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FC1BBBDD6F0045F300 /* MASCompositeConstraint.m */; };
+		BF3A39201C27E01F0009A89F /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF922BA11BD60F3900C97B30 /* DatePickerViewController.swift */; };
+		BF3A39211C27E01F0009A89F /* ExportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B401BD0D8A3000FDAF1 /* ExportSuccessViewController.swift */; };
+		BF3A39221C27E01F0009A89F /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41711BDF4FFB00BC37CE /* FTPManager.m */; };
+		BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */; };
+		BF3A39251C27E01F0009A89F /* CountingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */; };
+		BF3A39261C27E01F0009A89F /* CountingEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */; };
+		BF3A39271C27E01F0009A89F /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B91BF5B243007542B4 /* HelpView.swift */; };
+		BF3A39281C27E01F0009A89F /* QuantityExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD21BC75F9700026817 /* QuantityExportViewController.swift */; };
+		BF3A39291C27E01F0009A89F /* CountingEnquiryDetalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5D1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift */; };
+		BF3A392A1C27E01F0009A89F /* QuantityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */; };
+		BF3A392B1C27E01F0009A89F /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A941BBA77260019C604 /* FMDatabaseQueue.m */; };
+		BF3A392C1C27E01F0009A89F /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7061C22A120007AEA2B /* CameraView.swift */; };
+		BF3A392D1C27E01F0009A89F /* UserAccountsSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F51BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift */; };
+		BF3A392E1C27E01F0009A89F /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B311BBA86DF0019C604 /* CurrentUser.swift */; };
+		BF3A392F1C27E01F0009A89F /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FF1BBBDD6F0045F300 /* MASConstraintMaker.m */; };
+		BF3A39301C27E01F0009A89F /* ExportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B421BD0DAD7000FDAF1 /* ExportSuccessView.swift */; };
+		BF3A39311C27E01F0009A89F /* QuantityExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B3E1BD0D04D000FDAF1 /* QuantityExportView.swift */; };
+		BF3A39321C27E01F0009A89F /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */; };
+		BF3A39331C27E01F0009A89F /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
+		BF3A39341C27E01F0009A89F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B491BBA8BF00019C604 /* BaseViewController.swift */; };
+		BF3A39351C27E01F0009A89F /* INFOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */; };
+		BF3A39361C27E01F0009A89F /* UserAccountsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F71BD4F5480091CE82 /* UserAccountsAddViewController.swift */; };
+		BF3A39371C27E01F0009A89F /* RecordsRemovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD41BC75FA800026817 /* RecordsRemovalViewController.swift */; };
+		BF3A39381C27E01F0009A89F /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
+		BF3A39391C27E01F0009A89F /* CountingEnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCE1BC75F6B00026817 /* CountingEnquiryViewController.swift */; };
+		BF3A393A1C27E01F0009A89F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A5C1BBA70650019C604 /* AppDelegate.swift */; };
+		BF3A393B1C27E01F0009A89F /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421071BBBDD6F0045F300 /* MASViewConstraint.m */; };
+		BF3A393C1C27E01F0009A89F /* ImportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */; };
+		BF3A393D1C27E01F0009A89F /* INFOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */; };
+		BF3A393E1C27E01F0009A89F /* RecordsRemoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F91BD4F82A0091CE82 /* RecordsRemoveView.swift */; };
+		BF3A393F1C27E01F0009A89F /* LogonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B401BBA8AEF0019C604 /* LogonView.swift */; };
+		BF3A39401C27E01F0009A89F /* QuantityImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */; };
+		BF3A39411C27E01F0009A89F /* FTPServerConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD01BC75F8200026817 /* FTPServerConnectionViewController.swift */; };
+		BF3A39421C27E01F0009A89F /* CountingEnquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */; };
+		BF3A39431C27E01F0009A89F /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9A1BBA77260019C604 /* FTPHelper.m */; };
+		BF3A39441C27E01F0009A89F /* INFODropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */; };
+		BF3A39451C27E01F0009A89F /* BluetoothScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */; };
+		BF3A39461C27E01F0009A89F /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B2A1BBA85EC0019C604 /* DataBase.swift */; };
+		BF3A39471C27E01F0009A89F /* INFODrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */; };
+		BF3A39481C27E01F0009A89F /* EnquiryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5B1BE8934E00F43D4F /* EnquiryModel.swift */; };
+		BF3A39491C27E01F0009A89F /* CameraScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */; };
+		BF3A394A1C27E01F0009A89F /* BluetoothScannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */; };
+		BF3A394B1C27E01F0009A89F /* LogonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3A1BBA8AE10019C604 /* LogonViewController.swift */; };
+		BF3A394C1C27E01F0009A89F /* BluetoothScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */; };
+		BF3A394D1C27E01F0009A89F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3C1BBA8AE10019C604 /* MainViewController.swift */; };
+		BF3A394E1C27E01F0009A89F /* UserAccountsSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */; };
+		BF3A394F1C27E01F0009A89F /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
+		BF3A39501C27E01F0009A89F /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE5D021BC66D1300DD0C90 /* BaseView.swift */; };
+		BF3A39511C27E01F0009A89F /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */; };
+		BF3A39521C27E01F0009A89F /* CountingEnquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */; };
+		BF3A39531C27E01F0009A89F /* CountingEnquiryDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */; };
+		BF3A39541C27E01F0009A89F /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A921BBA77260019C604 /* FMDatabasePool.m */; };
+		BF3A39551C27E01F0009A89F /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421011BBBDD6F0045F300 /* MASLayoutConstraint.m */; };
+		BF3A39561C27E01F0009A89F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A8E1BBA77260019C604 /* FMDatabase.m */; };
+		BF3A39571C27E01F0009A89F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B421BBA8AEF0019C604 /* MainView.swift */; };
+		BF3A39581C27E01F0009A89F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A901BBA77260019C604 /* FMDatabaseAdditions.m */; };
+		BF3A39591C27E01F0009A89F /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B301BBA86DF0019C604 /* UserModel.swift */; };
+		BF3A395A1C27E01F0009A89F /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9D1BBA77260019C604 /* MBProgressHUD.m */; };
+		BF3A395B1C27E01F0009A89F /* CurrentFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */; };
+		BF3A395C1C27E01F0009A89F /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421051BBBDD6F0045F300 /* MASViewAttribute.m */; };
+		BF3A395D1C27E01F0009A89F /* QuantityImportBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */; };
+		BF3A395E1C27E01F0009A89F /* CountingEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */; };
+		BF3A39601C27E01F0009A89F /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA04AAC1BBA782E0019C604 /* libsqlite3.tbd */; };
+		BF3A39621C27E01F0009A89F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A651BBA70650019C604 /* LaunchScreen.storyboard */; };
+		BF3A39631C27E01F0009A89F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
+		BF3A39641C27E01F0009A89F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A631BBA70650019C604 /* Assets.xcassets */; };
+		BF3A39651C27E01F0009A89F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A601BBA70650019C604 /* Main.storyboard */; };
+		BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */; };
+		BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */; };
+		BF3B44301C11827200D85339 /* BluetoothScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */; };
+		BF41DA591CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
+		BF41DA5A1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
+		BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
+		BF45DB091C15291A00CB3401 /* BluetoothScannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */; };
+		BF6625EB1BCF516200BF2BD7 /* CountingEnquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */; };
+		BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */; };
+		BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B91BF5B243007542B4 /* HelpView.swift */; };
+		BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */; };
+		BF838E311BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */; };
+		BF83AC471BC8DDD600451902 /* ImportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */; };
+		BF83AC491BC8DE3200451902 /* ImportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC481BC8DE3200451902 /* ImportSuccessView.swift */; };
+		BF886B3F1BD0D04D000FDAF1 /* QuantityExportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B3E1BD0D04D000FDAF1 /* QuantityExportView.swift */; };
+		BF886B411BD0D8A3000FDAF1 /* ExportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B401BD0D8A3000FDAF1 /* ExportSuccessViewController.swift */; };
+		BF886B431BD0DAD7000FDAF1 /* ExportSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF886B421BD0DAD7000FDAF1 /* ExportSuccessView.swift */; };
+		BF922BA21BD60F3900C97B30 /* DatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF922BA11BD60F3900C97B30 /* DatePickerViewController.swift */; };
+		BF9421101BBBDD6F0045F300 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FC1BBBDD6F0045F300 /* MASCompositeConstraint.m */; };
+		BF9421111BBBDD6F0045F300 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9420FF1BBBDD6F0045F300 /* MASConstraintMaker.m */; };
+		BF9421121BBBDD6F0045F300 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421011BBBDD6F0045F300 /* MASLayoutConstraint.m */; };
+		BF9421131BBBDD6F0045F300 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421051BBBDD6F0045F300 /* MASViewAttribute.m */; };
+		BF9421141BBBDD6F0045F300 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421071BBBDD6F0045F300 /* MASViewConstraint.m */; };
+		BF9421151BBBDD6F0045F300 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF9421091BBBDD6F0045F300 /* NSArray+MASAdditions.m */; };
+		BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		BF9421171BBBDD6F0045F300 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */; };
+		BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
+		BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
+		BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
+		BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
+		BF9E85F61BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F51BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift */; };
+		BF9E85F81BD4F5480091CE82 /* UserAccountsAddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F71BD4F5480091CE82 /* UserAccountsAddViewController.swift */; };
+		BF9E85FA1BD4F82A0091CE82 /* RecordsRemoveView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F91BD4F82A0091CE82 /* RecordsRemoveView.swift */; };
+		BF9EFA5C1BE8934E00F43D4F /* EnquiryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5B1BE8934E00F43D4F /* EnquiryModel.swift */; };
+		BF9EFA5E1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9EFA5D1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift */; };
 		BFA04A5D1BBA70650019C604 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A5C1BBA70650019C604 /* AppDelegate.swift */; };
-		BFA04A5F1BBA70650019C604 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A5E1BBA70650019C604 /* ViewController.swift */; };
 		BFA04A621BBA70650019C604 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A601BBA70650019C604 /* Main.storyboard */; };
 		BFA04A641BBA70650019C604 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A631BBA70650019C604 /* Assets.xcassets */; };
 		BFA04A671BBA70650019C604 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA04A651BBA70650019C604 /* LaunchScreen.storyboard */; };
 		BFA04A721BBA70650019C604 /* Stock_Take_LiteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A711BBA70650019C604 /* Stock_Take_LiteTests.swift */; };
 		BFA04A7D1BBA70650019C604 /* Stock_Take_LiteUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A7C1BBA70650019C604 /* Stock_Take_LiteUITests.swift */; };
+		BFA04A9E1BBA77260019C604 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A8E1BBA77260019C604 /* FMDatabase.m */; };
+		BFA04A9F1BBA77260019C604 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A901BBA77260019C604 /* FMDatabaseAdditions.m */; };
+		BFA04AA01BBA77260019C604 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A921BBA77260019C604 /* FMDatabasePool.m */; };
+		BFA04AA11BBA77260019C604 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A941BBA77260019C604 /* FMDatabaseQueue.m */; };
+		BFA04AA21BBA77260019C604 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A971BBA77260019C604 /* FMResultSet.m */; };
+		BFA04AA31BBA77260019C604 /* FTPHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9A1BBA77260019C604 /* FTPHelper.m */; };
+		BFA04AA41BBA77260019C604 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = BFA04A9D1BBA77260019C604 /* MBProgressHUD.m */; };
+		BFA04AAD1BBA782E0019C604 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA04AAC1BBA782E0019C604 /* libsqlite3.tbd */; };
+		BFA04B2B1BBA85EC0019C604 /* DataBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B2A1BBA85EC0019C604 /* DataBase.swift */; };
+		BFA04B321BBA86DF0019C604 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B301BBA86DF0019C604 /* UserModel.swift */; };
+		BFA04B331BBA86DF0019C604 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B311BBA86DF0019C604 /* CurrentUser.swift */; };
+		BFA04B3D1BBA8AE10019C604 /* LogonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3A1BBA8AE10019C604 /* LogonViewController.swift */; };
+		BFA04B3F1BBA8AE10019C604 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B3C1BBA8AE10019C604 /* MainViewController.swift */; };
+		BFA04B441BBA8AEF0019C604 /* LogonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B401BBA8AEF0019C604 /* LogonView.swift */; };
+		BFA04B461BBA8AEF0019C604 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B421BBA8AEF0019C604 /* MainView.swift */; };
+		BFA04B4E1BBA8BF00019C604 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B491BBA8BF00019C604 /* BaseViewController.swift */; };
+		BFA04B4F1BBA8BF00019C604 /* INFODrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */; };
+		BFA04B501BBA8BF00019C604 /* INFODropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */; };
+		BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */; };
+		BFABF0871BD0B4E700CBF593 /* CountingEnquiryDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */; };
+		BFABF0891BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */; };
+		BFAC20F21BEC900E00ED909C /* INFOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */; };
+		BFBD41721BDF4FFB00BC37CE /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41711BDF4FFB00BC37CE /* FTPManager.m */; };
+		BFBD41741BDF50BF00BC37CE /* CurrentFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */; };
+		BFC7E7051C22A10F007AEA2B /* CameraScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */; };
+		BFC7E7071C22A120007AEA2B /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7061C22A120007AEA2B /* CameraView.swift */; };
+		BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE5D021BC66D1300DD0C90 /* BaseView.swift */; };
+		BFDFDD641BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */; };
+		BFE0B4171BE1D64300470545 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0B4161BE1D64300470545 /* FileDataModel.swift */; };
+		BFFBADC91BC75DDD00026817 /* QuantityImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */; };
+		BFFBADCB1BC75E0A00026817 /* QuantityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */; };
+		BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */; };
+		BFFBADCF1BC75F6B00026817 /* CountingEnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCE1BC75F6B00026817 /* CountingEnquiryViewController.swift */; };
+		BFFBADD11BC75F8200026817 /* FTPServerConnectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD01BC75F8200026817 /* FTPServerConnectionViewController.swift */; };
+		BFFBADD31BC75F9700026817 /* QuantityExportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD21BC75F9700026817 /* QuantityExportViewController.swift */; };
+		BFFBADD51BC75FA800026817 /* RecordsRemovalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD41BC75FA800026817 /* RecordsRemovalViewController.swift */; };
+		BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */; };
+		BFFBADD91BC7666F00026817 /* QuantityImportBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */; };
+		BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,26 +265,149 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
+		BF33F4E11D20E82800A49C0B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
+		BF3A39121C27DCC50009A89F /* Stock Take Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Take Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3A39141C27DE0E0009A89F /* Stock Take Pro-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stock Take Pro-Info.plist"; sourceTree = "<group>"; };
+		BF3A39161C27DECA0009A89F /* Stock Take Lite-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stock Take Lite-Info.plist"; sourceTree = "<group>"; };
+		BF3A39691C27E01F0009A89F /* Stock Take Enterprise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Take Enterprise.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stock Take Enterprise-Info.plist"; sourceTree = "<group>"; };
+		BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerViewController.swift; sourceTree = "<group>"; };
+		BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerView.swift; sourceTree = "<group>"; };
+		BF41DA581CD352C200AFA721 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
+		BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerCell.swift; sourceTree = "<group>"; };
+		BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryView.swift; sourceTree = "<group>"; };
+		BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		BF6BC1B91BF5B243007542B4 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryView.swift; sourceTree = "<group>"; };
+		BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryTableViewCell.swift; sourceTree = "<group>"; };
+		BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSuccessViewController.swift; sourceTree = "<group>"; };
+		BF83AC481BC8DE3200451902 /* ImportSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSuccessView.swift; sourceTree = "<group>"; };
+		BF886B3E1BD0D04D000FDAF1 /* QuantityExportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityExportView.swift; sourceTree = "<group>"; };
+		BF886B401BD0D8A3000FDAF1 /* ExportSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportSuccessViewController.swift; sourceTree = "<group>"; };
+		BF886B421BD0DAD7000FDAF1 /* ExportSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExportSuccessView.swift; sourceTree = "<group>"; };
+		BF922BA11BD60F3900C97B30 /* DatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerViewController.swift; sourceTree = "<group>"; };
+		BF9420FB1BBBDD6F0045F300 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		BF9420FC1BBBDD6F0045F300 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		BF9420FD1BBBDD6F0045F300 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		BF9420FE1BBBDD6F0045F300 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		BF9420FF1BBBDD6F0045F300 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		BF9421001BBBDD6F0045F300 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		BF9421011BBBDD6F0045F300 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		BF9421021BBBDD6F0045F300 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		BF9421031BBBDD6F0045F300 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		BF9421041BBBDD6F0045F300 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		BF9421051BBBDD6F0045F300 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		BF9421061BBBDD6F0045F300 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		BF9421071BBBDD6F0045F300 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		BF9421081BBBDD6F0045F300 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		BF9421091BBBDD6F0045F300 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		BF94210A1BBBDD6F0045F300 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		BF94210B1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		BF94210D1BBBDD6F0045F300 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		BF94210F1BBBDD6F0045F300 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		BF9596DE1BF1EF9D004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		BF9596DF1BF1EF9D004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BF9596E31BF1F03E004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BF9596E51BF1F043004DE3B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPServerConnectionView.swift; sourceTree = "<group>"; };
+		BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsAddView.swift; sourceTree = "<group>"; };
+		BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupView.swift; sourceTree = "<group>"; };
+		BF9E85F51BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupTableViewCell.swift; sourceTree = "<group>"; };
+		BF9E85F71BD4F5480091CE82 /* UserAccountsAddViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsAddViewController.swift; sourceTree = "<group>"; };
+		BF9E85F91BD4F82A0091CE82 /* RecordsRemoveView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsRemoveView.swift; sourceTree = "<group>"; };
+		BF9EFA5B1BE8934E00F43D4F /* EnquiryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnquiryModel.swift; sourceTree = "<group>"; };
+		BF9EFA5D1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalCell.swift; sourceTree = "<group>"; };
 		BFA04A591BBA70650019C604 /* Stock Take Lite.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Stock Take Lite.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA04A5C1BBA70650019C604 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BFA04A5E1BBA70650019C604 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BFA04A611BBA70650019C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BFA04A631BBA70650019C604 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFA04A661BBA70650019C604 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		BFA04A681BBA70650019C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA04A6D1BBA70650019C604 /* Stock Take LiteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stock Take LiteTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA04A711BBA70650019C604 /* Stock_Take_LiteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock_Take_LiteTests.swift; sourceTree = "<group>"; };
 		BFA04A731BBA70650019C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFA04A781BBA70650019C604 /* Stock Take LiteUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Stock Take LiteUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFA04A7C1BBA70650019C604 /* Stock_Take_LiteUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock_Take_LiteUITests.swift; sourceTree = "<group>"; };
 		BFA04A7E1BBA70650019C604 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFA04A8D1BBA77260019C604 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		BFA04A8E1BBA77260019C604 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		BFA04A8F1BBA77260019C604 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		BFA04A901BBA77260019C604 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		BFA04A911BBA77260019C604 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		BFA04A921BBA77260019C604 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		BFA04A931BBA77260019C604 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		BFA04A941BBA77260019C604 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		BFA04A951BBA77260019C604 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		BFA04A961BBA77260019C604 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		BFA04A971BBA77260019C604 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		BFA04A991BBA77260019C604 /* FTPHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPHelper.h; sourceTree = "<group>"; };
+		BFA04A9A1BBA77260019C604 /* FTPHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPHelper.m; sourceTree = "<group>"; };
+		BFA04A9C1BBA77260019C604 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		BFA04A9D1BBA77260019C604 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		BFA04AAC1BBA782E0019C604 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		BFA04AB21BBA79E30019C604 /* Stock Take-Brigding-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Stock Take-Brigding-Header.h"; sourceTree = "<group>"; };
+		BFA04B2A1BBA85EC0019C604 /* DataBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataBase.swift; sourceTree = "<group>"; };
+		BFA04B301BBA86DF0019C604 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		BFA04B311BBA86DF0019C604 /* CurrentUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		BFA04B3A1BBA8AE10019C604 /* LogonViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogonViewController.swift; sourceTree = "<group>"; };
+		BFA04B3C1BBA8AE10019C604 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		BFA04B401BBA8AEF0019C604 /* LogonView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogonView.swift; sourceTree = "<group>"; };
+		BFA04B421BBA8AEF0019C604 /* MainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
+		BFA04B491BBA8BF00019C604 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODrawerViewController.swift; sourceTree = "<group>"; };
+		BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODropShadowView.swift; sourceTree = "<group>"; };
+		BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOViewController.swift; sourceTree = "<group>"; };
+		BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalView.swift; sourceTree = "<group>"; };
+		BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalViewController.swift; sourceTree = "<group>"; };
+		BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOTableViewCell.swift; sourceTree = "<group>"; };
+		BFBD41701BDF4FFB00BC37CE /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
+		BFBD41711BDF4FFB00BC37CE /* FTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPManager.m; sourceTree = "<group>"; };
+		BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentFTP.swift; sourceTree = "<group>"; };
+		BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraScanViewController.swift; sourceTree = "<group>"; };
+		BFC7E7061C22A120007AEA2B /* CameraView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		BFDE5D021BC66D1300DD0C90 /* BaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseView.swift; sourceTree = "<group>"; };
+		BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryTableViewCell.swift; sourceTree = "<group>"; };
+		BFE0B4161BE1D64300470545 /* FileDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FileDataModel.swift; sourceTree = "<group>"; };
+		BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportViewController.swift; sourceTree = "<group>"; };
+		BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportView.swift; sourceTree = "<group>"; };
+		BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryViewController.swift; sourceTree = "<group>"; };
+		BFFBADCE1BC75F6B00026817 /* CountingEnquiryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryViewController.swift; sourceTree = "<group>"; };
+		BFFBADD01BC75F8200026817 /* FTPServerConnectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPServerConnectionViewController.swift; sourceTree = "<group>"; };
+		BFFBADD21BC75F9700026817 /* QuantityExportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityExportViewController.swift; sourceTree = "<group>"; };
+		BFFBADD41BC75FA800026817 /* RecordsRemovalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordsRemovalViewController.swift; sourceTree = "<group>"; };
+		BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupViewController.swift; sourceTree = "<group>"; };
+		BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportBaseView.swift; sourceTree = "<group>"; };
+		BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BF3A39081C27DCC50009A89F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF33F4E31D20E84800A49C0B /* MessageUI.framework in Frameworks */,
+				BF3A39091C27DCC50009A89F /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3A395F1C27E01F0009A89F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF33F4E41D20E85200A49C0B /* MessageUI.framework in Frameworks */,
+				BF3A39601C27E01F0009A89F /* libsqlite3.tbd in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFA04A561BBA70650019C604 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF33F4E21D20E82800A49C0B /* MessageUI.framework in Frameworks */,
+				BFA04AAD1BBA782E0019C604 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,9 +428,107 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BF33F4D91D20E4AA00A49C0B /* Email */ = {
+			isa = PBXGroup;
+			children = (
+				BF33F4DA1D20E4AA00A49C0B /* Controller */,
+				BF33F4DB1D20E4AA00A49C0B /* Model */,
+				BF33F4DC1D20E4AA00A49C0B /* View */,
+			);
+			path = Email;
+			sourceTree = "<group>";
+		};
+		BF33F4DA1D20E4AA00A49C0B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */,
+				BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF33F4DB1D20E4AA00A49C0B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF33F4DC1D20E4AA00A49C0B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF3B44291C11818F00D85339 /*  Bluetooth Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B442A1C11818F00D85339 /* Controller */,
+				BF3B442B1C11818F00D85339 /* Model */,
+				BF3B442C1C11818F00D85339 /* View */,
+			);
+			path = " Bluetooth Scanner";
+			sourceTree = "<group>";
+		};
+		BF3B442A1C11818F00D85339 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BF3B442B1C11818F00D85339 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BF3B442C1C11818F00D85339 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */,
+				BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BF9420FA1BBBDD6F0045F300 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				BF9420FB1BBBDD6F0045F300 /* MASCompositeConstraint.h */,
+				BF9420FC1BBBDD6F0045F300 /* MASCompositeConstraint.m */,
+				BF9420FD1BBBDD6F0045F300 /* MASConstraint.h */,
+				BF9420FE1BBBDD6F0045F300 /* MASConstraintMaker.h */,
+				BF9420FF1BBBDD6F0045F300 /* MASConstraintMaker.m */,
+				BF9421001BBBDD6F0045F300 /* MASLayoutConstraint.h */,
+				BF9421011BBBDD6F0045F300 /* MASLayoutConstraint.m */,
+				BF9421021BBBDD6F0045F300 /* Masonry.h */,
+				BF9421031BBBDD6F0045F300 /* MASUtilities.h */,
+				BF9421041BBBDD6F0045F300 /* MASViewAttribute.h */,
+				BF9421051BBBDD6F0045F300 /* MASViewAttribute.m */,
+				BF9421061BBBDD6F0045F300 /* MASViewConstraint.h */,
+				BF9421071BBBDD6F0045F300 /* MASViewConstraint.m */,
+				BF9421081BBBDD6F0045F300 /* NSArray+MASAdditions.h */,
+				BF9421091BBBDD6F0045F300 /* NSArray+MASAdditions.m */,
+				BF94210A1BBBDD6F0045F300 /* NSArray+MASShorthandAdditions.h */,
+				BF94210B1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				BF94210D1BBBDD6F0045F300 /* View+MASAdditions.h */,
+				BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */,
+				BF94210F1BBBDD6F0045F300 /* View+MASShorthandAdditions.h */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
 		BFA04A501BBA70650019C604 = {
 			isa = PBXGroup;
 			children = (
+				BF33F4E11D20E82800A49C0B /* MessageUI.framework */,
+				BF9596E41BF1F03E004DE3B9 /* Localizable.strings */,
+				BFA04AAC1BBA782E0019C604 /* libsqlite3.tbd */,
 				BFA04A5B1BBA70650019C604 /* Stock Take Lite */,
 				BFA04A701BBA70650019C604 /* Stock Take LiteTests */,
 				BFA04A7B1BBA70650019C604 /* Stock Take LiteUITests */,
@@ -90,6 +542,8 @@
 				BFA04A591BBA70650019C604 /* Stock Take Lite.app */,
 				BFA04A6D1BBA70650019C604 /* Stock Take LiteTests.xctest */,
 				BFA04A781BBA70650019C604 /* Stock Take LiteUITests.xctest */,
+				BF3A39121C27DCC50009A89F /* Stock Take Pro.app */,
+				BF3A39691C27E01F0009A89F /* Stock Take Enterprise.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,12 +551,27 @@
 		BFA04A5B1BBA70650019C604 /* Stock Take Lite */ = {
 			isa = PBXGroup;
 			children = (
+				BF33F4D91D20E4AA00A49C0B /* Email */,
+				BFC7E7001C2294D6007AEA2B /* iPad Camera Scan */,
+				BF3B44291C11818F00D85339 /*  Bluetooth Scanner */,
+				BFFBADAC1BC758FB00026817 /* Counting Enquiry */,
+				BFFBADB01BC758FB00026817 /* Counting Entry */,
+				BFFBADB41BC758FB00026817 /* FTPServer Connection */,
+				BFFBADB81BC758FB00026817 /* Quantity Export */,
+				BFFBADBC1BC758FB00026817 /* Quantity Import */,
+				BFFBADC01BC758FB00026817 /* Records Removal */,
+				BFFBADC41BC758FB00026817 /* User Accounts Setup */,
+				BFA04B2C1BBA86C00019C604 /* Main Menu */,
+				BFA04A8B1BBA76E90019C604 /* DataBase */,
+				BFA04A8A1BBA72480019C604 /* Libraries */,
 				BFA04A5C1BBA70650019C604 /* AppDelegate.swift */,
-				BFA04A5E1BBA70650019C604 /* ViewController.swift */,
+				BFDE5D021BC66D1300DD0C90 /* BaseView.swift */,
 				BFA04A601BBA70650019C604 /* Main.storyboard */,
 				BFA04A631BBA70650019C604 /* Assets.xcassets */,
 				BFA04A651BBA70650019C604 /* LaunchScreen.storyboard */,
-				BFA04A681BBA70650019C604 /* Info.plist */,
+				BF3A39161C27DECA0009A89F /* Stock Take Lite-Info.plist */,
+				BF3A39141C27DE0E0009A89F /* Stock Take Pro-Info.plist */,
+				BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */,
 			);
 			path = "Stock Take Lite";
 			sourceTree = "<group>";
@@ -112,6 +581,7 @@
 			children = (
 				BFA04A711BBA70650019C604 /* Stock_Take_LiteTests.swift */,
 				BFA04A731BBA70650019C604 /* Info.plist */,
+				BFA04AB21BBA79E30019C604 /* Stock Take-Brigding-Header.h */,
 			);
 			path = "Stock Take LiteTests";
 			sourceTree = "<group>";
@@ -125,9 +595,443 @@
 			path = "Stock Take LiteUITests";
 			sourceTree = "<group>";
 		};
+		BFA04A8A1BBA72480019C604 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD416F1BDF4FFB00BC37CE /* FTPManager */,
+				BF9420FA1BBBDD6F0045F300 /* Masonry */,
+				BFA04B481BBA8BF00019C604 /* INFORESideMenu */,
+				BFA04A8C1BBA77260019C604 /* fmdb */,
+				BFA04A981BBA77260019C604 /* ftp */,
+				BFA04A9B1BBA77260019C604 /* MBProgressHUD */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		BFA04A8B1BBA76E90019C604 /* DataBase */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B2A1BBA85EC0019C604 /* DataBase.swift */,
+			);
+			path = DataBase;
+			sourceTree = "<group>";
+		};
+		BFA04A8C1BBA77260019C604 /* fmdb */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04A8D1BBA77260019C604 /* FMDatabase.h */,
+				BFA04A8E1BBA77260019C604 /* FMDatabase.m */,
+				BFA04A8F1BBA77260019C604 /* FMDatabaseAdditions.h */,
+				BFA04A901BBA77260019C604 /* FMDatabaseAdditions.m */,
+				BFA04A911BBA77260019C604 /* FMDatabasePool.h */,
+				BFA04A921BBA77260019C604 /* FMDatabasePool.m */,
+				BFA04A931BBA77260019C604 /* FMDatabaseQueue.h */,
+				BFA04A941BBA77260019C604 /* FMDatabaseQueue.m */,
+				BFA04A951BBA77260019C604 /* FMDB.h */,
+				BFA04A961BBA77260019C604 /* FMResultSet.h */,
+				BFA04A971BBA77260019C604 /* FMResultSet.m */,
+			);
+			path = fmdb;
+			sourceTree = "<group>";
+		};
+		BFA04A981BBA77260019C604 /* ftp */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04A991BBA77260019C604 /* FTPHelper.h */,
+				BFA04A9A1BBA77260019C604 /* FTPHelper.m */,
+			);
+			path = ftp;
+			sourceTree = "<group>";
+		};
+		BFA04A9B1BBA77260019C604 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04A9C1BBA77260019C604 /* MBProgressHUD.h */,
+				BFA04A9D1BBA77260019C604 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		BFA04B2C1BBA86C00019C604 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B2D1BBA86C00019C604 /* Controller */,
+				BFA04B2E1BBA86C00019C604 /* Model */,
+				BFA04B2F1BBA86C00019C604 /* View */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		BFA04B2D1BBA86C00019C604 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B3A1BBA8AE10019C604 /* LogonViewController.swift */,
+				BFA04B3C1BBA8AE10019C604 /* MainViewController.swift */,
+				BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFA04B2E1BBA86C00019C604 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B301BBA86DF0019C604 /* UserModel.swift */,
+				BFA04B311BBA86DF0019C604 /* CurrentUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFA04B2F1BBA86C00019C604 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B401BBA8AEF0019C604 /* LogonView.swift */,
+				BFA04B421BBA8AEF0019C604 /* MainView.swift */,
+				BF6BC1B91BF5B243007542B4 /* HelpView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFA04B481BBA8BF00019C604 /* INFORESideMenu */ = {
+			isa = PBXGroup;
+			children = (
+				BFA04B491BBA8BF00019C604 /* BaseViewController.swift */,
+				BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */,
+				BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */,
+				BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */,
+				BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */,
+			);
+			path = INFORESideMenu;
+			sourceTree = "<group>";
+		};
+		BFBD416F1BDF4FFB00BC37CE /* FTPManager */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD41701BDF4FFB00BC37CE /* FTPManager.h */,
+				BFBD41711BDF4FFB00BC37CE /* FTPManager.m */,
+			);
+			path = FTPManager;
+			sourceTree = "<group>";
+		};
+		BFC7E7001C2294D6007AEA2B /* iPad Camera Scan */ = {
+			isa = PBXGroup;
+			children = (
+				BFC7E7011C2294D6007AEA2B /* Controller */,
+				BFC7E7021C2294D6007AEA2B /* Model */,
+				BFC7E7031C2294D6007AEA2B /* View */,
+			);
+			path = "iPad Camera Scan";
+			sourceTree = "<group>";
+		};
+		BFC7E7011C2294D6007AEA2B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFC7E7021C2294D6007AEA2B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFC7E7031C2294D6007AEA2B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFC7E7061C22A120007AEA2B /* CameraView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADAC1BC758FB00026817 /* Counting Enquiry */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADAD1BC758FB00026817 /* Controller */,
+				BFFBADAE1BC758FB00026817 /* Model */,
+				BFFBADAF1BC758FB00026817 /* View */,
+			);
+			path = "Counting Enquiry";
+			sourceTree = "<group>";
+		};
+		BFFBADAD1BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADCE1BC75F6B00026817 /* CountingEnquiryViewController.swift */,
+				BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADAE1BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BF9EFA5B1BE8934E00F43D4F /* EnquiryModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADAF1BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */,
+				BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */,
+				BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */,
+				BF9EFA5D1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADB01BC758FB00026817 /* Counting Entry */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADB11BC758FB00026817 /* Controller */,
+				BFFBADB21BC758FB00026817 /* Model */,
+				BFFBADB31BC758FB00026817 /* View */,
+			);
+			path = "Counting Entry";
+			sourceTree = "<group>";
+		};
+		BFFBADB11BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADB21BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADB31BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */,
+				BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADB41BC758FB00026817 /* FTPServer Connection */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADB51BC758FB00026817 /* Controller */,
+				BFFBADB61BC758FB00026817 /* Model */,
+				BFFBADB71BC758FB00026817 /* View */,
+			);
+			path = "FTPServer Connection";
+			sourceTree = "<group>";
+		};
+		BFFBADB51BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADD01BC75F8200026817 /* FTPServerConnectionViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADB61BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADB71BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADB81BC758FB00026817 /* Quantity Export */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADB91BC758FB00026817 /* Controller */,
+				BFFBADBA1BC758FB00026817 /* Model */,
+				BFFBADBB1BC758FB00026817 /* View */,
+			);
+			path = "Quantity Export";
+			sourceTree = "<group>";
+		};
+		BFFBADB91BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADD21BC75F9700026817 /* QuantityExportViewController.swift */,
+				BF886B401BD0D8A3000FDAF1 /* ExportSuccessViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADBA1BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADBB1BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF886B3E1BD0D04D000FDAF1 /* QuantityExportView.swift */,
+				BF886B421BD0DAD7000FDAF1 /* ExportSuccessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADBC1BC758FB00026817 /* Quantity Import */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADBD1BC758FB00026817 /* Controller */,
+				BFFBADBE1BC758FB00026817 /* Model */,
+				BFFBADBF1BC758FB00026817 /* View */,
+			);
+			path = "Quantity Import";
+			sourceTree = "<group>";
+		};
+		BFFBADBD1BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */,
+				BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADBE1BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFE0B4161BE1D64300470545 /* FileDataModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADBF1BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */,
+				BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */,
+				BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */,
+				BF83AC481BC8DE3200451902 /* ImportSuccessView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADC01BC758FB00026817 /* Records Removal */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADC11BC758FB00026817 /* Controller */,
+				BFFBADC21BC758FB00026817 /* Model */,
+				BFFBADC31BC758FB00026817 /* View */,
+			);
+			path = "Records Removal";
+			sourceTree = "<group>";
+		};
+		BFFBADC11BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADD41BC75FA800026817 /* RecordsRemovalViewController.swift */,
+				BF922BA11BD60F3900C97B30 /* DatePickerViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADC21BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADC31BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E85F91BD4F82A0091CE82 /* RecordsRemoveView.swift */,
+				BF41DA581CD352C200AFA721 /* DatePickerView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFFBADC41BC758FB00026817 /* User Accounts Setup */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADC51BC758FB00026817 /* Controller */,
+				BFFBADC61BC758FB00026817 /* Model */,
+				BFFBADC71BC758FB00026817 /* View */,
+			);
+			path = "User Accounts Setup";
+			sourceTree = "<group>";
+		};
+		BFFBADC51BC758FB00026817 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */,
+				BF9E85F71BD4F5480091CE82 /* UserAccountsAddViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFFBADC61BC758FB00026817 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		BFFBADC71BC758FB00026817 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */,
+				BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */,
+				BF9E85F51BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BF3A38C11C27DCC50009A89F /* Stock Take Pro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3A390F1C27DCC50009A89F /* Build configuration list for PBXNativeTarget "Stock Take Pro" */;
+			buildPhases = (
+				BF3A38C21C27DCC50009A89F /* Sources */,
+				BF3A39081C27DCC50009A89F /* Frameworks */,
+				BF3A390A1C27DCC50009A89F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stock Take Pro";
+			productName = "Stock Take Lite";
+			productReference = BF3A39121C27DCC50009A89F /* Stock Take Pro.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF3A39181C27E01F0009A89F /* Stock Take Enterprise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF3A39661C27E01F0009A89F /* Build configuration list for PBXNativeTarget "Stock Take Enterprise" */;
+			buildPhases = (
+				BF3A39191C27E01F0009A89F /* Sources */,
+				BF3A395F1C27E01F0009A89F /* Frameworks */,
+				BF3A39611C27E01F0009A89F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Stock Take Enterprise";
+			productName = "Stock Take Lite";
+			productReference = BF3A39691C27E01F0009A89F /* Stock Take Enterprise.app */;
+			productType = "com.apple.product-type.application";
+		};
 		BFA04A581BBA70650019C604 /* Stock Take Lite */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A811BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take Lite" */;
@@ -187,18 +1091,28 @@
 		BFA04A511BBA70650019C604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = infoware;
 				TargetAttributes = {
+					BF3A38C11C27DCC50009A89F = {
+						DevelopmentTeam = U837TW5R38;
+					};
+					BF3A39181C27E01F0009A89F = {
+						DevelopmentTeam = U837TW5R38;
+					};
 					BFA04A581BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = U837TW5R38;
+						LastSwiftMigration = 0800;
 					};
 					BFA04A6C1BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = BFA04A581BBA70650019C604;
 					};
 					BFA04A771BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 						TestTargetID = BFA04A581BBA70650019C604;
 					};
 				};
@@ -219,18 +1133,45 @@
 				BFA04A581BBA70650019C604 /* Stock Take Lite */,
 				BFA04A6C1BBA70650019C604 /* Stock Take LiteTests */,
 				BFA04A771BBA70650019C604 /* Stock Take LiteUITests */,
+				BF3A38C11C27DCC50009A89F /* Stock Take Pro */,
+				BF3A39181C27E01F0009A89F /* Stock Take Enterprise */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BF3A390A1C27DCC50009A89F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3A390B1C27DCC50009A89F /* LaunchScreen.storyboard in Resources */,
+				BF3A390C1C27DCC50009A89F /* Localizable.strings in Resources */,
+				BF3A390D1C27DCC50009A89F /* Assets.xcassets in Resources */,
+				BF3A390E1C27DCC50009A89F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3A39611C27E01F0009A89F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3A39621C27E01F0009A89F /* LaunchScreen.storyboard in Resources */,
+				BF3A39631C27E01F0009A89F /* Localizable.strings in Resources */,
+				BF3A39641C27E01F0009A89F /* Assets.xcassets in Resources */,
+				BF3A39651C27E01F0009A89F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFA04A571BBA70650019C604 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				BFA04A671BBA70650019C604 /* LaunchScreen.storyboard in Resources */,
+				BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */,
+				BF3A39151C27DE0E0009A89F /* Stock Take Pro-Info.plist in Resources */,
 				BFA04A641BBA70650019C604 /* Assets.xcassets in Resources */,
 				BFA04A621BBA70650019C604 /* Main.storyboard in Resources */,
+				BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,12 +1192,240 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BF3A38C21C27DCC50009A89F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3A38C31C27DCC50009A89F /* NSArray+MASAdditions.m in Sources */,
+				BF3A38C41C27DCC50009A89F /* FMResultSet.m in Sources */,
+				BF3A38C51C27DCC50009A89F /* FileDataModel.swift in Sources */,
+				BF3A38C61C27DCC50009A89F /* CountingEnquiryDetalView.swift in Sources */,
+				BF3A38C71C27DCC50009A89F /* ImportSuccessView.swift in Sources */,
+				BF3A38C81C27DCC50009A89F /* MASCompositeConstraint.m in Sources */,
+				BF3A38C91C27DCC50009A89F /* DatePickerViewController.swift in Sources */,
+				BF3A38CA1C27DCC50009A89F /* ExportSuccessViewController.swift in Sources */,
+				BF3A38CB1C27DCC50009A89F /* FTPManager.m in Sources */,
+				BF33F4ED1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
+				BF3A38CC1C27DCC50009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				BF3A38CD1C27DCC50009A89F /* QuantityImportTableViewCell.swift in Sources */,
+				BF3A38CE1C27DCC50009A89F /* CountingEntryView.swift in Sources */,
+				BF3A38CF1C27DCC50009A89F /* CountingEntryViewController.swift in Sources */,
+				BF3A38D01C27DCC50009A89F /* HelpView.swift in Sources */,
+				BF3A38D11C27DCC50009A89F /* QuantityExportViewController.swift in Sources */,
+				BF3A38D21C27DCC50009A89F /* CountingEnquiryDetalCell.swift in Sources */,
+				BF3A38D31C27DCC50009A89F /* QuantityImportView.swift in Sources */,
+				BF3A38D41C27DCC50009A89F /* FMDatabaseQueue.m in Sources */,
+				BF3A38D51C27DCC50009A89F /* CameraView.swift in Sources */,
+				BF3A38D61C27DCC50009A89F /* UserAccountsSetupTableViewCell.swift in Sources */,
+				BF3A38D71C27DCC50009A89F /* CurrentUser.swift in Sources */,
+				BF3A38D81C27DCC50009A89F /* MASConstraintMaker.m in Sources */,
+				BF3A38D91C27DCC50009A89F /* ExportSuccessView.swift in Sources */,
+				BF3A38DA1C27DCC50009A89F /* QuantityExportView.swift in Sources */,
+				BF3A38DB1C27DCC50009A89F /* View+MASAdditions.m in Sources */,
+				BF3A38DC1C27DCC50009A89F /* UserAccountsSetupView.swift in Sources */,
+				BF3A38DD1C27DCC50009A89F /* BaseViewController.swift in Sources */,
+				BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */,
+				BF3A38DE1C27DCC50009A89F /* INFOViewController.swift in Sources */,
+				BF3A38DF1C27DCC50009A89F /* UserAccountsAddViewController.swift in Sources */,
+				BF3A38E01C27DCC50009A89F /* RecordsRemovalViewController.swift in Sources */,
+				BF3A38E11C27DCC50009A89F /* UserAccountsAddView.swift in Sources */,
+				BF3A38E21C27DCC50009A89F /* CountingEnquiryViewController.swift in Sources */,
+				BF3A38E31C27DCC50009A89F /* AppDelegate.swift in Sources */,
+				BF3A38E41C27DCC50009A89F /* MASViewConstraint.m in Sources */,
+				BF3A38E51C27DCC50009A89F /* ImportSuccessViewController.swift in Sources */,
+				BF3A38E61C27DCC50009A89F /* INFOTableViewCell.swift in Sources */,
+				BF3A38E71C27DCC50009A89F /* RecordsRemoveView.swift in Sources */,
+				BF3A38E81C27DCC50009A89F /* LogonView.swift in Sources */,
+				BF3A38E91C27DCC50009A89F /* QuantityImportViewController.swift in Sources */,
+				BF3A38EA1C27DCC50009A89F /* FTPServerConnectionViewController.swift in Sources */,
+				BF3A38EB1C27DCC50009A89F /* CountingEnquiryView.swift in Sources */,
+				BF3A38EC1C27DCC50009A89F /* FTPHelper.m in Sources */,
+				BF3A38ED1C27DCC50009A89F /* INFODropShadowView.swift in Sources */,
+				BF3A38EE1C27DCC50009A89F /* BluetoothScannerView.swift in Sources */,
+				BF3A38EF1C27DCC50009A89F /* DataBase.swift in Sources */,
+				BF3A38F01C27DCC50009A89F /* INFODrawerViewController.swift in Sources */,
+				BF41DA5A1CD352C200AFA721 /* DatePickerView.swift in Sources */,
+				BF3A38F11C27DCC50009A89F /* EnquiryModel.swift in Sources */,
+				BF3A38F21C27DCC50009A89F /* CameraScanViewController.swift in Sources */,
+				BF3A38F31C27DCC50009A89F /* BluetoothScannerCell.swift in Sources */,
+				BF3A38F41C27DCC50009A89F /* LogonViewController.swift in Sources */,
+				BF3A38F51C27DCC50009A89F /* BluetoothScannerViewController.swift in Sources */,
+				BF3A38F61C27DCC50009A89F /* MainViewController.swift in Sources */,
+				BF3A38F71C27DCC50009A89F /* UserAccountsSetupViewController.swift in Sources */,
+				BF3A38F81C27DCC50009A89F /* FTPServerConnectionView.swift in Sources */,
+				BF3A38F91C27DCC50009A89F /* BaseView.swift in Sources */,
+				BF3A38FA1C27DCC50009A89F /* HelpViewController.swift in Sources */,
+				BF3A38FB1C27DCC50009A89F /* CountingEnquiryTableViewCell.swift in Sources */,
+				BF3A38FC1C27DCC50009A89F /* CountingEnquiryDetalViewController.swift in Sources */,
+				BF3A38FD1C27DCC50009A89F /* FMDatabasePool.m in Sources */,
+				BF3A38FE1C27DCC50009A89F /* MASLayoutConstraint.m in Sources */,
+				BF3A38FF1C27DCC50009A89F /* FMDatabase.m in Sources */,
+				BF3A39001C27DCC50009A89F /* MainView.swift in Sources */,
+				BF3A39011C27DCC50009A89F /* FMDatabaseAdditions.m in Sources */,
+				BF3A39021C27DCC50009A89F /* UserModel.swift in Sources */,
+				BF3A39031C27DCC50009A89F /* MBProgressHUD.m in Sources */,
+				BF3A39041C27DCC50009A89F /* CurrentFTP.swift in Sources */,
+				BF3A39051C27DCC50009A89F /* MASViewAttribute.m in Sources */,
+				BF3A39061C27DCC50009A89F /* QuantityImportBaseView.swift in Sources */,
+				BF3A39071C27DCC50009A89F /* CountingEntryTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF3A39191C27E01F0009A89F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF3A391A1C27E01F0009A89F /* NSArray+MASAdditions.m in Sources */,
+				BF3A391B1C27E01F0009A89F /* FMResultSet.m in Sources */,
+				BF3A391C1C27E01F0009A89F /* FileDataModel.swift in Sources */,
+				BF3A391D1C27E01F0009A89F /* CountingEnquiryDetalView.swift in Sources */,
+				BF3A391E1C27E01F0009A89F /* ImportSuccessView.swift in Sources */,
+				BF3A391F1C27E01F0009A89F /* MASCompositeConstraint.m in Sources */,
+				BF3A39201C27E01F0009A89F /* DatePickerViewController.swift in Sources */,
+				BF3A39211C27E01F0009A89F /* ExportSuccessViewController.swift in Sources */,
+				BF3A39221C27E01F0009A89F /* FTPManager.m in Sources */,
+				BF33F4EE1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
+				BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */,
+				BF3A39251C27E01F0009A89F /* CountingEntryView.swift in Sources */,
+				BF3A39261C27E01F0009A89F /* CountingEntryViewController.swift in Sources */,
+				BF3A39271C27E01F0009A89F /* HelpView.swift in Sources */,
+				BF3A39281C27E01F0009A89F /* QuantityExportViewController.swift in Sources */,
+				BF3A39291C27E01F0009A89F /* CountingEnquiryDetalCell.swift in Sources */,
+				BF3A392A1C27E01F0009A89F /* QuantityImportView.swift in Sources */,
+				BF3A392B1C27E01F0009A89F /* FMDatabaseQueue.m in Sources */,
+				BF3A392C1C27E01F0009A89F /* CameraView.swift in Sources */,
+				BF3A392D1C27E01F0009A89F /* UserAccountsSetupTableViewCell.swift in Sources */,
+				BF3A392E1C27E01F0009A89F /* CurrentUser.swift in Sources */,
+				BF3A392F1C27E01F0009A89F /* MASConstraintMaker.m in Sources */,
+				BF3A39301C27E01F0009A89F /* ExportSuccessView.swift in Sources */,
+				BF3A39311C27E01F0009A89F /* QuantityExportView.swift in Sources */,
+				BF3A39321C27E01F0009A89F /* View+MASAdditions.m in Sources */,
+				BF3A39331C27E01F0009A89F /* UserAccountsSetupView.swift in Sources */,
+				BF3A39341C27E01F0009A89F /* BaseViewController.swift in Sources */,
+				BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */,
+				BF3A39351C27E01F0009A89F /* INFOViewController.swift in Sources */,
+				BF3A39361C27E01F0009A89F /* UserAccountsAddViewController.swift in Sources */,
+				BF3A39371C27E01F0009A89F /* RecordsRemovalViewController.swift in Sources */,
+				BF3A39381C27E01F0009A89F /* UserAccountsAddView.swift in Sources */,
+				BF3A39391C27E01F0009A89F /* CountingEnquiryViewController.swift in Sources */,
+				BF3A393A1C27E01F0009A89F /* AppDelegate.swift in Sources */,
+				BF3A393B1C27E01F0009A89F /* MASViewConstraint.m in Sources */,
+				BF3A393C1C27E01F0009A89F /* ImportSuccessViewController.swift in Sources */,
+				BF3A393D1C27E01F0009A89F /* INFOTableViewCell.swift in Sources */,
+				BF3A393E1C27E01F0009A89F /* RecordsRemoveView.swift in Sources */,
+				BF3A393F1C27E01F0009A89F /* LogonView.swift in Sources */,
+				BF3A39401C27E01F0009A89F /* QuantityImportViewController.swift in Sources */,
+				BF3A39411C27E01F0009A89F /* FTPServerConnectionViewController.swift in Sources */,
+				BF3A39421C27E01F0009A89F /* CountingEnquiryView.swift in Sources */,
+				BF3A39431C27E01F0009A89F /* FTPHelper.m in Sources */,
+				BF3A39441C27E01F0009A89F /* INFODropShadowView.swift in Sources */,
+				BF3A39451C27E01F0009A89F /* BluetoothScannerView.swift in Sources */,
+				BF3A39461C27E01F0009A89F /* DataBase.swift in Sources */,
+				BF3A39471C27E01F0009A89F /* INFODrawerViewController.swift in Sources */,
+				BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */,
+				BF3A39481C27E01F0009A89F /* EnquiryModel.swift in Sources */,
+				BF3A39491C27E01F0009A89F /* CameraScanViewController.swift in Sources */,
+				BF3A394A1C27E01F0009A89F /* BluetoothScannerCell.swift in Sources */,
+				BF3A394B1C27E01F0009A89F /* LogonViewController.swift in Sources */,
+				BF3A394C1C27E01F0009A89F /* BluetoothScannerViewController.swift in Sources */,
+				BF3A394D1C27E01F0009A89F /* MainViewController.swift in Sources */,
+				BF3A394E1C27E01F0009A89F /* UserAccountsSetupViewController.swift in Sources */,
+				BF3A394F1C27E01F0009A89F /* FTPServerConnectionView.swift in Sources */,
+				BF3A39501C27E01F0009A89F /* BaseView.swift in Sources */,
+				BF3A39511C27E01F0009A89F /* HelpViewController.swift in Sources */,
+				BF3A39521C27E01F0009A89F /* CountingEnquiryTableViewCell.swift in Sources */,
+				BF3A39531C27E01F0009A89F /* CountingEnquiryDetalViewController.swift in Sources */,
+				BF3A39541C27E01F0009A89F /* FMDatabasePool.m in Sources */,
+				BF3A39551C27E01F0009A89F /* MASLayoutConstraint.m in Sources */,
+				BF3A39561C27E01F0009A89F /* FMDatabase.m in Sources */,
+				BF3A39571C27E01F0009A89F /* MainView.swift in Sources */,
+				BF3A39581C27E01F0009A89F /* FMDatabaseAdditions.m in Sources */,
+				BF3A39591C27E01F0009A89F /* UserModel.swift in Sources */,
+				BF3A395A1C27E01F0009A89F /* MBProgressHUD.m in Sources */,
+				BF3A395B1C27E01F0009A89F /* CurrentFTP.swift in Sources */,
+				BF3A395C1C27E01F0009A89F /* MASViewAttribute.m in Sources */,
+				BF3A395D1C27E01F0009A89F /* QuantityImportBaseView.swift in Sources */,
+				BF3A395E1C27E01F0009A89F /* CountingEntryTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BFA04A551BBA70650019C604 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BFA04A5F1BBA70650019C604 /* ViewController.swift in Sources */,
+				BF9421151BBBDD6F0045F300 /* NSArray+MASAdditions.m in Sources */,
+				BFA04AA21BBA77260019C604 /* FMResultSet.m in Sources */,
+				BFE0B4171BE1D64300470545 /* FileDataModel.swift in Sources */,
+				BFABF0871BD0B4E700CBF593 /* CountingEnquiryDetalView.swift in Sources */,
+				BF83AC491BC8DE3200451902 /* ImportSuccessView.swift in Sources */,
+				BF9421101BBBDD6F0045F300 /* MASCompositeConstraint.m in Sources */,
+				BF922BA21BD60F3900C97B30 /* DatePickerViewController.swift in Sources */,
+				BF886B411BD0D8A3000FDAF1 /* ExportSuccessViewController.swift in Sources */,
+				BFBD41721BDF4FFB00BC37CE /* FTPManager.m in Sources */,
+				BF33F4EC1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
+				BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */,
+				BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */,
+				BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */,
+				BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */,
+				BFFBADD31BC75F9700026817 /* QuantityExportViewController.swift in Sources */,
+				BF9EFA5E1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift in Sources */,
+				BFFBADCB1BC75E0A00026817 /* QuantityImportView.swift in Sources */,
+				BFA04AA11BBA77260019C604 /* FMDatabaseQueue.m in Sources */,
+				BFC7E7071C22A120007AEA2B /* CameraView.swift in Sources */,
+				BF9E85F61BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift in Sources */,
+				BFA04B331BBA86DF0019C604 /* CurrentUser.swift in Sources */,
+				BF9421111BBBDD6F0045F300 /* MASConstraintMaker.m in Sources */,
+				BF886B431BD0DAD7000FDAF1 /* ExportSuccessView.swift in Sources */,
+				BF886B3F1BD0D04D000FDAF1 /* QuantityExportView.swift in Sources */,
+				BF9421171BBBDD6F0045F300 /* View+MASAdditions.m in Sources */,
+				BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */,
+				BFA04B4E1BBA8BF00019C604 /* BaseViewController.swift in Sources */,
+				BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */,
+				BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */,
+				BF9E85F81BD4F5480091CE82 /* UserAccountsAddViewController.swift in Sources */,
+				BFFBADD51BC75FA800026817 /* RecordsRemovalViewController.swift in Sources */,
+				BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */,
+				BFFBADCF1BC75F6B00026817 /* CountingEnquiryViewController.swift in Sources */,
 				BFA04A5D1BBA70650019C604 /* AppDelegate.swift in Sources */,
+				BF9421141BBBDD6F0045F300 /* MASViewConstraint.m in Sources */,
+				BF83AC471BC8DDD600451902 /* ImportSuccessViewController.swift in Sources */,
+				BFAC20F21BEC900E00ED909C /* INFOTableViewCell.swift in Sources */,
+				BF9E85FA1BD4F82A0091CE82 /* RecordsRemoveView.swift in Sources */,
+				BFA04B441BBA8AEF0019C604 /* LogonView.swift in Sources */,
+				BFFBADC91BC75DDD00026817 /* QuantityImportViewController.swift in Sources */,
+				BFFBADD11BC75F8200026817 /* FTPServerConnectionViewController.swift in Sources */,
+				BF6625EB1BCF516200BF2BD7 /* CountingEnquiryView.swift in Sources */,
+				BFA04AA31BBA77260019C604 /* FTPHelper.m in Sources */,
+				BFA04B501BBA8BF00019C604 /* INFODropShadowView.swift in Sources */,
+				BF3B44301C11827200D85339 /* BluetoothScannerView.swift in Sources */,
+				BFA04B2B1BBA85EC0019C604 /* DataBase.swift in Sources */,
+				BFA04B4F1BBA8BF00019C604 /* INFODrawerViewController.swift in Sources */,
+				BF41DA591CD352C200AFA721 /* DatePickerView.swift in Sources */,
+				BF9EFA5C1BE8934E00F43D4F /* EnquiryModel.swift in Sources */,
+				BFC7E7051C22A10F007AEA2B /* CameraScanViewController.swift in Sources */,
+				BF45DB091C15291A00CB3401 /* BluetoothScannerCell.swift in Sources */,
+				BFA04B3D1BBA8AE10019C604 /* LogonViewController.swift in Sources */,
+				BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */,
+				BFA04B3F1BBA8AE10019C604 /* MainViewController.swift in Sources */,
+				BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */,
+				BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */,
+				BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */,
+				BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */,
+				BFDFDD641BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift in Sources */,
+				BFABF0891BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift in Sources */,
+				BFA04AA01BBA77260019C604 /* FMDatabasePool.m in Sources */,
+				BF9421121BBBDD6F0045F300 /* MASLayoutConstraint.m in Sources */,
+				BFA04A9E1BBA77260019C604 /* FMDatabase.m in Sources */,
+				BFA04B461BBA8AEF0019C604 /* MainView.swift in Sources */,
+				BFA04A9F1BBA77260019C604 /* FMDatabaseAdditions.m in Sources */,
+				BFA04B321BBA86DF0019C604 /* UserModel.swift in Sources */,
+				BFA04AA41BBA77260019C604 /* MBProgressHUD.m in Sources */,
+				BFBD41741BDF50BF00BC37CE /* CurrentFTP.swift in Sources */,
+				BF9421131BBBDD6F0045F300 /* MASViewAttribute.m in Sources */,
+				BFFBADD91BC7666F00026817 /* QuantityImportBaseView.swift in Sources */,
+				BF838E311BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,10 +1461,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		BF9596E41BF1F03E004DE3B9 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF9596E31BF1F03E004DE3B9 /* zh-Hans */,
+				BF9596E51BF1F043004DE3B9 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BFA04A601BBA70650019C604 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				BFA04A611BBA70650019C604 /* Base */,
+				BF9596DE1BF1EF9D004DE3B9 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -304,6 +1483,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BFA04A661BBA70650019C604 /* Base */,
+				BF9596DF1BF1EF9D004DE3B9 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -311,6 +1491,74 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BF3A39101C27DCC50009A89F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Pro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D PRO_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF3A39111C27DCC50009A89F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Pro-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D PRO_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BF3A39671C27E01F0009A89F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Enterprise-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D ENTERPRISE_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BF3A39681C27E01F0009A89F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Enterprise-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "-D ENTERPRISE_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		BFA04A7F1BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -328,7 +1576,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -350,6 +1599,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -373,7 +1623,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -388,6 +1639,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -398,10 +1650,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Stock Take Lite/Info.plist";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-Lite";
+				OTHER_SWIFT_FLAGS = "-D LITE_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -409,10 +1670,19 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Stock Take Lite/Info.plist";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-Lite";
+				OTHER_SWIFT_FLAGS = "-D LITE_VERSION";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -424,6 +1694,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Debug;
@@ -436,6 +1707,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Release;
@@ -447,6 +1719,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};
@@ -459,6 +1732,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};
@@ -467,6 +1741,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BF3A390F1C27DCC50009A89F /* Build configuration list for PBXNativeTarget "Stock Take Pro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3A39101C27DCC50009A89F /* Debug */,
+				BF3A39111C27DCC50009A89F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF3A39661C27E01F0009A89F /* Build configuration list for PBXNativeTarget "Stock Take Enterprise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF3A39671C27E01F0009A89F /* Debug */,
+				BF3A39681C27E01F0009A89F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BFA04A541BBA70650019C604 /* Build configuration list for PBXProject "Stock Take Lite" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -483,6 +1775,7 @@
 				BFA04A831BBA70650019C604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFA04A841BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +1784,7 @@
 				BFA04A861BBA70650019C604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BFA04A871BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteUITests" */ = {
 			isa = XCConfigurationList;
@@ -499,6 +1793,7 @@
 				BFA04A891BBA70650019C604 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

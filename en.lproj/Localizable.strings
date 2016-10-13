@@ -1,0 +1,251 @@
+/* 
+  Localizable.strings
+  Stock Take Lite
+
+  Created by infoware on 10/11/15.
+  Copyright © 2015年 infoware. All rights reserved.
+*/
+
+/**
+ *  Button
+ */
+
+ok = "OK";
+return = "Return";
+countingEntry = "Counting Entry";
+save = "Save";
+export = "Export";
+off = "OFF";
+on = "ON";
+delete = "Delete";
+cancel = "Cancel";
+add = "Add";
+logon = "Logon";
+userAccountSetup = "User Account Setup";
+update = "Update";
+helpButton = "Help";
+back = "Back";
+camera = "Camera";
+
+/**
+ *  Main Menu
+ */
+
+mUserID = "UserID";
+mPassword = "Password";
+mTitle = "STOCK TAKE LITE";
+mTitle_pro = "STOCK TAKE PRO";
+mTitle_ent = "STOCK TAKE ENT";
+mMainMenu = "Main Menu";
+mImport = "Stock On-hand Quantity Import";
+mEntry = "Stock Take Counting Entry";
+mEnquirty = "Stock Take Counting Enquiry";
+mExport = "Counted Quantity Export";
+mRemove = "Historical Stock Take Records Removal";
+mUserAccountsSetup = "User Accounts Setup";
+mFTPServer = "FTP Server Connection Setup";
+mBluetooth = "Bluetooth Scan";
+mCamera = "iPad Camera Scan";
+mEmail = "Send Email";
+
+/**
+ *  Import
+ */
+topTitle = "STOCK TAKE LITE";
+topTitle_pro = "STOCK TAKE PRO";
+topTitle_ent = "STOCK TAKE ENT";
+title = "Stock On-hand Quantity Import";
+FTPServer = "FTP Server";
+FTPUser = "FTP User";
+chooseFile = "Please choose one of the below files for import";
+fileName = "File Name";
+dataAndTime = "Data&Time";
+
+/**
+ *  Import Success
+ */
+
+isFTPServer = "FTP Server";
+isFTPUser = "FTP User";
+isFileName = "File Name";
+isImportSuccess = "File Import Successfully";
+isNumOfRecords = "No. of records:";
+isNumOfSKU = "No. of SKU:";
+isTotalOnhandQTY = "Total no. of on-hand quantity:";
+
+/**
+ *  Entry
+ */
+
+eTitle = "Stock Take Counting Entry";
+eFileName = "File Name:";
+eNumOfSKU = "No. of SKU:";
+eSKUCode = "SKU Code";
+eSKUName = "SKU Name";
+eOnhandQty = "Onhand\nQty";
+eCountQty = "Count\nQty";
+eVarianceQty = "Variance\nQty";
+eTotal = "Total";
+
+
+/**
+ *  Enquiry
+ */
+
+enTitle = "Stock Take Counting Enquiry";
+enPrompt = "Please choose one of the below Stock Take count to display";
+enDataAndTime = "Stock Take Date & Time";
+enNumOfSKU = "No. of SKU";
+enOnhandQty = "Ohand Qty";
+enCountedQty = "Counted Qty";
+
+/**
+ *  Enquiry Detal
+ */
+
+edTitle = "Stock Take Counting Enquiry";
+edDataAndTime = "Data & Time:";
+
+/**
+ *  Export
+ */
+
+exTitle = "Counted Quantity Export";
+exPrompt = "Please choose one of the below Stock Take count to export";
+
+/**
+ *  Export Success
+ */
+
+exsTitle = "Counted Quantity Export";
+exsDate = "Stock Take Date";
+exsNumOfSKU = "No. of SKU";
+exsOnhandQty = "Total On-hand Quantity";
+exsCountedQty = "Total Counted Quantity";
+exsVarianceQty = "Total Variance Quantity";
+exsFTPServer = "FTP Server";
+exsFTPUser = "FTP User";
+exsFileName = "File Name";
+exsState = "Please enter the name of the export file.";
+exsExportSuccess = "Counted Quantity data  export success：";
+exsExportFailed = "Counted Quantity data  export failed：";
+
+
+/**
+ *  Remove
+ */
+
+rTitle = "Historical Stock Take Records Removal";
+rPrompt = "Remove historical records created before";
+rData = "Stock Take Date & Time";
+rNumOfSKU = "No. of\nSKU";
+rOnhandQty = "Ohand\nQty";
+rCountedQty = "Counted\nQty";
+
+/**
+ *  User Account Setup
+ */
+
+usTitle = "User Account Setup";
+usPrompt = "Please choose one of the below account for  maintenance, or click Add button to create a new account";
+usUserID = "User ID";
+usName = "Name";
+usAdmin = "Administrator";
+
+/**
+ *  User Account Add
+ */
+
+uTitle = "User Account Setup";
+uUserID = "User ID";
+uName = "Name";
+uPassword = "Password";
+uAdmin = "Administrator";
+
+/**
+ *  FTP Server
+ */
+
+fsTitle = "FTP Server Connection Setup";
+fsFTPServer = "FTP Server";
+fsFTPUser = "FTP User";
+fsFTPPassword = "FTP Password";
+
+/**
+ *  Blutooth Scanner
+ */
+blTitle = "Stock Take By Bluetooth Scanner";
+blFileName = "File Name:";
+blBarcode = "Barcode:";
+
+
+/**
+ *  iPad Camera Scanner
+ */
+
+icTitle = "iPad Camera Scan";
+
+
+
+/**
+ *  Controller
+ */
+
+
+
+/**
+ *  Alert
+ */
+
+warning = "Warning";
+imSetFTPServer = "Please setup FTP Server";
+imprompt = "Get the file failed,please try again.";
+inchoose = "Please choose a file!";
+aSuccess = "File Import Failed,Please try again";
+aeAlert = "Please import a file first";
+aexportAlert = "No data can be exported!";
+aexprortPrompt = "Please setup the FTP server first!";
+arPrompt = "Stock Take records are removed successfully";
+auAlert = "Please choose a user !";
+aucheck = "Please enter the admin and password";
+auUserID = "Please enter an admin ID";
+auAdminName = "Admin name";
+auPassword = "Password";
+prompt = "Prompting";
+userExist = "User alredy exist!";
+auSaveSuccess =  "Save success!";
+auDeleteSuccess = "Delete Success!";
+aiSamePrompt = "Some SKUCode already exists! Do you want to update ?";
+auCheckInput = "Please check the input or the network.";
+numOfRecodes = "A maximum of 50 records can be imported!";
+inputfileName = "Please input file name!";
+
+/**
+ *  left Menu
+ */
+
+lMainMenu = "Main Menu";
+limport = "Stock On-hand Quantity Import";
+lEntry = "Stock Take Counting Entry";
+lEnquiry = "Stock Take Counting Enquiry";
+lExport = "Counted Quantity Export";
+lRemove = "Historical Recordds Removal";
+lBluetooth = "Bluetooth Scanner Enquiry";
+
+/**
+ *  Email
+ */
+
+eChooseAttachment = "Attachment Selection";
+epromot = "Please choose the file needs to be sent.";
+epromotSet = "First, in the device \"Settings\" ->\"Mail, Contacts, Calendar,\" -> \"Add Account \" add a mail account! Then, click on the account \"Mail \" to open the switch.";
+
+
+/**
+ *  help
+ */
+
+objective = "Objective";
+
+help = "Objective\n     This application is designed to help business users to record stock take information for a location which can be a boutique, counter or even a small warehouse.\n       Assuming that users have already operated an Inventory system which can export the Stock On-hand quantity for the stock take location. After the stock take completion, counted quantity will be exported for users’ further processing at their own Inventory system.\nBelow is a simple operation steps of this App.\n1.      Setup User\nTo add or delete users for this App.\n2.      Setup the FTP server connection information.\nThis is the FTP server at users’ company for storing the stock onhand quantity of a location for stock take.\n3.      Import Stock Onhand information\nTo connect to the FTP server to get the Stock Onhand file of a location and then import the information into the iPad local database for stock take reference.\nThe file format is a CSV file with 4 columns:\nProduct Code, Product Name , On-hand Quantity, barcode.\n4.      Input the Stock Take Counting\nBy using the Stock Take Counting Entry, users can input the counted quantity and also see the variance between the counted and physical stock on-hand quantity.\n5.      Counted Quantity Export\nAfter completed the Stock Take process, users can export the counted quantity to the FTP server for further processing.\nThe exported file is a CSV file with 5 colums:\nProduct Code, Product Name, On-hand Quantity, Counted Quantity, Variance Quantity.\n6.      Historical Stock Take Removal\nThis is a housekeeping funcion by which users can remove histoical stock take records in order to minimize the local database size on the iPad.\n7.     Barcode Scanning by Blue Tooth Scanner\nThe Stock Take process can be speeded up by using barcode scanning.Users can connect a blue tooth scanner to the iPad and use it to scan product barcodes.The applicatin is able to find out the product code based on the corresponding barcode.The counted quantity will be incremeted by 1 upon each succesfull barcode scan.If the corresponding product code for a barcode could not be found,a stock take count record will be created with product code the same as barcode.";
+

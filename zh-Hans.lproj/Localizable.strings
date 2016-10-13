@@ -1,0 +1,238 @@
+/* 
+  Localizable.strings
+  Stock Take Lite
+
+  Created by infoware on 10/11/15.
+  Copyright © 2015年 infoware. All rights reserved.
+*/
+
+/**
+ *  Button
+ */
+
+ok = "确定";
+return = "返回";
+countingEntry = "数量输入";
+save = "保存";
+export = "导出";
+off = "关";
+on = "开";
+delete = "删除";
+cancel = "取消";
+add = "添加";
+logon = "登陆";
+userAccountSetup = "设置用户账户";
+update = "更新";
+helpButton = "帮助";
+back = "返回";
+camera = "相机";
+
+/**
+ *  Main Menu
+ */
+
+mUserID = "用户名";
+mPassword = "密码";
+mTitle = "库存盘点-精简版";
+mTitle_pro = "库存盘点-专业版";
+mTitle_ent = "库存盘点-企业版";
+mMainMenu = "主页";
+mImport = "库存记录导入";
+mEntry = "盘点数量输入";
+mEnquirty = "库存盘点查询";
+mExport = "盘点数量导出";
+mRemove = "历史记录清除";
+mUserAccountsSetup = "设置用户帐户";
+mFTPServer = "设置FTP服务器";
+mBluetooth = "蓝牙扫描条码";
+mCamera = "相机扫描条码";
+mEmail = "发送邮件";
+/**
+ *  Import
+ */
+
+topTitle = "库存盘点-精简版";
+topTitle_pro = "库存盘点-专业版";
+topTitle_ent = "库存盘点-企业版";
+title = "库存记录导入";
+FTPServer = "FTP 服务器";
+FTPUser = "FTP 用户名";
+chooseFile = "请在下列文件中选择需要导入的文件：";
+fileName = "文件名";
+dataAndTime = "日期";
+
+/**
+ *  Import Success
+ */
+
+isFTPServer = "FTP 服务器";
+isFTPUser = "FTP 用户名";
+isFileName = "文件名";
+isImportSuccess = "文件导入成功";
+isNumOfRecords = "记录总数";
+isNumOfSKU = "SKU总数:";
+isTotalOnhandQTY = "库存总数：";
+
+/**
+ *  Entry
+ */
+
+eTitle = "输入盘点数量";
+eFileName = "文件名";
+eNumOfSKU = "SKU总数:";
+eSKUCode = "SKU 编码";
+eSKUName = "SKU 名称";
+eOnhandQty = "库存数量";
+eCountQty = "盘点数量";
+eVarianceQty = "相差数量";
+eTotal = "总量";
+
+
+/**
+ *  Enquiry
+ */
+
+enTitle = "盘点记录查询";
+enPrompt = "请在下列文件中选择要显示的文件：";
+enDataAndTime = "盘点日期";
+enNumOfSKU = "SKU\n总数量";
+enOnhandQty = "库存\n数量";
+enCountedQty = "盘点\n数量";
+
+/**
+ *  Enquiry Detal
+ */
+
+edTitle = "盘点数量查询";
+edDataAndTime = "盘点日期:";
+
+/**
+ *  Export
+ */
+
+exTitle = "盘点数量导出";
+exPrompt = "请在下列文件中选择需要导出的文件：";
+
+/**
+ *  Export Success
+ */
+
+exsTitle = "盘点数量导出";
+exsDate = "盘点日期";
+exsNumOfSKU = "SKU总数量";
+exsOnhandQty = "库存总量";
+exsCountedQty = "盘点总量";
+exsVarianceQty = "相差总量";
+exsFTPServer = "FTP 服务器";
+exsFTPUser = "FTP 用户名";
+exsFileName = "文件名";
+exsState = "请输入导出文件的名称.";
+exsExportSuccess = "文件导出成功：";
+exsExportFailed = "文件导出失败：";
+
+/**
+ *  Remove
+ */
+
+rTitle = "历史盘点记录删除";
+rPrompt = "清除历史导入记录";
+rData = "盘点日期";
+rNumOfSKU = "SKU总量";
+rOnhandQty = "库存\n数量";
+rCountedQty = "盘点\n数量";
+
+/**
+ *  User Account Setup
+ */
+
+usTitle = "设置用户账户";
+usPrompt = "请选择下面的一个帐户进行维护，或单击“添加”按钮以创建一个新帐户";
+usUserID = "用户ID";
+usName = "用户名";
+usAdmin = "管理员";
+
+/**
+ *  User Account Add
+ */
+
+uTitle = "设置用户账户";
+uUserID = "用户 ID";
+uName = "用户名";
+uPassword = "密码";
+uAdmin = "管理员";
+
+/**
+ *  FTP Server
+ */
+
+fsTitle = "设置FTP服务器的链接";
+fsFTPServer = "FTP 服务器";
+fsFTPUser = "FTP 用户名";
+fsFTPPassword = "FTP 密码";
+
+/**
+ *  Blutooth Scanner
+ */
+blTitle = "蓝牙扫描盘点";
+blFileName = "文件名:";
+blBarcode = "条码:";
+
+/**
+ *  iPad Camera Scanner
+ */
+
+icTitle = "相机扫描条码";
+
+/**
+ *  Alert
+ */
+
+warning = "警告";
+imSetFTPServer = "请设置FTP服务器";
+imprompt = "获取文件失败，请再次尝试.";
+inchoose = "请选择文件!";
+aSuccess = "文件导入失败，请再次尝试";
+aeAlert = "请先导入一个文件";
+aexportAlert = "没有数据可以导出!";
+aexprortPrompt = "请首先设置FTP服务器!";
+arPrompt = "条历史盘点记录清楚成功";
+auAlert = "请选择一个账户 !";
+aucheck = "请输入管理员账户和密码";
+auUserID = "请输入一个管理员账号";
+auAdminName = "管理员账号";
+auPassword = "密码";
+prompt = "提示";
+userExist = "该用户已经存在！";
+auSaveSuccess =  "保存成功!";
+auDeleteSuccess = "删除成功!";
+aiSamePrompt = "一些SKUCode已经存在，是否要继续更新？";
+auCheckInput = "请检查网络连接或输入是否有误.";
+numOfRecodes = "一次最多可以导入50条记录！";
+inputfileName = "请输入文件名！";
+/**
+ *  left Menu
+ */
+
+lMainMenu = "主页";
+limport = "历史记录导入";
+lEntry = "盘点数量输入";
+lEnquiry = "盘点数量查询";
+lExport = "盘点数量导出";
+lRemove = "库存记录删除";
+lBluetooth = "蓝牙扫描条码";
+/**
+ *  Email
+ */
+
+eChooseAttachment = "附件选择";
+epromot = "请选择需要发送的文件。";
+epromotSet = "首先在设备的\"设置\"->\"邮件、通讯录、日历\"->\"添加账户\"下添加一个邮件账户！然后，点击已添加账户\"邮件\"打开开关。";
+/**
+ *  help
+ */
+
+objective = "简介";
+
+
+help = "简介\n此应用程序的目的是帮助企业用户记录库存信息的一个位置，它可以是一个精品，柜台，甚至是一个小仓库。\n假设用户已经操作了库存系统，可以将库存的库存量输出到库存位置。库存完成后，用户在自己的库存系统中进一步处理导出数量。\n\n以下是该应用的一个简单的操作步骤\n\n1.      设置账户\n为该应用程序添加或删除用户。\n\n2.设置FTP服务器的连接信息。\n这是用户自己公司用来存储库存数量的FTP 服务器。\n\n3.      导入库存信息\n连接服务器获取库存文件，导入文件到本地数据库。\n文件的格式是一个有4列的CSV文件：\n产品编码，产品名称，库存数量，条形码\n\n4.      输入盘点数量\n通过使用“盘点数量输入”，用户可以输入计数的数量，也可以看到盘点与库存之间的数量差异\n\n5.      盘点数量导出\n在完成盘点之后，用户可以导出盘点数量到FTP服务器进行进一步处理\n导出文件的格式是一个包含5列的CSV文件：\n产品编码、产品名称、库存数量、盘点数量、相差数量\n\n6.      历史记录清除\n这是一个管理功能，用户可以删除历史盘点记录以减少对ipad本地数据库的大小。\n\n7.       蓝牙扫描条码\n利用条形码扫描功能可加快盘点的速度，用户可以将一个蓝牙扫描仪连接在iPad进行条形码扫描，该应用程序自动找出扫描条形码对应产品的相关信息，找出产品后盘点数量会增加1，如果扫描条码的产品信息在程序中不存在，系统会自动增加一条记录，其产品编码与条形码相同。";
+

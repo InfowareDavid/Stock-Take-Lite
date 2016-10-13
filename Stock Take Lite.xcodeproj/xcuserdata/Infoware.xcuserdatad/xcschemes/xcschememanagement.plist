@@ -4,14 +4,34 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Stock Take Enterprise.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
 		<key>Stock Take Lite.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Stock Take Pro.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BF3A38C11C27DCC50009A89F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BF3A39181C27E01F0009A89F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BFA04A581BBA70650019C604</key>
 		<dict>
 			<key>primary</key>

@@ -8,14 +8,25 @@
 
 import UIKit
 
+
+let DEVICE = UIDevice.currentDevice().userInterfaceIdiom //获取当前设备类型
+//let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
+//let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        self.window?.backgroundColor = UIColor.whiteColor();
+        let testVC = INFODrawerViewController();
+        
+        let logon = LogonViewController();
+        
+        let drawer = INFOViewController();
+        drawer.initWithLeftViewController(testVC, centerViewController: logon);
+        self.window?.rootViewController = drawer;
         return true
     }
 
