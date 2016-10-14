@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		99A52693B44409691C2D9324 /* Pods_Stock_Take_LiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */; };
+		BEF4014FB494CC8759F64CBF /* Pods_Stock_Take_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */; };
 		BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
@@ -175,6 +177,9 @@
 		BF6625EB1BCF516200BF2BD7 /* CountingEnquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */; };
 		BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */; };
 		BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B91BF5B243007542B4 /* HelpView.swift */; };
+		BF7F4D571DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D561DB0C85E00FB4FA0 /* NetWorkManager.swift */; };
+		BF7F4D581DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D561DB0C85E00FB4FA0 /* NetWorkManager.swift */; };
+		BF7F4D591DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D561DB0C85E00FB4FA0 /* NetWorkManager.swift */; };
 		BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */; };
 		BF838E311BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */; };
 		BF83AC471BC8DDD600451902 /* ImportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */; };
@@ -245,6 +250,9 @@
 		BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */; };
 		BFFBADD91BC7666F00026817 /* QuantityImportBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */; };
 		BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */; };
+		D0392FC5A723DC930D17949A /* Pods_Stock_Take_LiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */; };
+		F0249F197800A6636B64D523 /* Pods_Stock_Take_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */; };
+		F45914EBD8DAB91793D0BDA7 /* Pods_Stock_Take_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -265,6 +273,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.release.xcconfig"; sourceTree = "<group>"; };
+		3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.debug.xcconfig"; sourceTree = "<group>"; };
+		49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.release.xcconfig"; sourceTree = "<group>"; };
+		8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.release.xcconfig"; sourceTree = "<group>"; };
+		88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		BF33F4E11D20E82800A49C0B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
@@ -280,6 +301,7 @@
 		BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryView.swift; sourceTree = "<group>"; };
 		BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		BF6BC1B91BF5B243007542B4 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		BF7F4D561DB0C85E00FB4FA0 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryView.swift; sourceTree = "<group>"; };
 		BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryTableViewCell.swift; sourceTree = "<group>"; };
 		BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSuccessViewController.swift; sourceTree = "<group>"; };
@@ -381,6 +403,8 @@
 		BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupViewController.swift; sourceTree = "<group>"; };
 		BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportBaseView.swift; sourceTree = "<group>"; };
 		BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportTableViewCell.swift; sourceTree = "<group>"; };
+		DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.debug.xcconfig"; sourceTree = "<group>"; };
+		E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +414,7 @@
 			files = (
 				BF33F4E31D20E84800A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39091C27DCC50009A89F /* libsqlite3.tbd in Frameworks */,
+				F0249F197800A6636B64D523 /* Pods_Stock_Take_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +424,7 @@
 			files = (
 				BF33F4E41D20E85200A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39601C27E01F0009A89F /* libsqlite3.tbd in Frameworks */,
+				F45914EBD8DAB91793D0BDA7 /* Pods_Stock_Take_Enterprise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +434,7 @@
 			files = (
 				BF33F4E21D20E82800A49C0B /* MessageUI.framework in Frameworks */,
 				BFA04AAD1BBA782E0019C604 /* libsqlite3.tbd in Frameworks */,
+				BEF4014FB494CC8759F64CBF /* Pods_Stock_Take_Lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +442,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99A52693B44409691C2D9324 /* Pods_Stock_Take_LiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +450,25 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0392FC5A723DC930D17949A /* Pods_Stock_Take_LiteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8CB2B61F7813A27DC8CEFC4E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */,
+				B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */,
+				88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */,
+				5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */,
+				B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BF33F4D91D20E4AA00A49C0B /* Email */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +536,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BF7F4D551DB0C80F00FB4FA0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F4D561DB0C85E00FB4FA0 /* NetWorkManager.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		BF9420FA1BBBDD6F0045F300 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +582,8 @@
 				BFA04A701BBA70650019C604 /* Stock Take LiteTests */,
 				BFA04A7B1BBA70650019C604 /* Stock Take LiteUITests */,
 				BFA04A5A1BBA70650019C604 /* Products */,
+				F7AAF0DD162804E42471ED66 /* Pods */,
+				8CB2B61F7813A27DC8CEFC4E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -551,6 +602,7 @@
 		BFA04A5B1BBA70650019C604 /* Stock Take Lite */ = {
 			isa = PBXGroup;
 			children = (
+				BF7F4D551DB0C80F00FB4FA0 /* NetWork */,
 				BF33F4D91D20E4AA00A49C0B /* Email */,
 				BFC7E7001C2294D6007AEA2B /* iPad Camera Scan */,
 				BF3B44291C11818F00D85339 /*  Bluetooth Scanner */,
@@ -995,6 +1047,23 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F7AAF0DD162804E42471ED66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */,
+				0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */,
+				0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */,
+				8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */,
+				4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */,
+				AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */,
+				49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */,
+				9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */,
+				DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */,
+				84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1002,9 +1071,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A390F1C27DCC50009A89F /* Build configuration list for PBXNativeTarget "Stock Take Pro" */;
 			buildPhases = (
+				09C266432ADD500DE0D0F2F5 /* Check Pods Manifest.lock */,
 				BF3A38C21C27DCC50009A89F /* Sources */,
 				BF3A39081C27DCC50009A89F /* Frameworks */,
 				BF3A390A1C27DCC50009A89F /* Resources */,
+				87850AD228493DAE573F79F1 /* Embed Pods Frameworks */,
+				14C409DAAD3DF080AD6E174B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1019,9 +1091,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A39661C27E01F0009A89F /* Build configuration list for PBXNativeTarget "Stock Take Enterprise" */;
 			buildPhases = (
+				9F67684F384FE30AC74F68A7 /* Check Pods Manifest.lock */,
 				BF3A39191C27E01F0009A89F /* Sources */,
 				BF3A395F1C27E01F0009A89F /* Frameworks */,
 				BF3A39611C27E01F0009A89F /* Resources */,
+				0EEB54287987663EB96B5F6B /* Embed Pods Frameworks */,
+				CD5F7B310BBBF1BA2E4AF063 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1036,9 +1111,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A811BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take Lite" */;
 			buildPhases = (
+				927C365899A1A77392B0BF4F /* Check Pods Manifest.lock */,
 				BFA04A551BBA70650019C604 /* Sources */,
 				BFA04A561BBA70650019C604 /* Frameworks */,
 				BFA04A571BBA70650019C604 /* Resources */,
+				95479D6EBA7FBEBE957D5BC4 /* Embed Pods Frameworks */,
+				09F0F67DECAC3DEA68CFD1F3 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1053,9 +1131,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A841BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteTests" */;
 			buildPhases = (
+				DC80644E8114243793B780DA /* Check Pods Manifest.lock */,
 				BFA04A691BBA70650019C604 /* Sources */,
 				BFA04A6A1BBA70650019C604 /* Frameworks */,
 				BFA04A6B1BBA70650019C604 /* Resources */,
+				6E87812D15A502A48B3CE5E4 /* Embed Pods Frameworks */,
+				4F5E1140FED7E5091AE72289 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1071,9 +1152,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A871BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteUITests" */;
 			buildPhases = (
+				CD2562604705A3273F704CD2 /* Check Pods Manifest.lock */,
 				BFA04A741BBA70650019C604 /* Sources */,
 				BFA04A751BBA70650019C604 /* Frameworks */,
 				BFA04A761BBA70650019C604 /* Resources */,
+				471F860AE12DE8FB649E2855 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1191,6 +1274,219 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		09C266432ADD500DE0D0F2F5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		09F0F67DECAC3DEA68CFD1F3 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0EEB54287987663EB96B5F6B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14C409DAAD3DF080AD6E174B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		471F860AE12DE8FB649E2855 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4F5E1140FED7E5091AE72289 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6E87812D15A502A48B3CE5E4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		87850AD228493DAE573F79F1 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		927C365899A1A77392B0BF4F /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		95479D6EBA7FBEBE957D5BC4 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F67684F384FE30AC74F68A7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD2562604705A3273F704CD2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CD5F7B310BBBF1BA2E4AF063 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DC80644E8114243793B780DA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF3A38C21C27DCC50009A89F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1228,6 +1524,7 @@
 				BF3A38DE1C27DCC50009A89F /* INFOViewController.swift in Sources */,
 				BF3A38DF1C27DCC50009A89F /* UserAccountsAddViewController.swift in Sources */,
 				BF3A38E01C27DCC50009A89F /* RecordsRemovalViewController.swift in Sources */,
+				BF7F4D581DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */,
 				BF3A38E11C27DCC50009A89F /* UserAccountsAddView.swift in Sources */,
 				BF3A38E21C27DCC50009A89F /* CountingEnquiryViewController.swift in Sources */,
 				BF3A38E31C27DCC50009A89F /* AppDelegate.swift in Sources */,
@@ -1307,6 +1604,7 @@
 				BF3A39351C27E01F0009A89F /* INFOViewController.swift in Sources */,
 				BF3A39361C27E01F0009A89F /* UserAccountsAddViewController.swift in Sources */,
 				BF3A39371C27E01F0009A89F /* RecordsRemovalViewController.swift in Sources */,
+				BF7F4D591DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */,
 				BF3A39381C27E01F0009A89F /* UserAccountsAddView.swift in Sources */,
 				BF3A39391C27E01F0009A89F /* CountingEnquiryViewController.swift in Sources */,
 				BF3A393A1C27E01F0009A89F /* AppDelegate.swift in Sources */,
@@ -1386,6 +1684,7 @@
 				BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */,
 				BF9E85F81BD4F5480091CE82 /* UserAccountsAddViewController.swift in Sources */,
 				BFFBADD51BC75FA800026817 /* RecordsRemovalViewController.swift in Sources */,
+				BF7F4D571DB0C85E00FB4FA0 /* NetWorkManager.swift in Sources */,
 				BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */,
 				BFFBADCF1BC75F6B00026817 /* CountingEnquiryViewController.swift in Sources */,
 				BFA04A5D1BBA70650019C604 /* AppDelegate.swift in Sources */,
@@ -1493,6 +1792,7 @@
 /* Begin XCBuildConfiguration section */
 		BF3A39101C27DCC50009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1510,6 +1810,7 @@
 		};
 		BF3A39111C27DCC50009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1527,6 +1828,7 @@
 		};
 		BF3A39671C27E01F0009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1544,6 +1846,7 @@
 		};
 		BF3A39681C27E01F0009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1648,6 +1951,7 @@
 		};
 		BFA04A821BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1668,6 +1972,7 @@
 		};
 		BFA04A831BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -1688,6 +1993,7 @@
 		};
 		BFA04A851BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
@@ -1701,6 +2007,7 @@
 		};
 		BFA04A861BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
@@ -1714,6 +2021,7 @@
 		};
 		BFA04A881BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1727,6 +2035,7 @@
 		};
 		BFA04A891BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
