@@ -54,7 +54,7 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
                 var temOnhandNum = 0;
                 var temcountedNum = 0;
                 //MARK: CHANGE 4
-                for i in 0 ... itemArray.count {
+                for i in 0 ..< itemArray.count {
                     let fileModel:FileDataModel = itemArray[i] as!FileDataModel;
                     temOnhandNum = temOnhandNum + (fileModel.onhandQty?.integerValue)!;
                     temcountedNum = temcountedNum + (fileModel.countQty?.integerValue)!;

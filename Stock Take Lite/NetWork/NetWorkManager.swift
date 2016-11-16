@@ -10,18 +10,17 @@ import UIKit
 import Alamofire
 
 typealias SuccessBlock = (NSData)->Void
+typealias FaileBlock = (NSError)->Void
 
-class IFONetManager: NSObject{
+class NetWorkManager: NSObject{
     
     var         webData:                    NSMutableData!
-    var         soapResults:                String = String()
-    var         elementFound:               Bool = false
-    var         matchingElement:            String!
     var         currentService:             String = String()
     var         currentAction:              String = String()
     var         successBlock:               SuccessBlock?
+    var         faileBlock:                 FaileBlock?
     
-    func getRequest(service:String,action:String,paramValues:String,success:SuccessBlock)->NSMutableURLRequest{
+    func postRequest(service:String,action:String,paramValues:String,success:SuccessBlock){
         
         self.successBlock = success
         
@@ -29,8 +28,8 @@ class IFONetManager: NSObject{
         
         self.currentAction = action
         
-        
         let URL = getURL(service, action: action)
+        print(URL)
         
         let soapMsg:String = toSoapMessage(action, pams: paramValues)
         
@@ -38,28 +37,28 @@ class IFONetManager: NSObject{
         
         
         Alamofire.request(mutableURLRequest).responseData { response in
-            
-//            let string:NSString = NSString(data: response.data!, encoding: NSUTF8StringEncoding)!
-//            print("response----------->\(string)")
-//            let parse:NSXMLParser = NSXMLParser(data: response.data!)
-//            parse.delegate = self
-//            parse.parse()
-            
-            //这里直接调用返回数据的Block，放在其他地方解析Model?
-            if let successful = self.successBlock{
-                successful(response.data!)
+
+            if response.result.isSuccess{
+                if let successful = self.successBlock{
+                    successful(response.data!)
+                }
+            }else{
+                 print("请求数据失败----》\(response.result.error?.description)")
+            //    self.faileBlock!(response.result.error!)
             }
         }
         
-        return mutableURLRequest
     }
     
+   
     func getMutableRequest(action:String,URL:NSURL,soapMsg:String)->NSMutableURLRequest{
         
-        let mutableURLRequest: NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+       // let mutableURLRequest: NSMutableURLRequest = NSMutableURLRequest(URL:URL)
+        let mutableURLRequest:NSMutableURLRequest = NSMutableURLRequest(URL: URL, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 1)
         mutableURLRequest.setValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        
-        mutableURLRequest.setValue(kNameSpace+action, forHTTPHeaderField: "SOAPAction")
+         let soapAction = kNameSpace+action
+        print("\(soapAction)")
+        mutableURLRequest.setValue(soapAction, forHTTPHeaderField: "SOAPAction")
         mutableURLRequest.setValue("\(soapMsg.characters.count)", forHTTPHeaderField: "Content-Length")
         mutableURLRequest.HTTPMethod = "POST"
         mutableURLRequest.HTTPBody = soapMsg.dataUsingEncoding(NSUTF8StringEncoding)
@@ -74,12 +73,12 @@ class IFONetManager: NSObject{
      
         action: 服务端口 eg.  GetProduct
      
-     Return: "http://192.168.2.17:9090/ProductService.asmx/GetProduct"
-     
+     Return: "http://192.168.2.17:9090/ProductService.asmx?op=GetProduct"
+     ?op=
      */
     
     func getURL(service:String,action:String)->NSURL{
-        let urlStr = kURLHeader+service+"/"+action
+        let urlStr = kURLHeader+service+"?op="+action
         return NSURL(string: urlStr)!
     }
     
@@ -101,40 +100,13 @@ class IFONetManager: NSObject{
         message += "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
         message += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"
         message += "<soap:Body>"
-        message += "<\(action) xmlns=\(kNameSpace)/\">"
+        message += "<\(action) xmlns=\"\(kNameSpace)\">"
         message += "\(pams)"
         message += "</\(action)>"
         message += "</soap:Body>"
         message += "</soap:Envelope>"
+        print(message)
         return message
     }
-    
-//
-//    
-//    //MARK:- Parse Delegate
-//    
-//    
-//    func parser(parser: NSXMLParser, foundCharacters string: String) {
-//       
-//        //在这里判断是哪一个服务，即可知应该是用哪一个Model
-//        
-//    }
-//    
-//    func parser(parser: NSXMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
-//        
-//        if elementName == "Product"{
-//            // print("\(elementName)-------\(soapResults)")
-//        }
-//    }
-//    
-//    func parserDidEndDocument(parser: NSXMLParser) {
-//        // print(soapResults)
-//        soapResults = ""
-//    }
-//    
-//    func parser(parser: NSXMLParser, parseErrorOccurred parseError: NSError) {
-//        soapResults = ""
-//    }
-//    
 
 }

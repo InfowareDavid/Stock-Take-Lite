@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Alamofire
+
 
 
 let DEVICE = UIDevice.currentDevice().userInterfaceIdiom //获取当前设备类型
@@ -16,10 +18,26 @@ let DEVICE = UIDevice.currentDevice().userInterfaceIdiom //获取当前设备类
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    let reachManager = NetworkReachabilityManager()
+
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        
+
         self.window?.backgroundColor = UIColor.whiteColor();
+        
+        
+        reachManager!.listener = { status in
+            
+            switch status {
+            case .NotReachable,.Unknown:
+                print("网络不可用")
+            case .Reachable(.EthernetOrWiFi),.Reachable(.WWAN):
+             print("网络可用")
+            
+            }
+        }
+        reachManager?.startListening()
+        
         let testVC = INFODrawerViewController();
         
         let logon = LogonViewController();
@@ -51,7 +69,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
+    
+   // var window: UIWindow?
+    
 
 }
 

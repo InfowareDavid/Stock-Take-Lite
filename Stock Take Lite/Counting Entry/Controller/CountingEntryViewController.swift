@@ -65,7 +65,37 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         let num = self.totalOnhandQty - self.totalCountQty;
         self.countingEntryView.varianceTotalLabel.text = String(format: "%0.0f", arguments: [Float(num)]);
         MBProgressHUD.hideHUDForView(self.view, animated: true);
+       // postData()
     }
+    
+    func postData(){
+        
+        var message = "<data>"
+        for item in self.dataArray {
+            let fileModel:FileDataModel = item  as! FileDataModel
+            message += "<CountingEntryTable>"
+            message += "<skuCode>\(fileModel.skuCode!)</skuCode>"
+            message += "<skuName>\(fileModel.skuName!)</skuName>"
+            message += "<onHandQty>\(fileModel.onhandQty!)</onHandQty>"
+            message += "<countQty>\(fileModel.countQty!)</countQty>"
+            message += "<varianceQty>\(fileModel.varianceQty!)</varianceQty>"
+            message += "</CountingEntryTable>"
+        }
+        message += "</data>"
+        
+        networkManager.postRequest(Service.CountingEntry.rawValue, action: ServiceAction.CountEntryServiceAction.AddCount.rawValue, paramValues: message, success:{
+            data in
+            //            self.parse = NSXMLParser(data: data)
+            //            self.parse!.delegate = self
+            //            self.parse!.parse()
+            
+            let string = NSString(data: data, encoding: NSUTF8StringEncoding)
+            count+=1
+            print("count------------>\(count)")
+            print("\(string!)")
+        })
+    }
+
     
     
     func getCurrentTime()->NSString{
@@ -82,7 +112,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func updateVrianceDataBaseAndLabel(){
         
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             let variance = Float((fileModel.onhandQty?.floatValue)!) - Float((fileModel.countQty?.floatValue)!);
                 fileModel.varianceQty = String(format: "%0.0f", arguments: [variance]);
@@ -97,7 +127,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     }
     
     func updateCountDataBaseAndLabel(){
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             let Str:NSString = countEntryArray[i] as! NSString;
             fileModel.countQty = Str;
@@ -109,7 +139,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func calculateCountQty(){
         self.totalCountQty = 0.0;
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let Str:NSString = countEntryArray[i] as! NSString;
             self.totalCountQty = Float(self.totalCountQty) + Float(Str.floatValue);
         }
@@ -160,7 +190,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func initCountEntryArray(){
         self.countEntryArray.removeAllObjects();
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             let Str:NSString = fileModel.countQty!;
             self.countEntryArray.addObject(Str);
@@ -174,7 +204,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
 
     func updateTotalLabelText(){
         
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             totalOnhandQty = Float(totalOnhandQty ) + Float((fileModel.onhandQty?.floatValue)!)
         }

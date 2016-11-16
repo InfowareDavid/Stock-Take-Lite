@@ -48,7 +48,7 @@ class CountingEnquiryDetalViewController: BaseViewController,UITableViewDelegate
         var temOhand:Float = 0;
         var temCounted:Float = 0.0;
         var variance:Float = 0.0;
-        for i in 0 ... self.dataArray.count{
+        for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = self.dataArray[i] as! FileDataModel;
             temOhand = Float(temOhand) + Float((fileModel.onhandQty?.floatValue)!);
             temCounted = Float(temCounted) + Float((fileModel.countQty?.floatValue)!);

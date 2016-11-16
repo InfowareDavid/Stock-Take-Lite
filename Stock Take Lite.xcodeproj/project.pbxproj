@@ -170,9 +170,9 @@
 		BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */; };
 		BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */; };
 		BF3B44301C11827200D85339 /* BluetoothScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */; };
-		BF3BD0611DB0E8BB00C639C5 /* IFONetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* IFONetManager.swift */; };
-		BF3BD0621DB0E8BB00C639C5 /* IFONetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* IFONetManager.swift */; };
-		BF3BD0631DB0E8BB00C639C5 /* IFONetManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* IFONetManager.swift */; };
+		BF3BD0611DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
+		BF3BD0621DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
+		BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
 		BF41DA591CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
 		BF41DA5A1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
 		BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
@@ -299,7 +299,7 @@
 		BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stock Take Enterprise-Info.plist"; sourceTree = "<group>"; };
 		BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerViewController.swift; sourceTree = "<group>"; };
 		BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerView.swift; sourceTree = "<group>"; };
-		BF3BD0601DB0E8BB00C639C5 /* IFONetManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IFONetManager.swift; sourceTree = "<group>"; };
+		BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		BF41DA581CD352C200AFA721 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerCell.swift; sourceTree = "<group>"; };
 		BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryView.swift; sourceTree = "<group>"; };
@@ -544,7 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */,
-				BF3BD0601DB0E8BB00C639C5 /* IFONetManager.swift */,
+				BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -1184,9 +1184,11 @@
 				TargetAttributes = {
 					BF3A38C11C27DCC50009A89F = {
 						DevelopmentTeam = U837TW5R38;
+						LastSwiftMigration = 0800;
 					};
 					BF3A39181C27E01F0009A89F = {
 						DevelopmentTeam = U837TW5R38;
+						LastSwiftMigration = 0800;
 					};
 					BFA04A581BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1509,7 +1511,7 @@
 				BF33F4ED1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF3A38CC1C27DCC50009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A38CD1C27DCC50009A89F /* QuantityImportTableViewCell.swift in Sources */,
-				BF3BD0621DB0E8BB00C639C5 /* IFONetManager.swift in Sources */,
+				BF3BD0621DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
 				BF3A38CE1C27DCC50009A89F /* CountingEntryView.swift in Sources */,
 				BF3A38CF1C27DCC50009A89F /* CountingEntryViewController.swift in Sources */,
 				BF3A38D01C27DCC50009A89F /* HelpView.swift in Sources */,
@@ -1590,7 +1592,7 @@
 				BF33F4EE1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */,
-				BF3BD0631DB0E8BB00C639C5 /* IFONetManager.swift in Sources */,
+				BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
 				BF3A39251C27E01F0009A89F /* CountingEntryView.swift in Sources */,
 				BF3A39261C27E01F0009A89F /* CountingEntryViewController.swift in Sources */,
 				BF3A39271C27E01F0009A89F /* HelpView.swift in Sources */,
@@ -1671,7 +1673,7 @@
 				BF33F4EC1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */,
-				BF3BD0611DB0E8BB00C639C5 /* IFONetManager.swift in Sources */,
+				BF3BD0611DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
 				BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */,
 				BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */,
 				BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */,
@@ -1812,6 +1814,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1830,6 +1833,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1848,6 +1852,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1866,6 +1871,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

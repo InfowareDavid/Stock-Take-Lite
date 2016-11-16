@@ -7,13 +7,51 @@
 //
 
 import UIKit
+import Alamofire
 
 class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerControllerPressenting {
     weak var drawer:            INFOViewController?;
+    var      networkManager:         NetWorkManager = NetWorkManager()
+    var      activityIndicatorView:                   UIActivityIndicatorView!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
+        activityIndicatorView.frame = CGRectMake(80,10, 0,0)
+        activityIndicatorView.activityIndicatorViewStyle = .White
+        activityIndicatorView.hidesWhenStopped = true
+        activityIndicatorView.color = UIColor.blackColor()
+     //   activityIndicatorView.startAnimating()
+        self.view.addSubview(activityIndicatorView)
+        
+
+        
     }
+    
+//    func netWorkAvailable()->Bool{
+//        
+//        var isAvailable:Bool = false
+//        let NetworkManager = NetworkReachabilityManager()
+//
+//        NetworkManager!.listener = { status in
+//            
+//            switch status {
+//            case .NotReachable:
+//                isAvailable = false
+//            case .Unknown:
+//               isAvailable = false
+//            case .Reachable(.EthernetOrWiFi):
+//                
+//               isAvailable = true
+//            case .Reachable(.WWAN):
+//                isAvailable = true
+//            }
+//        }
+//       // NetworkManager!.startListening()
+//        
+//        return isAvailable
+//    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
