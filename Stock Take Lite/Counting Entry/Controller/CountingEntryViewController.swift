@@ -181,7 +181,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
             self.countingEntryView.skuNumberTextLabel.text = "\(self.dataArray.count)";
         }else{
             self.countingEntryView.fileNameTextLabel.text = self.fileName as String;
-            self.countingEntryView.skuNumberTextLabel.text = "\(self.numOfSKU)";
+            self.countingEntryView.skuNumberTextLabel.text = "\(self.numOfSKU!)";
             dataArray = dbManager.contentWithFileName(self.fileName);
             self.initCountEntryArray();
         }

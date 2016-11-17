@@ -67,7 +67,7 @@ class RecordsRemovalViewController: BaseViewController,UITableViewDelegate,UITab
             dataFromate.dateFormat = "dd-MMM-yyyy HH:mm";
             var     dataBaseDate:Date;
             self.dataArray.removeAllObjects()
-            for i in 0..<self.dataArray.count{
+            for i in 0 ..< self.datesArray.count{
                 print(self.datesArray)
                 dataBaseDate = dataFromate.date(from: self.datesArray[i] as! String)!;
                 if dataBaseDate.compare(seletedDate) == ComparisonResult.orderedAscending{
@@ -96,8 +96,8 @@ class RecordsRemovalViewController: BaseViewController,UITableViewDelegate,UITab
             var tempOnhandQty = 0;
             var tempCountedQty = 0;
             let enquiryModel = EnquiryModel();
-            let string = "\((self.dataArray[i] as AnyObject).count)"
-            enquiryModel.skuNum = string as NSString?
+            let string = "\(((self.dataArray[i] as AnyObject).count)!)"
+            enquiryModel.skuNum = string as NSString
             for j in 0..<(self.dataArray[i] as AnyObject).count{
                 let array:NSArray = self.dataArray[i] as! NSArray
                 let fileDataModel = array[j] as! FileDataModel;
@@ -148,9 +148,9 @@ class RecordsRemovalViewController: BaseViewController,UITableViewDelegate,UITab
     
     func removeFileFromFTPServer(_ name:NSString){
         
-        let filePath = CSVFILEPATH + "/\(name)";
+        let filePath = CSVFILEPATH + "/\(name)"
         do{
-            try  self.fileManager.removeItem(atPath: filePath as String);
+            try  self.fileManager.removeItem(atPath: filePath as String)
         }catch{
             
         }
@@ -243,10 +243,12 @@ class RecordsRemovalViewController: BaseViewController,UITableViewDelegate,UITab
         }
         
         let enquiryModel:EnquiryModel = self.enquryDataArray[(indexPath as NSIndexPath).row] as! EnquiryModel;
-        cell?.dataAndTimeLabel.text = enquiryModel.date as? String;
-        cell?.numberOfSKULabel.text = enquiryModel.skuNum as? String;
-        cell?.onhandQtyLabel.text = enquiryModel.onhandQty as? String;
-        cell?.countedQtyLabel.text = enquiryModel.countedQty as? String;
+        cell?.dataAndTimeLabel.text = enquiryModel.date as String?
+        
+        cell?.numberOfSKULabel.text = enquiryModel.skuNum as String?
+        
+        cell?.onhandQtyLabel.text = enquiryModel.onhandQty as String?
+        cell?.countedQtyLabel.text = enquiryModel.countedQty as String?
         
         return cell!;
     }

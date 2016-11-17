@@ -74,11 +74,11 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
         succesed = ftpManager.uploadFile(URL(string:self.filePath as String), to: server);
         if succesed {
             self.removeTempFile();
-            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with: localString("exsExportSuccess") + " \(self.fileName)", waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with: localString("exsExportSuccess") + " \(self.fileName!)", waitUntilDone: true);
             self.performSelector(onMainThread: #selector(ExportSuccessViewController.progressHUDHiden), with: nil, waitUntilDone: true);
         }else{
             self.removeTempFile();
-            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with:localString("exsExportFailed") + " \(self.fileName)", waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with:localString("exsExportFailed") + " \(self.fileName!)", waitUntilDone: true);
             self.performSelector(onMainThread: #selector(ExportSuccessViewController.progressHUDHiden), with: nil, waitUntilDone: true);
         }
     }

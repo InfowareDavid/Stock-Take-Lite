@@ -85,9 +85,9 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
     
     func setRecodeLabelName(){
         
-        self.successView.recordsTextLabel.text = "\(self.recodes)";
-        self.successView.skuTextLabel.text = "\(self.recodes)";
-        self.successView.onhandQuantityTextLabel.text = "\(self.recodes)";
+        self.successView.recordsTextLabel.text = "\(self.recodes!)";
+        self.successView.skuTextLabel.text = "\(self.recodes!)";
+        self.successView.onhandQuantityTextLabel.text = "\(self.recodes!)";
         
     }
     
@@ -186,7 +186,7 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
         
         let countingEntryVC = CountingEntryViewController();
         countingEntryVC.fileName = self.downloadFileName;
-        countingEntryVC.numOfSKU = self.recodes;
+        countingEntryVC.numOfSKU = self.recodes!;
         self.drawer?.repleaceCenterViewControllerWithViewController(countingEntryVC);
         
     }
