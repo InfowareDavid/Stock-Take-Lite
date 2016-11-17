@@ -15,15 +15,15 @@ class HelpViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         previousRow = 99;
-        self.view.backgroundColor = UIColor.whiteColor();
-        helpView = HelpView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        self.view.backgroundColor = UIColor.white;
+        helpView = HelpView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.view.addSubview(helpView);
         self.addButtonAction();
     }
     
     func addButtonAction(){
         
-        self.helpView.backButton.addTarget(self, action: #selector(HelpViewController.backButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.helpView.backButton.addTarget(self, action: #selector(HelpViewController.backButtonAction), for: UIControlEvents.touchUpInside);
         
     }
     

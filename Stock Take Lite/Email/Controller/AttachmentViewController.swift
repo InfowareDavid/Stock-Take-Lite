@@ -34,7 +34,7 @@ class AttachmentViewController: QuantityExportViewController {
                 
                 
                 emailVC.fileDate = enquiryModel.date;
-                let mywindow = UIApplication.sharedApplication().keyWindow
+                let mywindow = UIApplication.shared.keyWindow
                 mywindow?.rootViewController = emailVC
 
             }else{

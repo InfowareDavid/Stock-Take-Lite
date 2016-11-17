@@ -18,10 +18,10 @@ class HelpView: QuantityImportBaseView {
         super.init(frame: frame);
         self.secondeTopLabel.text = self.localString("objective");
         
-        self.topImageView.userInteractionEnabled = true;
-        backButton = UIButton(type: UIButtonType.System);
-        backButton.setTitle(localString("back"), forState: UIControlState.Normal);
-        backButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal);
+        self.topImageView.isUserInteractionEnabled = true;
+        backButton = UIButton(type: UIButtonType.system);
+        backButton.setTitle(localString("back"), for: UIControlState());
+        backButton.setTitleColor(UIColor.white, for: UIControlState());
         backButton.titleLabel?.font = FONT20()
         self.topImageView.addSubview(backButton);
         
@@ -33,10 +33,10 @@ class HelpView: QuantityImportBaseView {
         helpLabel.numberOfLines = 0;
         helpLabel.text = localString("help");
         
-        helpLabel.textColor = UIColor.blackColor();
+        helpLabel.textColor = UIColor.black;
         helpLabel.font = FONT20()
         helpScrollView.addSubview(helpLabel);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
            addPhoneHelpViewConstraint()
         }else{
             addHelpViewConstraint()
@@ -44,53 +44,53 @@ class HelpView: QuantityImportBaseView {
     }
     
     func addPhoneHelpViewConstraint(){
-        backButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.bottom.equalTo(self.topImageView.mas_bottom).with.offset(-10);
-            make.right.equalTo(self.mas_right).with.offset(-15);
+        backButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.topImageView.snp.bottom).offset(-10);
+            make.right.equalTo(self.snp.right).offset(-15);
             make.width.equalTo(25);
             make.height.equalTo(25);
             
         }
 
-        helpScrollView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(0);
-            make.right.equalTo(self.mas_right).with.offset(0);
-            make.bottom.equalTo(self.mas_bottom);
+        helpScrollView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left).offset(0);
+            make.right.equalTo(self.snp.right).offset(0);
+            make.bottom.equalTo(self.snp.bottom);
         }
 
-        helpLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            let height = self.getTextRectSize(self.helpLabel.text!, font: self.FONT20(), size: CGSizeMake(SCREENWIDTH-60, CGFloat.max)).height;
-            make.top.equalTo(self.helpScrollView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(10);
-            make.right.equalTo(self.mas_right).with.offset(-10);
-            make.bottom.equalTo(self.helpScrollView.mas_bottom);
+        helpLabel.snp.makeConstraints { (make) in
+            let height = self.getTextRectSize(self.helpLabel.text! as NSString, font: self.FONT20(), size: CGSize(width: SCREENWIDTH-60, height: CGFloat.greatestFiniteMagnitude)).height;
+            make.top.equalTo(self.helpScrollView.snp.top);
+            make.left.equalTo(self.snp.left).offset(10);
+            make.right.equalTo(self.snp.right).offset(-10);
+            make.bottom.equalTo(self.helpScrollView.snp.bottom);
             make.height.equalTo(height);
         }
     }
     
     func addHelpViewConstraint(){
-        backButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.bottom.equalTo(self.topImageView.mas_bottom).with.offset(-20);
-            make.right.equalTo(self.mas_right).with.offset(-30);
+        backButton.snp.makeConstraints { (make) in
+            make.bottom.equalTo(self.topImageView.snp.bottom).offset(-20);
+            make.right.equalTo(self.snp.right).offset(-30);
             make.width.equalTo(50);
             make.height.equalTo(50);
             
         }
         
-        helpScrollView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(0);
-            make.right.equalTo(self.mas_right).with.offset(0);
-            make.bottom.equalTo(self.mas_bottom);
+        helpScrollView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left).offset(0);
+            make.right.equalTo(self.snp.right).offset(0);
+            make.bottom.equalTo(self.snp.bottom);
         }
         
-        helpLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            let height = self.getTextRectSize(self.helpLabel.text!, font: UIFont.systemFontOfSize(20), size: CGSizeMake(SCREENWIDTH-60, CGFloat.max)).height;
-            make.top.equalTo(self.helpScrollView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(20);
-            make.right.equalTo(self.mas_right).with.offset(-20);
-            make.bottom.equalTo(self.helpScrollView.mas_bottom);
+        helpLabel.snp.makeConstraints { (make) in
+            let height = self.getTextRectSize(self.helpLabel.text! as NSString, font: UIFont.systemFont(ofSize: 20), size: CGSize(width: SCREENWIDTH-60, height: CGFloat.greatestFiniteMagnitude)).height;
+            make.top.equalTo(self.helpScrollView.snp.top);
+            make.left.equalTo(self.snp.left).offset(20);
+            make.right.equalTo(self.snp.right).offset(-20);
+            make.bottom.equalTo(self.helpScrollView.snp.bottom);
             make.height.equalTo(height);
         }
     }
@@ -105,13 +105,13 @@ class HelpView: QuantityImportBaseView {
     - returns: CGRect
     */
     
-    func getTextRectSize(text:NSString,font:UIFont,size:CGSize) -> CGRect {
+    func getTextRectSize(_ text:NSString,font:UIFont,size:CGSize) -> CGRect {
         
         let attributes = [NSFontAttributeName: font]
         
-        let option = NSStringDrawingOptions.UsesLineFragmentOrigin
+        let option = NSStringDrawingOptions.usesLineFragmentOrigin
         
-        let rect:CGRect = text.boundingRectWithSize(size, options: option, attributes: attributes, context: nil)
+        let rect:CGRect = text.boundingRect(with: size, options: option, attributes: attributes, context: nil)
         
         return rect;
         

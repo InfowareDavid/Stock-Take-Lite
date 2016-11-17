@@ -23,8 +23,8 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         dataArray = NSMutableArray();
         barcodeArray = NSMutableArray();
         dbManager = DataBase();
-        self.view.backgroundColor = UIColor.whiteColor();
-        bluetoothView = BluetoothScannerView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        self.view.backgroundColor = UIColor.white;
+        bluetoothView = BluetoothScannerView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.bluetoothView.tableView.delegate = self;
         self.bluetoothView.tableView.dataSource = self;
         self.bluetoothView.barcodeTextFiled.delegate = self;
@@ -37,9 +37,9 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     */
     
     func addButtonActions(){
-        self.bluetoothView.saveButton.addTarget(self, action: #selector(BluetoothScannerViewController.saveAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.bluetoothView.returnButton.addTarget(self, action: #selector(BluetoothScannerViewController.returnAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.bluetoothView.logoutButton.addTarget(self, action: #selector(BluetoothScannerViewController.logoutAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.bluetoothView.saveButton.addTarget(self, action: #selector(BluetoothScannerViewController.saveAction), for: UIControlEvents.touchUpInside);
+        self.bluetoothView.returnButton.addTarget(self, action: #selector(BluetoothScannerViewController.returnAction), for: UIControlEvents.touchUpInside);
+        self.bluetoothView.logoutButton.addTarget(self, action: #selector(BluetoothScannerViewController.logoutAction), for: UIControlEvents.touchUpInside);
     }
     
     /**
@@ -48,9 +48,9 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     
     func saveAction(){
         self.view.endEditing(true);
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true);
-        self.performSelectorInBackground(#selector(BluetoothScannerViewController.updateDataToDataBase), withObject: nil);
-        MBProgressHUD.hideHUDForView(self.view, animated: true);
+        MBProgressHUD.showAdded(to: self.view, animated: true);
+        self.performSelector(inBackground: #selector(BluetoothScannerViewController.updateDataToDataBase), with: nil);
+        MBProgressHUD.hide(for: self.view, animated: true);
     }
     
     /**
@@ -67,7 +67,7 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     */
     
     func logoutAction(){
-        let currentUser:CurrentUser = CurrentUser.current();
+        let currentUser:CurrentUser = CurrentUser.current;
         currentUser.user = nil;
         let logonVC = LogonViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(logonVC);
@@ -78,7 +78,8 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     */
     
     func updateDataToDataBase(){
-        for var indext = 0; indext < self.dataArray.count; indext = indext + 1{
+        //for var indext = 0; indext < self.dataArray.count; indext = indext + 1{
+            for indext in 0 ..< self.dataArray.count{
             let fileDataModel:FileDataModel = self.dataArray[indext] as! FileDataModel;
             fileDataModel.fileDate = self.getCurrentTime();
             self.dbManager.updateFileData(fileDataModel);
@@ -87,23 +88,23 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     
     //加载扫描条码的商品的详细信息
     
-    func loadDataFromDataBaseWithBarcode(barcode:String){
+    func loadDataFromDataBaseWithBarcode(_ barcode:String){
         var fileDataModel :FileDataModel;
        fileDataModel =  dbManager.recodeWithBarcode(barcode);
         if fileDataModel.skuCode != nil{
             if !isDataExistInDataArray(fileDataModel){
                 self.addOneForCountQty(fileDataModel);
                 let temVrianceQty = (fileDataModel.onhandQty?.integerValue)! - (fileDataModel.countQty?.integerValue)!;
-                fileDataModel.varianceQty = "\(temVrianceQty)";
-                self.dataArray.addObject(fileDataModel);
+                fileDataModel.varianceQty = "\(temVrianceQty)" as NSString?;
+                self.dataArray.add(fileDataModel);
             }
             self.updateTopViewLabels(fileDataModel);
         }else{
             //该条码不存在，在数据库新增记录
             let tempFileDataModel:FileDataModel = FileDataModel();
             
-            tempFileDataModel.barcode = barcode;
-            tempFileDataModel.skuCode = barcode;
+            tempFileDataModel.barcode = barcode as NSString?;
+            tempFileDataModel.skuCode = barcode as NSString?;
             tempFileDataModel.fileDate = getCurrentTime();
             tempFileDataModel.fileName = "Temporary name";
             tempFileDataModel.skuName = "SkuName";
@@ -111,7 +112,7 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
             tempFileDataModel.countQty = "1";
             tempFileDataModel.varianceQty = "-1";
             self.setLatestFileName(tempFileDataModel.fileName!);
-            self.dataArray.addObject(tempFileDataModel);
+            self.dataArray.add(tempFileDataModel);
             self.dbManager.addFileData(tempFileDataModel);
             self.updateTopViewLabels(tempFileDataModel);
         }
@@ -124,9 +125,9 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     - parameter fileName: 最后导入文件的名字
     */
     
-    func setLatestFileName(fileName:NSString){
+    func setLatestFileName(_ fileName:NSString){
         
-        let defaults:NSUserDefaults = NSUserDefaults();
+        let defaults:UserDefaults = UserDefaults();
         defaults.setValue(fileName, forKey: "DefaultsFileName");
         defaults.synchronize();
         
@@ -140,14 +141,15 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     - returns: true 存在->调用加一  false 不存在
     */
     
-    func isDataExistInDataArray(fileDataModel:FileDataModel)->Bool{
+    func isDataExistInDataArray(_ fileDataModel:FileDataModel)->Bool{
         if self.dataArray.count>0{
-            for var indext = 0;indext < self.dataArray.count ; indext = indext + 1{
+         //   for var indext = 0;indext < self.dataArray.count ; indext = indext + 1{
+                for indext in 0 ..< self.dataArray.count {
                 let model:FileDataModel = self.dataArray[indext] as! FileDataModel;
                 if model.barcode == fileDataModel.barcode{
                      self.addOneForCountQty(model);
                     let temVrianceQty = (model.onhandQty?.integerValue)! - (model.countQty?.integerValue)!;
-                    model.varianceQty = "\(temVrianceQty)";
+                    model.varianceQty = "\(temVrianceQty)" as NSString?;
                     return true
                 }
             }
@@ -159,9 +161,9 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         加一
     */
     
-    func addOneForCountQty(fileDataModel:FileDataModel){
+    func addOneForCountQty(_ fileDataModel:FileDataModel){
         let temNum = (fileDataModel.countQty?.integerValue)! + 1;
-        fileDataModel.countQty = "\(temNum)";
+        fileDataModel.countQty = "\(temNum)" as NSString?;
     }
     
     /**
@@ -169,7 +171,7 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     */
     //MARK: - 考虑若没有这个条码的情况
     
-    func updateTopViewLabels(fileDataModel:FileDataModel){
+    func updateTopViewLabels(_ fileDataModel:FileDataModel){
         
         var         onhandQty = 0;
         var         countQty = 0;
@@ -179,7 +181,8 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         let contentArray:NSMutableArray = self.dbManager.contentWithFileName(fileDataModel.fileName!);
         self.bluetoothView.skuNumberTextLabel.text = "\(contentArray.count)";
        
-        for var index = 0; index < self.dataArray.count; index = index + 1{
+       // for var index = 0; index < self.dataArray.count; index = index + 1{
+            for index in 0 ..< self.dataArray.count{
             let model:FileDataModel = self.dataArray[index] as! FileDataModel;
             print("\(model.skuCode)---\(model.countQty)");
             onhandQty = onhandQty + (model.onhandQty?.integerValue)!;
@@ -200,26 +203,26 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
     */
 
     func getCurrentTime()->NSString{
-        let date:NSDate = NSDate();
-        let dateFormate:NSDateFormatter = NSDateFormatter();
-        dateFormate.dateStyle = NSDateFormatterStyle.NoStyle;
-        dateFormate.timeStyle = NSDateFormatterStyle.NoStyle;
-        dateFormate.locale = NSLocale.currentLocale();
+        let date:Date = Date();
+        let dateFormate:DateFormatter = DateFormatter();
+        dateFormate.dateStyle = DateFormatter.Style.none;
+        dateFormate.timeStyle = DateFormatter.Style.none;
+        dateFormate.locale = Locale.current;
         dateFormate.dateFormat = "dd-MMM-yyyy HH:mm";
-        let   timeString = dateFormate.stringFromDate(date);
-        return timeString;
+        let   timeString = dateFormate.string(from: date);
+        return timeString as NSString;
     }
 
     //MARK:- TableView代理
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell :BluetoothScannerCell?;
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? BluetoothScannerCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? BluetoothScannerCell;
         if cell == nil {
-            cell = BluetoothScannerCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = BluetoothScannerCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
         
-        let fileModel: FileDataModel = self.dataArray[indexPath.row] as! FileDataModel;
+        let fileModel: FileDataModel = self.dataArray[(indexPath as NSIndexPath).row] as! FileDataModel;
         
         cell?.skuNameLabel.text = fileModel.skuName as? String;
         cell?.skuCodeLabel.text = fileModel.skuCode as? String;
@@ -229,23 +232,23 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         return cell!;
 
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray.count;
     }
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if DEVICE == .Phone{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DEVICE == .phone{
             return 50/1024.0 * SCREENHEIGHT
         }
         return 50
     }
 
     //MARK:- TextField代理
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         
         if string == "\n" {
             let str = self.barcodeString;
             if str != ""{
-                self.barcodeArray.addObject(str);
+                self.barcodeArray.add(str);
             }
             if self.barcodeArray.count != 0{
                 self.loadDataFromDataBaseWithBarcode(self.barcodeArray.lastObject as! String);
@@ -256,7 +259,7 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
 
             self.barcodeString = "";
         }else{
-            self.barcodeString = self.barcodeString.stringByAppendingString(string);
+            self.barcodeString = self.barcodeString.appending(string) as NSString!;
             
         }
         return true;
@@ -271,8 +274,8 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
 //        return true
 //    }
     
-    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        super.touchesBegan(touches, withEvent: event)
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         self.view.endEditing(true)
     }
     

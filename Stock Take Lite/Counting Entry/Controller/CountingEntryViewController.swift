@@ -31,13 +31,13 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         fileNameArray = NSMutableArray();
         dataArray = NSMutableArray();
         countEntryArray = NSMutableArray();
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor.white;
         self.loadMyView();
         //self.countingEntryView.tableView.reloadData();
     }
     
     func loadMyView(){
-        countingEntryView = CountingEntryView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        countingEntryView = CountingEntryView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.view.addSubview(countingEntryView);
         countingEntryView.tableView.delegate = self;
         countingEntryView.tableView.dataSource = self;
@@ -48,9 +48,9 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func addButtonActions(){
         
-        self.countingEntryView.saveButton.addTarget(self, action: #selector(CountingEntryViewController.saveButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.countingEntryView.returnButton.addTarget(self, action: #selector(CountingEntryViewController.returnButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.countingEntryView.logoutButton.addTarget(self, action: #selector(CountingEntryViewController.logoutAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.countingEntryView.saveButton.addTarget(self, action: #selector(CountingEntryViewController.saveButtonAction), for: UIControlEvents.touchUpInside);
+        self.countingEntryView.returnButton.addTarget(self, action: #selector(CountingEntryViewController.returnButtonAction), for: UIControlEvents.touchUpInside);
+        self.countingEntryView.logoutButton.addTarget(self, action: #selector(CountingEntryViewController.logoutAction), for: UIControlEvents.touchUpInside);
     }
     
     /**
@@ -59,12 +59,12 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func saveButtonAction(){
         self.view.endEditing(true);
-        MBProgressHUD.showHUDAddedTo(self.view, animated: true);
+        MBProgressHUD.showAdded(to: self.view, animated: true);
         self.updateCountDataBaseAndLabel();
         self.updateVrianceDataBaseAndLabel();
         let num = self.totalOnhandQty - self.totalCountQty;
         self.countingEntryView.varianceTotalLabel.text = String(format: "%0.0f", arguments: [Float(num)]);
-        MBProgressHUD.hideHUDForView(self.view, animated: true);
+        MBProgressHUD.hide(for: self.view, animated: true);
        // postData()
     }
     
@@ -89,7 +89,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
             //            self.parse!.delegate = self
             //            self.parse!.parse()
             
-            let string = NSString(data: data, encoding: NSUTF8StringEncoding)
+            let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
             count+=1
             print("count------------>\(count)")
             print("\(string!)")
@@ -99,14 +99,14 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     
     func getCurrentTime()->NSString{
-        let date:NSDate = NSDate();
-        let dateFormate:NSDateFormatter = NSDateFormatter();
-        dateFormate.dateStyle = NSDateFormatterStyle.NoStyle;
-        dateFormate.timeStyle = NSDateFormatterStyle.NoStyle;
-        dateFormate.locale = NSLocale.currentLocale();
+        let date:Date = Date();
+        let dateFormate:DateFormatter = DateFormatter();
+        dateFormate.dateStyle = DateFormatter.Style.none;
+        dateFormate.timeStyle = DateFormatter.Style.none;
+        dateFormate.locale = Locale.current;
         dateFormate.dateFormat = "dd-MMM-yyyy HH:mm";
-        let   timeString = dateFormate.stringFromDate(date);
-        return timeString;
+        let   timeString = dateFormate.string(from: date);
+        return timeString as NSString;
     }
 
     
@@ -115,11 +115,11 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             let variance = Float((fileModel.onhandQty?.floatValue)!) - Float((fileModel.countQty?.floatValue)!);
-                fileModel.varianceQty = String(format: "%0.0f", arguments: [variance]);
+                fileModel.varianceQty = String(format: "%0.0f", arguments: [variance]) as NSString?;
             fileModel.fileDate = self.getCurrentTime();
             dbManager.updateFileContentWithModel(fileModel);
         }
-        self.performSelectorOnMainThread(#selector(CountingEntryViewController.reloadTableView), withObject: nil, waitUntilDone: true);
+        self.performSelector(onMainThread: #selector(CountingEntryViewController.reloadTableView), with: nil, waitUntilDone: true);
     }
     
     func reloadTableView(){
@@ -153,7 +153,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
     
     func logoutAction(){
         
-        let currentUser:CurrentUser = CurrentUser.current();
+        let currentUser:CurrentUser = CurrentUser.current;
         currentUser.user = nil;
         let logonVC = LogonViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(logonVC);
@@ -168,13 +168,13 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         */
         
         if self.fileName == nil{
-            let defaults:NSUserDefaults = NSUserDefaults();
-            let defaultsfileName = defaults.objectForKey("DefaultsFileName");
+            let defaults:UserDefaults = UserDefaults();
+            let defaultsfileName = defaults.object(forKey: "DefaultsFileName");
             if defaultsfileName == nil {
                 self.createAlertView(localString("warning"), message: localString("aeAlert"));
                 return
             }
-            self.fileName = defaultsfileName as! String;
+            self.fileName = defaultsfileName as! String as NSString!;
             self.countingEntryView.fileNameTextLabel.text = self.fileName as String;
             dataArray = dbManager.contentWithFileName(self.fileName);
             self.initCountEntryArray();
@@ -193,7 +193,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         for i in 0 ..< self.dataArray.count{
             let fileModel:FileDataModel = dataArray[i] as! FileDataModel;
             let Str:NSString = fileModel.countQty!;
-            self.countEntryArray.addObject(Str);
+            self.countEntryArray.add(Str);
         }
         self.calculateCountQty();
     }
@@ -214,89 +214,89 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell :CountingEntryTableViewCell?;
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? CountingEntryTableViewCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? CountingEntryTableViewCell;
         if cell == nil {
-            cell = CountingEntryTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = CountingEntryTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
             cell?.countQtyTextField.delegate = self;
         }
-        let fileModel:FileDataModel = dataArray[indexPath.row] as! FileDataModel;
+        let fileModel:FileDataModel = dataArray[(indexPath as NSIndexPath).row] as! FileDataModel;
         cell?.skuNameLabel.text = fileModel.skuName as? String;
         cell?.skuCodeLabel.text = fileModel.skuCode as? String;
         cell?.onhandeQtyLabel.text = fileModel.onhandQty as? String;
-        cell?.countQtyTextField.text = self.countEntryArray[indexPath.row] as? String;
+        cell?.countQtyTextField.text = self.countEntryArray[(indexPath as NSIndexPath).row] as? String;
         cell?.varianceQtyLabel.text = fileModel.varianceQty as? String;
         
         return cell!;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataArray.count;
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
       
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             return 50 / 1024.0 * SCREENHEIGHT
         }
         return 50
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         var cell:  CountingEntryTableViewCell!;
-        cell = tableView.cellForRowAtIndexPath(indexPath) as? CountingEntryTableViewCell;
+        cell = tableView.cellForRow(at: indexPath) as? CountingEntryTableViewCell;
         didcell = cell;
         if lastcell != nil{
             if cell == lastcell {
-                cell.selected = true;
+                cell.isSelected = true;
             }else{
-                lastcell.selected = false;
+                lastcell.isSelected = false;
             }
         }
     }
     
-    func scrollViewWillBeginDragging(scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         //self.view.endEditing(true);
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        if DEVICE == .Phone{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if DEVICE == .phone{
             self.hiddenAnimation()
 
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\(self.countingEntryView.tableView.indexPathForCell(lastcell)?.row)----------")
+        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as NSIndexPath?)?.row)----------")
         print("\(lastcell.countQtyTextField.text)000");
         
-        let  myIndex :NSIndexPath! = self.countingEntryView.tableView.indexPathForCell(lastcell);
+        let  myIndex :IndexPath! = self.countingEntryView.tableView.indexPath(for: lastcell);
         
         self.countEntryArray[myIndex.row] = lastcell.countQtyTextField.text!;
         print("text=====\(textField.text!)");
-        lastcell.selected = false;
+        lastcell.isSelected = false;
     }
     
-    func textFieldDidBeginEditing(textField: UITextField) {
-        if DEVICE == .Phone{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if DEVICE == .phone{
             self.showAnimation()
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\(self.countingEntryView.tableView.indexPathForCell(lastcell)?.row)----------")
+        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as NSIndexPath?)?.row)----------")
         print("\(lastcell.countQtyTextField.text)000");
         print("text=====\(textField.text!)");
         if didcell != nil{
-            didcell.selected = false;
+            didcell.isSelected = false;
         }
-        lastcell.selected = true;
+        lastcell.isSelected = true;
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if DEVICE == .Phone{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if DEVICE == .phone{
             self.hiddenAnimation()
             textField.resignFirstResponder()
         }

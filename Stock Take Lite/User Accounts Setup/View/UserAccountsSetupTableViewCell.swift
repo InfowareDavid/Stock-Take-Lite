@@ -22,7 +22,7 @@ class UserAccountsSetupTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
         
-        self.selectionStyle = UITableViewCellSelectionStyle.None;
+        self.selectionStyle = UITableViewCellSelectionStyle.none;
         userIDLabel = UILabel();
         userIDLabel.text = "User ID";
         userIDLabel.textColor = self.colorWithString("#6D6E71");
@@ -47,7 +47,7 @@ class UserAccountsSetupTableViewCell: UITableViewCell {
         bottomLine.backgroundColor = self.colorWithString("#2A9CAB");
         self.contentView.addSubview(bottomLine);
         
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             addPhoneUserAccountsCellConstraint()
         }else{
             addUserAccountsCellConstraint()
@@ -57,30 +57,30 @@ class UserAccountsSetupTableViewCell: UITableViewCell {
     
     func addPhoneUserAccountsCellConstraint(){
         
-        userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.contentView.mas_top).with.offset(0);
-            make.left.equalTo(self.contentView.mas_left).with.offset(SCREENWIDTH/10);
+        userIDLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.contentView.snp.top).offset(0);
+            make.left.equalTo(self.contentView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.height.equalTo(self.contentView.mas_height);
+            make.height.equalTo(self.contentView.snp.height);
         }
-        userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userIDLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(100);
+        userNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userIDLabel.snp.top).offset(0);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(100);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.height.equalTo(self.contentView.mas_height);
+            make.height.equalTo(self.contentView.snp.height);
         }
 
-        administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userNameLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(100);
+        administratorLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userNameLabel.snp.top).offset(0);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(100);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.height.equalTo(self.contentView.mas_height);
+            make.height.equalTo(self.contentView.snp.height);
         }
-        bottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        bottomLine.snp.makeConstraints { (make) in
             
-            make.bottom.equalTo(self.contentView.mas_bottom);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.bottom.equalTo(self.contentView.snp.bottom);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
@@ -88,30 +88,30 @@ class UserAccountsSetupTableViewCell: UITableViewCell {
     }
     func addUserAccountsCellConstraint(){
         
-        userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.contentView.mas_top).with.offset(0);
-            make.left.equalTo(self.contentView.mas_left).with.offset(111);
+        userIDLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.contentView.snp.top).offset(0);
+            make.left.equalTo(self.contentView.snp.left).offset(111);
             make.width.equalTo(100);
             make.height.equalTo(48);
         }
-        userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userIDLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(100);
+        userNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userIDLabel.snp.top).offset(0);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(100);
             make.width.equalTo(130);
             make.height.equalTo(48);
         }
         
-        administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userNameLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(100);
+        administratorLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userNameLabel.snp.top).offset(0);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(100);
             make.width.equalTo(160);
             make.height.equalTo(48);
         }
-        bottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        bottomLine.snp.makeConstraints { (make) in
             
-            make.bottom.equalTo(self.contentView.mas_bottom);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.bottom.equalTo(self.contentView.snp.bottom);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
@@ -120,29 +120,29 @@ class UserAccountsSetupTableViewCell: UITableViewCell {
 
     
     func FONT25()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(14)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 14)
         }
-        return UIFont.systemFontOfSize(25)
+        return UIFont.systemFont(ofSize: 25)
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
             self.contentView.backgroundColor = self.colorWithString("#CBEAF1");
         }else{
-            self.contentView.backgroundColor = UIColor.whiteColor();
+            self.contentView.backgroundColor = UIColor.white;
         }
     }
     
-    func colorWithString(aString:String)->UIColor{
+    func colorWithString(_ aString:String)->UIColor{
         var aString = aString
-        aString.replaceRange(aString.rangeOfString("#")!, with: "0x");
+        aString.replaceSubrange(aString.range(of: "#")!, with: "0x");
         
-        let colorLong = strtoul(aString.cStringUsingEncoding(NSUTF8StringEncoding)!,
+        let colorLong = strtoul(aString.cString(using: String.Encoding.utf8)!,
             nil, 16);
         let R = Double((colorLong & 0xFF0000)>>16);
         let G = Double((colorLong & 0x00FF00)>>8);

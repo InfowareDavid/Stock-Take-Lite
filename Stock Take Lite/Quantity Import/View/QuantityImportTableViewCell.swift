@@ -16,7 +16,7 @@ class QuantityImportTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
-        self.selectionStyle = UITableViewCellSelectionStyle.None;
+        self.selectionStyle = UITableViewCellSelectionStyle.none;
         fileNameLabel = UILabel();
         fileNameLabel.font = FONT20()
         self.contentView.addSubview(fileNameLabel);
@@ -28,7 +28,7 @@ class QuantityImportTableViewCell: UITableViewCell {
         cellBottomLine = UILabel();
         cellBottomLine.backgroundColor = self.colorWithString("#2A9CAB");
         self.contentView.addSubview(cellBottomLine);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             addPhoneCellConstraint()
         }else{
             addCellConstraint()
@@ -36,60 +36,60 @@ class QuantityImportTableViewCell: UITableViewCell {
     }
     
     func FONT20()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9)
         }
-        return UIFont.systemFontOfSize(20)
+        return UIFont.systemFont(ofSize: 20)
     }
     func addPhoneCellConstraint(){
-        fileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.contentView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH*0.3);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
         
-        fileTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.fileNameLabel.mas_right).with.offset(SCREENWIDTH/10);
+        fileTimeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.fileNameLabel.snp.right).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH*0.32);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        cellBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cellBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.top.equalTo(self.contentView.snp.bottom).offset(-1);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
     }
 
     func addCellConstraint(){
-        fileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left).with.offset(111);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.contentView.snp.left).offset(111);
             make.width.equalTo(200);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
         
-        fileTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.fileNameLabel.mas_right).with.offset(100);
+        fileTimeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.fileNameLabel.snp.right).offset(100);
             make.width.equalTo(250);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        cellBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cellBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.top.equalTo(self.contentView.snp.bottom).offset(-1);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
@@ -103,21 +103,21 @@ class QuantityImportTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         if selected {
             self.contentView.backgroundColor = self.colorWithString("#CBEAF1");
         }else{
-            self.contentView.backgroundColor = UIColor.whiteColor();
+            self.contentView.backgroundColor = UIColor.white;
         }
         // Configure the view for the selected state
     }
-    func colorWithString(aString:String)->UIColor{
+    func colorWithString(_ aString:String)->UIColor{
         var aString = aString
-        aString.replaceRange(aString.rangeOfString("#")!, with: "0x");
+        aString.replaceSubrange(aString.range(of: "#")!, with: "0x");
         
-        let colorLong = strtoul(aString.cStringUsingEncoding(NSUTF8StringEncoding)!,
+        let colorLong = strtoul(aString.cString(using: String.Encoding.utf8)!,
             nil, 16);
         let R = Double((colorLong & 0xFF0000)>>16);
         let G = Double((colorLong & 0x00FF00)>>8);

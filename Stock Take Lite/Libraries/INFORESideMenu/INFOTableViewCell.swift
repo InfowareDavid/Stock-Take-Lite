@@ -23,21 +23,21 @@ class INFOTableViewCell: UITableViewCell {
         infocellTextLabel = UILabel();
         infocellTextLabel.font = FONT20();
         self.contentView.addSubview(self.infocellTextLabel);
-        infocellTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        infocellTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left).with.offset(SCREENWIDTH/100.0 * 3);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.contentView.snp.left).offset(SCREENWIDTH/100.0 * 3);
             make.width.equalTo(SCREENWIDTH/5.0 * 3);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         cellBottomLine = UILabel();
         cellBottomLine.backgroundColor = self.colorWithString("#2A9CAB");
         self.contentView.addSubview(cellBottomLine);
-        cellBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cellBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.top.equalTo(self.contentView.snp.bottom).offset(-1);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
@@ -45,16 +45,16 @@ class INFOTableViewCell: UITableViewCell {
     }
     
     func FONT20()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9)
         }
-        return UIFont.systemFontOfSize(20)
+        return UIFont.systemFont(ofSize: 20)
     }
-    func colorWithString(aString:String)->UIColor{
+    func colorWithString(_ aString:String)->UIColor{
         var aString = aString
-        aString.replaceRange(aString.rangeOfString("#")!, with: "0x");
+        aString.replaceSubrange(aString.range(of: "#")!, with: "0x");
         
-        let colorLong = strtoul(aString.cStringUsingEncoding(NSUTF8StringEncoding)!,
+        let colorLong = strtoul(aString.cString(using: String.Encoding.utf8)!,
             nil, 16);
         let R = Double((colorLong & 0xFF0000)>>16);
         let G = Double((colorLong & 0x00FF00)>>8);
@@ -67,12 +67,12 @@ class INFOTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         if selected {
             self.contentView.backgroundColor = self.colorWithString("#CBEAF1");
         }else{
-            self.contentView.backgroundColor = UIColor.whiteColor();
+            self.contentView.backgroundColor = UIColor.white;
         }
     }
 

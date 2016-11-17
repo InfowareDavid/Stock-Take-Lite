@@ -34,35 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SnapKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>08466CDD43E3AD4B3A746B737501130E</key>
+		<key>3EF97FA891E6413169A383FF6EC0C63C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>548FEA8226B3C984851053C8B5A70B37</key>
+		<key>424084B989A4458C4FD2991035C62664</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>79C040AFDDCE1BCBF6D8B5EB0B85887F</key>
+		<key>6494AB0A1CF582CF7ADD9608674EEF4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8860EEEBD89C497C5916D2BDF35DC522</key>
+		<key>65AC4ABE2CCFB1AF5AAD761D8D306CA7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BC093A951C6A831A3BABE8B4E1A89BCA</key>
+		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C9CD62AF390A8664C15942C656B0A820</key>
+		<key>9594C85597B4D52F3E7986B25DE93DCA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EC462498772EAD634A344D035C2B678F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

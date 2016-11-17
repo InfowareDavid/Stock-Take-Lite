@@ -7,9 +7,10 @@
 //
 
 import UIKit
+
 import Alamofire
 
-typealias SuccessBlock = (NSData)->Void
+typealias SuccessBlock = (Data)->Void
 typealias FaileBlock = (NSError)->Void
 
 class NetWorkManager: NSObject{
@@ -20,7 +21,7 @@ class NetWorkManager: NSObject{
     var         successBlock:               SuccessBlock?
     var         faileBlock:                 FaileBlock?
     
-    func postRequest(service:String,action:String,paramValues:String,success:SuccessBlock){
+    func postRequest(_ service:String,action:String,paramValues:String,success:@escaping SuccessBlock){
         
         self.successBlock = success
         
@@ -35,15 +36,15 @@ class NetWorkManager: NSObject{
         
         let mutableURLRequest: NSMutableURLRequest = getMutableRequest(action, URL: URL, soapMsg: soapMsg)
         
-        
-        Alamofire.request(mutableURLRequest).responseData { response in
+        //MARK: - 修改过后
+        Alamofire.request(mutableURLRequest as! URLRequestConvertible).responseData { response in
 
             if response.result.isSuccess{
                 if let successful = self.successBlock{
                     successful(response.data!)
                 }
             }else{
-                 print("请求数据失败----》\(response.result.error?.description)")
+                 print("请求数据失败----》\(response.result.error.debugDescription)")
             //    self.faileBlock!(response.result.error!)
             }
         }
@@ -51,17 +52,17 @@ class NetWorkManager: NSObject{
     }
     
    
-    func getMutableRequest(action:String,URL:NSURL,soapMsg:String)->NSMutableURLRequest{
+    func getMutableRequest(_ action:String,URL:Foundation.URL,soapMsg:String)->NSMutableURLRequest{
         
        // let mutableURLRequest: NSMutableURLRequest = NSMutableURLRequest(URL:URL)
-        let mutableURLRequest:NSMutableURLRequest = NSMutableURLRequest(URL: URL, cachePolicy: .UseProtocolCachePolicy, timeoutInterval: 1)
+        let mutableURLRequest:NSMutableURLRequest = NSMutableURLRequest(url: URL, cachePolicy: .useProtocolCachePolicy, timeoutInterval: 1)
         mutableURLRequest.setValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
          let soapAction = kNameSpace+action
         print("\(soapAction)")
         mutableURLRequest.setValue(soapAction, forHTTPHeaderField: "SOAPAction")
         mutableURLRequest.setValue("\(soapMsg.characters.count)", forHTTPHeaderField: "Content-Length")
-        mutableURLRequest.HTTPMethod = "POST"
-        mutableURLRequest.HTTPBody = soapMsg.dataUsingEncoding(NSUTF8StringEncoding)
+        mutableURLRequest.httpMethod = "POST"
+        mutableURLRequest.httpBody = soapMsg.data(using: String.Encoding.utf8)
         
         return mutableURLRequest
     }
@@ -77,9 +78,9 @@ class NetWorkManager: NSObject{
      ?op=
      */
     
-    func getURL(service:String,action:String)->NSURL{
+    func getURL(_ service:String,action:String)->URL{
         let urlStr = kURLHeader+service+"?op="+action
-        return NSURL(string: urlStr)!
+        return URL(string: urlStr)!
     }
     
 
@@ -95,7 +96,7 @@ class NetWorkManager: NSObject{
      Return: 字符串
      */
     
-    func toSoapMessage(action: String, pams: String) -> String {
+    func toSoapMessage(_ action: String, pams: String) -> String {
         var message: String = String()
         message += "<?xml version=\"1.0\" encoding=\"utf-8\"?>"
         message += "<soap:Envelope xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\" xmlns:soap=\"http://schemas.xmlsoap.org/soap/envelope/\">"

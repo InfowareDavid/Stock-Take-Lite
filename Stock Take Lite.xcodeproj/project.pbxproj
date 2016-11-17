@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		99A52693B44409691C2D9324 /* Pods_Stock_Take_LiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */; };
-		BEF4014FB494CC8759F64CBF /* Pods_Stock_Take_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */; };
+		079FD9008C543A865763F1FE /* Pods_Stock_Take_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */; };
+		1D32690B4E11EFCB50C2C981 /* Pods_Stock_Take_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */; };
+		29ACBB86251EBDC2AA20C790 /* Pods_Stock_Take_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */; };
+		438696DDA6BA8E4B25D74483 /* Pods_Stock_Take_LiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */; };
+		BCACAC2C0C8F691DECB0A964 /* Pods_Stock_Take_LiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */; };
 		BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
@@ -253,9 +256,6 @@
 		BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */; };
 		BFFBADD91BC7666F00026817 /* QuantityImportBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */; };
 		BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */; };
-		D0392FC5A723DC930D17949A /* Pods_Stock_Take_LiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */; };
-		F0249F197800A6636B64D523 /* Pods_Stock_Take_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */; };
-		F45914EBD8DAB91793D0BDA7 /* Pods_Stock_Take_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,19 +276,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.debug.xcconfig"; sourceTree = "<group>"; };
-		0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.release.xcconfig"; sourceTree = "<group>"; };
-		3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.debug.xcconfig"; sourceTree = "<group>"; };
-		49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.release.xcconfig"; sourceTree = "<group>"; };
-		8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.release.xcconfig"; sourceTree = "<group>"; };
-		88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.release.xcconfig"; sourceTree = "<group>"; };
-		AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.release.xcconfig"; sourceTree = "<group>"; };
-		B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.debug.xcconfig"; sourceTree = "<group>"; };
+		760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.release.xcconfig"; sourceTree = "<group>"; };
+		B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.debug.xcconfig"; sourceTree = "<group>"; };
 		BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		BF33F4E11D20E82800A49C0B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
@@ -407,8 +404,11 @@
 		BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupViewController.swift; sourceTree = "<group>"; };
 		BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportBaseView.swift; sourceTree = "<group>"; };
 		BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportTableViewCell.swift; sourceTree = "<group>"; };
-		DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.debug.xcconfig"; sourceTree = "<group>"; };
-		E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.release.xcconfig"; sourceTree = "<group>"; };
+		EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -418,7 +418,7 @@
 			files = (
 				BF33F4E31D20E84800A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39091C27DCC50009A89F /* libsqlite3.tbd in Frameworks */,
-				F0249F197800A6636B64D523 /* Pods_Stock_Take_Pro.framework in Frameworks */,
+				079FD9008C543A865763F1FE /* Pods_Stock_Take_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,7 +428,7 @@
 			files = (
 				BF33F4E41D20E85200A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39601C27E01F0009A89F /* libsqlite3.tbd in Frameworks */,
-				F45914EBD8DAB91793D0BDA7 /* Pods_Stock_Take_Enterprise.framework in Frameworks */,
+				1D32690B4E11EFCB50C2C981 /* Pods_Stock_Take_Enterprise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,7 +438,7 @@
 			files = (
 				BF33F4E21D20E82800A49C0B /* MessageUI.framework in Frameworks */,
 				BFA04AAD1BBA782E0019C604 /* libsqlite3.tbd in Frameworks */,
-				BEF4014FB494CC8759F64CBF /* Pods_Stock_Take_Lite.framework in Frameworks */,
+				29ACBB86251EBDC2AA20C790 /* Pods_Stock_Take_Lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -446,7 +446,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				99A52693B44409691C2D9324 /* Pods_Stock_Take_LiteTests.framework in Frameworks */,
+				BCACAC2C0C8F691DECB0A964 /* Pods_Stock_Take_LiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,23 +454,40 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D0392FC5A723DC930D17949A /* Pods_Stock_Take_LiteUITests.framework in Frameworks */,
+				438696DDA6BA8E4B25D74483 /* Pods_Stock_Take_LiteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		8CB2B61F7813A27DC8CEFC4E /* Frameworks */ = {
+		B1735774076CAC845DCC3750 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E4284F963875779E49A6C92B /* Pods_Stock_Take_Enterprise.framework */,
-				B1963FB6968700666A0773D8 /* Pods_Stock_Take_Lite.framework */,
-				88492A19E526D716FFC8575D /* Pods_Stock_Take_LiteTests.framework */,
-				5752585D7BEEEFDA613ED280 /* Pods_Stock_Take_LiteUITests.framework */,
-				B15774339A245DBD39401EF5 /* Pods_Stock_Take_Pro.framework */,
+				43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */,
+				868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */,
+				170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */,
+				C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */,
+				59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB8503C27997E329A85E6EC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */,
+				95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */,
+				2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */,
+				E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */,
+				760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */,
+				26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */,
+				EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */,
+				C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */,
+				B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */,
+				F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		BF33F4D91D20E4AA00A49C0B /* Email */ = {
@@ -587,8 +604,8 @@
 				BFA04A701BBA70650019C604 /* Stock Take LiteTests */,
 				BFA04A7B1BBA70650019C604 /* Stock Take LiteUITests */,
 				BFA04A5A1BBA70650019C604 /* Products */,
-				F7AAF0DD162804E42471ED66 /* Pods */,
-				8CB2B61F7813A27DC8CEFC4E /* Frameworks */,
+				BB8503C27997E329A85E6EC7 /* Pods */,
+				B1735774076CAC845DCC3750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1052,23 +1069,6 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		F7AAF0DD162804E42471ED66 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */,
-				0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */,
-				0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */,
-				8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */,
-				4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */,
-				AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */,
-				49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */,
-				9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */,
-				DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */,
-				84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1076,12 +1076,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A390F1C27DCC50009A89F /* Build configuration list for PBXNativeTarget "Stock Take Pro" */;
 			buildPhases = (
-				09C266432ADD500DE0D0F2F5 /* Check Pods Manifest.lock */,
+				4DB3E1332A0182D6D5261F2F /* [CP] Check Pods Manifest.lock */,
 				BF3A38C21C27DCC50009A89F /* Sources */,
 				BF3A39081C27DCC50009A89F /* Frameworks */,
 				BF3A390A1C27DCC50009A89F /* Resources */,
-				87850AD228493DAE573F79F1 /* Embed Pods Frameworks */,
-				14C409DAAD3DF080AD6E174B /* Copy Pods Resources */,
+				989CCF4FEC126AE4DAA3C8C1 /* [CP] Embed Pods Frameworks */,
+				95517E22B8589810B4BDE3B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1096,12 +1096,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A39661C27E01F0009A89F /* Build configuration list for PBXNativeTarget "Stock Take Enterprise" */;
 			buildPhases = (
-				9F67684F384FE30AC74F68A7 /* Check Pods Manifest.lock */,
+				911F32A3182C077A83E64A3B /* [CP] Check Pods Manifest.lock */,
 				BF3A39191C27E01F0009A89F /* Sources */,
 				BF3A395F1C27E01F0009A89F /* Frameworks */,
 				BF3A39611C27E01F0009A89F /* Resources */,
-				0EEB54287987663EB96B5F6B /* Embed Pods Frameworks */,
-				CD5F7B310BBBF1BA2E4AF063 /* Copy Pods Resources */,
+				BA51FC88A70EFBAD8CF9EE9F /* [CP] Embed Pods Frameworks */,
+				31E9672C086A6DC7CF3482BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1116,12 +1116,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A811BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take Lite" */;
 			buildPhases = (
-				927C365899A1A77392B0BF4F /* Check Pods Manifest.lock */,
+				3907E03DE8496DE56F9918D0 /* [CP] Check Pods Manifest.lock */,
 				BFA04A551BBA70650019C604 /* Sources */,
 				BFA04A561BBA70650019C604 /* Frameworks */,
 				BFA04A571BBA70650019C604 /* Resources */,
-				95479D6EBA7FBEBE957D5BC4 /* Embed Pods Frameworks */,
-				09F0F67DECAC3DEA68CFD1F3 /* Copy Pods Resources */,
+				9521EE9548E64A97DFCA1AC1 /* [CP] Embed Pods Frameworks */,
+				8E641DC81DFAFC115ED98096 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1136,12 +1136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A841BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteTests" */;
 			buildPhases = (
-				DC80644E8114243793B780DA /* Check Pods Manifest.lock */,
+				DAE65ADB57B614A0FA73740C /* [CP] Check Pods Manifest.lock */,
 				BFA04A691BBA70650019C604 /* Sources */,
 				BFA04A6A1BBA70650019C604 /* Frameworks */,
 				BFA04A6B1BBA70650019C604 /* Resources */,
-				6E87812D15A502A48B3CE5E4 /* Embed Pods Frameworks */,
-				4F5E1140FED7E5091AE72289 /* Copy Pods Resources */,
+				0ED85448E93E7063A935AFB1 /* [CP] Embed Pods Frameworks */,
+				D9BCF3E2835D774E24D585AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1157,11 +1157,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A871BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteUITests" */;
 			buildPhases = (
-				CD2562604705A3273F704CD2 /* Check Pods Manifest.lock */,
+				EF1B5D3C09B9FD6278284310 /* [CP] Check Pods Manifest.lock */,
 				BFA04A741BBA70650019C604 /* Sources */,
 				BFA04A751BBA70650019C604 /* Frameworks */,
 				BFA04A761BBA70650019C604 /* Resources */,
-				471F860AE12DE8FB649E2855 /* Copy Pods Resources */,
+				210F4EDBD6766EC7FEEA474F /* [CP] Embed Pods Frameworks */,
+				FD4735314686A7DA70FD1B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1179,7 +1180,7 @@
 		BFA04A511BBA70650019C604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = infoware;
 				TargetAttributes = {
 					BF3A38C11C27DCC50009A89F = {
@@ -1282,104 +1283,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		09C266432ADD500DE0D0F2F5 /* Check Pods Manifest.lock */ = {
+		0ED85448E93E7063A935AFB1 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		09F0F67DECAC3DEA68CFD1F3 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		0EEB54287987663EB96B5F6B /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		14C409DAAD3DF080AD6E174B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		471F860AE12DE8FB649E2855 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4F5E1140FED7E5091AE72289 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6E87812D15A502A48B3CE5E4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1387,89 +1298,29 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		87850AD228493DAE573F79F1 /* Embed Pods Frameworks */ = {
+		210F4EDBD6766EC7FEEA474F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		927C365899A1A77392B0BF4F /* Check Pods Manifest.lock */ = {
+		31E9672C086A6DC7CF3482BD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		95479D6EBA7FBEBE957D5BC4 /* Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		9F67684F384FE30AC74F68A7 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CD2562604705A3273F704CD2 /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CD5F7B310BBBF1BA2E4AF063 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1477,19 +1328,184 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		DC80644E8114243793B780DA /* Check Pods Manifest.lock */ = {
+		3907E03DE8496DE56F9918D0 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB3E1332A0182D6D5261F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E641DC81DFAFC115ED98096 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		911F32A3182C077A83E64A3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9521EE9548E64A97DFCA1AC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95517E22B8589810B4BDE3B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		989CCF4FEC126AE4DAA3C8C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA51FC88A70EFBAD8CF9EE9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9BCF3E2835D774E24D585AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE65ADB57B614A0FA73740C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1B5D3C09B9FD6278284310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4735314686A7DA70FD1B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -1802,8 +1818,9 @@
 /* Begin XCBuildConfiguration section */
 		BF3A39101C27DCC50009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DDAC973FD28E3E71ECE0C50C /* Pods-Stock Take Pro.debug.xcconfig */;
+			baseConfigurationReference = B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1821,8 +1838,9 @@
 		};
 		BF3A39111C27DCC50009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 84DD8A530FA2FA9DC3D6D16E /* Pods-Stock Take Pro.release.xcconfig */;
+			baseConfigurationReference = F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1840,8 +1858,9 @@
 		};
 		BF3A39671C27E01F0009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B223FD4E4F08C16D357F2B8 /* Pods-Stock Take Enterprise.debug.xcconfig */;
+			baseConfigurationReference = 6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1859,8 +1878,9 @@
 		};
 		BF3A39681C27E01F0009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0C3F5FFD5C2DBBF8AA92C408 /* Pods-Stock Take Enterprise.release.xcconfig */;
+			baseConfigurationReference = 95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1880,6 +1900,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1889,8 +1910,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1927,6 +1950,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1936,8 +1960,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
@@ -1958,6 +1984,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1965,12 +1992,14 @@
 		};
 		BFA04A821BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0099524326E088E515B8A641 /* Pods-Stock Take Lite.debug.xcconfig */;
+			baseConfigurationReference = 2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U837TW5R38;
 				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1979,19 +2008,21 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BFA04A831BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8695FF105827E2DAC488392B /* Pods-Stock Take Lite.release.xcconfig */;
+			baseConfigurationReference = E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U837TW5R38;
 				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2000,48 +2031,51 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		BFA04A851BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4C051FE49136C30D8243FF15 /* Pods-Stock Take LiteTests.debug.xcconfig */;
+			baseConfigurationReference = 760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Debug;
 		};
 		BFA04A861BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AC9BC278096F0DE402DB3F1A /* Pods-Stock Take LiteTests.release.xcconfig */;
+			baseConfigurationReference = 26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Release;
 		};
 		BFA04A881BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 49E5942E0B2576338A93FE19 /* Pods-Stock Take LiteUITests.debug.xcconfig */;
+			baseConfigurationReference = EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};
@@ -2049,13 +2083,14 @@
 		};
 		BFA04A891BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EC49BF40000F02A1BDF19F8 /* Pods-Stock Take LiteUITests.release.xcconfig */;
+			baseConfigurationReference = C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};

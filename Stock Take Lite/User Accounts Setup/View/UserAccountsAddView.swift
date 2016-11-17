@@ -57,8 +57,8 @@ class UserAccountsAddView: QuantityImportBaseView {
         
         userIDTextField = UITextField();
         userIDTextField.layer.borderWidth = 1;
-        userIDTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        userIDTextField.borderStyle = UITextBorderStyle.None;
+        userIDTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        userIDTextField.borderStyle = UITextBorderStyle.none;
         userIDTextField.font = FONT25()
         userIDTextField.minimumFontSize = 0.8;
         userIDTextField.sizeToFit();
@@ -66,8 +66,8 @@ class UserAccountsAddView: QuantityImportBaseView {
         
         userNameTextField = UITextField();
         userNameTextField.layer.borderWidth = 1;
-        userNameTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        userNameTextField.borderStyle = UITextBorderStyle.None;
+        userNameTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        userNameTextField.borderStyle = UITextBorderStyle.none;
         userNameTextField.font = FONT25()
         userNameTextField.minimumFontSize = 0.8;
         userNameTextField.sizeToFit();
@@ -75,44 +75,44 @@ class UserAccountsAddView: QuantityImportBaseView {
         
         passwordTextField = UITextField();
         passwordTextField.layer.borderWidth = 1;
-        passwordTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        passwordTextField.borderStyle = UITextBorderStyle.None;
+        passwordTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        passwordTextField.borderStyle = UITextBorderStyle.none;
         passwordTextField.font = FONT25()
         passwordTextField.minimumFontSize = 0.8;
         passwordTextField.sizeToFit();
         self.addSubview(passwordTextField);
        
         administratorButton = UISegmentedControl();
-        administratorButton.insertSegmentWithTitle(localString("off"), atIndex: 0, animated: false);
-        administratorButton.insertSegmentWithTitle("", atIndex: 1, animated: false);
-        administratorButton.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
+        administratorButton.insertSegment(withTitle: localString("off"), at: 0, animated: false);
+        administratorButton.insertSegment(withTitle: "", at: 1, animated: false);
+        administratorButton.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
         administratorButton.layer.borderWidth = 1;
         administratorButton.layer.masksToBounds = true;
         administratorButton.layer.cornerRadius = 5;
         administratorButton.selectedSegmentIndex = 0;
         self.addSubview(administratorButton);
         
-        saveButton = UIButton(type: UIButtonType.System);
-        saveButton.setTitle(localString("save"), forState: UIControlState.Normal);
-        saveButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        saveButton = UIButton(type: UIButtonType.system);
+        saveButton.setTitle(localString("save"), for: UIControlState());
+        saveButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         saveButton.titleLabel?.font = FONT25()
-        saveButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        saveButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(saveButton);
         
-        deletButton = UIButton(type: UIButtonType.System);
-        deletButton.setTitle(localString("delete"), forState: UIControlState.Normal);
-        deletButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        deletButton = UIButton(type: UIButtonType.system);
+        deletButton.setTitle(localString("delete"), for: UIControlState());
+        deletButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         deletButton.titleLabel?.font = FONT25()
-        deletButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        deletButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(deletButton);
         
-        cancelButton = UIButton(type: UIButtonType.System);
-        cancelButton.setTitle(localString("cancel"), forState: UIControlState.Normal);
-        cancelButton.setBackgroundImage(UIImage(named:"buttom_1"), forState: UIControlState.Normal)
+        cancelButton = UIButton(type: UIButtonType.system);
+        cancelButton.setTitle(localString("cancel"), for: UIControlState());
+        cancelButton.setBackgroundImage(UIImage(named:"buttom_1"), for: UIControlState())
         cancelButton.titleLabel?.font = FONT25()
-        cancelButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        cancelButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(cancelButton);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             addPhoneViewConstraint()
         }else{
             addViewConstraint()
@@ -120,96 +120,96 @@ class UserAccountsAddView: QuantityImportBaseView {
     }
     
     func addPhoneViewConstraint(){
-        setupBackgroundView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        setupBackgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.3);
             
         }
 
-        userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.setupBackgroundView.mas_top).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        userIDLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.setupBackgroundView.snp.top).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
         }
 
-        userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userIDLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        userNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userIDLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
         }
-        passwordLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userNameLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        passwordLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userNameLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
         }
 
-        administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.passwordLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        administratorLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.passwordLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(25);
         }
 
-        userIDTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        userIDTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.userIDLabel.mas_top);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.userIDLabel.snp.top);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(5);
             make.width.equalTo(SCREENWIDTH * 0.4);
             make.height.equalTo(25);
             
         }
 
-        userNameTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        userNameTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.userNameLabel.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.userNameLabel.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(5);
             make.width.equalTo(SCREENWIDTH * 0.4);
             make.height.equalTo(25);
             
         }
 
-        passwordTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        passwordTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.passwordLabel.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.passwordLabel.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(5);
             make.width.equalTo(SCREENWIDTH * 0.4);
             make.height.equalTo(25);
             
         }
-        administratorButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        administratorButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.administratorLabel.mas_top);
-            make.right.equalTo(self.userNameTextField.mas_right);
+            make.top.equalTo(self.administratorLabel.snp.top);
+            make.right.equalTo(self.userNameTextField.snp.right);
             make.width.equalTo(SCREENWIDTH/5);
-            make.height.equalTo(self.administratorLabel.mas_height);
+            make.height.equalTo(self.administratorLabel.snp.height);
             
         }
 
-        saveButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(15);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.width.equalTo(SCREENWIDTH/5);
-            make.height.equalTo(25);
-        }
-
-        deletButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(15);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(15);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(15);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
         }
 
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        deletButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(15);
-            make.left.equalTo(self.deletButton.mas_right).with.offset(15);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(15);
+            make.left.equalTo(self.saveButton.snp.right).offset(15);
+            make.width.equalTo(SCREENWIDTH/5);
+            make.height.equalTo(25);
+        }
+
+        cancelButton.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(15);
+            make.left.equalTo(self.deletButton.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
         }
@@ -217,96 +217,96 @@ class UserAccountsAddView: QuantityImportBaseView {
     }
     
     func addViewConstraint(){
-        setupBackgroundView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        setupBackgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(320);
             
         }
         
-        userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.setupBackgroundView.mas_top).with.offset(25);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        userIDLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.setupBackgroundView.snp.top).offset(25);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(130);
             make.height.equalTo(40);
         }
         
-        userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userIDLabel.mas_bottom).with.offset(36);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        userNameLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userIDLabel.snp.bottom).offset(36);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(130);
             make.height.equalTo(40);
         }
-        passwordLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.userNameLabel.mas_bottom).with.offset(36);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        passwordLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.userNameLabel.snp.bottom).offset(36);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(130);
             make.height.equalTo(40);
         }
         
-        administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.passwordLabel.mas_bottom).with.offset(36);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        administratorLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.passwordLabel.snp.bottom).offset(36);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(160);
             make.height.equalTo(40);
         }
         
-        userIDTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        userIDTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.userIDLabel.mas_top);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(20);
+            make.top.equalTo(self.userIDLabel.snp.top);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(20);
             make.width.equalTo(235);
             make.height.equalTo(35);
             
         }
         
-        userNameTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        userNameTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.userNameLabel.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(20);
+            make.top.equalTo(self.userNameLabel.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(20);
             make.width.equalTo(235);
             make.height.equalTo(35);
             
         }
         
-        passwordTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        passwordTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.passwordLabel.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(20);
+            make.top.equalTo(self.passwordLabel.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(20);
             make.width.equalTo(235);
             make.height.equalTo(35);
             
         }
-        administratorButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        administratorButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.administratorLabel.mas_top);
-            make.right.equalTo(self.userNameTextField.mas_right);
+            make.top.equalTo(self.administratorLabel.snp.top);
+            make.right.equalTo(self.userNameTextField.snp.right);
             make.width.equalTo(100);
-            make.height.equalTo(self.administratorLabel.mas_height);
+            make.height.equalTo(self.administratorLabel.snp.height);
             
         }
         
-        saveButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(118);
             make.height.equalTo(32);
         }
         
-        deletButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        deletButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(50);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(35);
+            make.left.equalTo(self.saveButton.snp.right).offset(50);
             make.width.equalTo(136);
             make.height.equalTo(32);
         }
         
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cancelButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.deletButton.mas_right).with.offset(50);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(35);
+            make.left.equalTo(self.deletButton.snp.right).offset(50);
             make.width.equalTo(136);
             make.height.equalTo(32);
         }

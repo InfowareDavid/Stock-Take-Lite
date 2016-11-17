@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import Alamofire
+
 
 class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerControllerPressenting {
     weak var drawer:            INFOViewController?;
@@ -17,11 +17,11 @@ class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerC
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.White)
-        activityIndicatorView.frame = CGRectMake(80,10, 0,0)
-        activityIndicatorView.activityIndicatorViewStyle = .White
+        activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: UIActivityIndicatorViewStyle.white)
+        activityIndicatorView.frame = CGRect(x: 80,y: 10, width: 0,height: 0)
+        activityIndicatorView.activityIndicatorViewStyle = .white
         activityIndicatorView.hidesWhenStopped = true
-        activityIndicatorView.color = UIColor.blackColor()
+        activityIndicatorView.color = UIColor.black
      //   activityIndicatorView.startAnimating()
         self.view.addSubview(activityIndicatorView)
         
@@ -60,15 +60,15 @@ class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerC
     //MARK:SHOW TextFeild Animation
     
     func showAnimation(){
-        UIView.animateWithDuration(0.2) {
-            self.view.frame = CGRectMake(0, -SCREENHEIGHT/3, SCREENWIDTH, SCREENHEIGHT)
-        }
+        UIView.animate(withDuration: 0.2, animations: {
+            self.view.frame = CGRect(x: 0, y: -SCREENHEIGHT/3, width: SCREENWIDTH, height: SCREENHEIGHT)
+        }) 
     }
     
     func hiddenAnimation(){
-        UIView.animateWithDuration(0.25) {
-            self.view.frame = CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT)
-        }
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.frame = CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT)
+        }) 
     }
 
     /**
@@ -77,7 +77,7 @@ class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerC
     - parameter title:标题
     - parameter message:内容
     */
-    func createAlertView(title:String,message:String?) {
+    func createAlertView(_ title:String,message:String?) {
         var alertView:              UIAlertView!;
         
         alertView = UIAlertView(title: title, message: message!, delegate: nil, cancelButtonTitle: localString("ok"));
@@ -86,14 +86,14 @@ class BaseViewController: UIViewController,INFODrawerControllerChild,INFODrawerC
         
     }
     
-    func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+     @objc(alertView:clickedButtonAtIndex:) func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int)  {
         
         let mainVC = MainViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
         
     }
     
-    func localString(aString:String)->String{
+    func localString(_ aString:String)->String{
         return NSLocalizedString(aString, comment: "");
     }
 

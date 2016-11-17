@@ -15,13 +15,13 @@ class CameraView: CountingEntryView {
         super.init(frame: frame);
         self.secondeTopLabel.text = localString("icTitle");
         
-        cameraButton = UIButton(type: UIButtonType.System);
-        cameraButton.setTitle(localString("camera"), forState: UIControlState.Normal);
-        cameraButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal);
-        cameraButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        cameraButton = UIButton(type: UIButtonType.system);
+        cameraButton.setTitle(localString("camera"), for: UIControlState());
+        cameraButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());
+        cameraButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         cameraButton.titleLabel?.font = FONT25();
         self.addSubview(cameraButton);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
           addPhoneCameraViewConstraint()
         }else{
            addCameraViewConstraint()
@@ -31,33 +31,33 @@ class CameraView: CountingEntryView {
     func addPhoneCameraViewConstraint(){
         
         
-        saveButton.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.updateConstraints { (make) in
             
-            make.top.equalTo(self.totalLabelBottomLineLabel.mas_bottom).with.offset(15);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10 * 3 + 5);
+            make.top.equalTo(self.totalLabelBottomLineLabel.snp.bottom).offset(15);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10 * 3 + 5);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
         
-        returnButton.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.saveButton.mas_top);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(5);
+        returnButton.snp.updateConstraints { (make) in
+            make.top.equalTo(self.saveButton.snp.top);
+            make.left.equalTo(self.saveButton.snp.right).offset(5);
             make.width.equalTo(SCREENWIDTH/5);
-            make.height.equalTo(self.saveButton.mas_height);
+            make.height.equalTo(self.saveButton.snp.height);
             
             
         }
         
-        cameraButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cameraButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.totalLabelBottomLineLabel.mas_bottom).with.offset(15);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.totalLabelBottomLineLabel.snp.bottom).offset(15);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
-            //            make.top.equalTo(self.saveButton.mas_top).with.offset(0);
-            //            make.left.equalTo(self.saveButton.mas_right).with.offset(15);
+            //            make.top.equalTo(self.saveButton.snp.top).offset(0);
+            //            make.left.equalTo(self.saveButton.snp.right).offset(15);
             //            make.width.equalTo(130);
             //            make.height.equalTo(37);
         }
@@ -68,33 +68,33 @@ class CameraView: CountingEntryView {
 
     
     func addCameraViewConstraint(){
-        saveButton.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.updateConstraints { (make) in
             
-            make.top.equalTo(self.totalLabelBottomLineLabel.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(241);
+            make.top.equalTo(self.totalLabelBottomLineLabel.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(241);
             make.width.equalTo(118);
             make.height.equalTo(37);
             
         }
         
-        returnButton.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.saveButton.mas_top);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(15);
+        returnButton.snp.updateConstraints { (make) in
+            make.top.equalTo(self.saveButton.snp.top);
+            make.left.equalTo(self.saveButton.snp.right).offset(15);
             make.width.equalTo(130);
-            make.height.equalTo(self.saveButton.mas_height);
+            make.height.equalTo(self.saveButton.snp.height);
             
             
         }
 
-        cameraButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cameraButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.totalLabelBottomLineLabel.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.totalLabelBottomLineLabel.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(118);
             make.height.equalTo(37);
             
-            //            make.top.equalTo(self.saveButton.mas_top).with.offset(0);
-            //            make.left.equalTo(self.saveButton.mas_right).with.offset(15);
+            //            make.top.equalTo(self.saveButton.snp.top).offset(0);
+            //            make.left.equalTo(self.saveButton.snp.right).offset(15);
             //            make.width.equalTo(130);
             //            make.height.equalTo(37);
         }

@@ -42,52 +42,52 @@ class QuantityImportBaseView: BaseView {
         bottomLineLabel = UILabel();
         bottomLineLabel.backgroundColor = self.colorWithString("#58595B");
         self.addSubview(bottomLineLabel);
-        if DEVICE == .Phone{
-            topTitleLabel.font = UIFont.systemFontOfSize(20, weight: 0.25);
-            secondeTopLabel.font = UIFont.systemFontOfSize(15, weight: 0.15);
+        if DEVICE == .phone{
+            topTitleLabel.font = UIFont.systemFont(ofSize: 20, weight: 0.25);
+            secondeTopLabel.font = UIFont.systemFont(ofSize: 15, weight: 0.15);
 
             addPhoneBaseImportConstraint()
         }else{
-            topTitleLabel.font = UIFont.systemFontOfSize(40, weight: 0.5);
-            secondeTopLabel.font = UIFont.systemFontOfSize(30, weight: 0.3);
+            topTitleLabel.font = UIFont.systemFont(ofSize: 40, weight: 0.5);
+            secondeTopLabel.font = UIFont.systemFont(ofSize: 30, weight: 0.3);
 
             addBaseImportConstraint()
         }
     }
     
     func addPhoneBaseImportConstraint(){
-        topImageView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        topImageView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.mas_top);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.snp.top);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(64);
             
         }
         
-        topTitleLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        topTitleLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.topImageView.mas_top).with.offset(0);
-            make.left.equalTo(self.topImageView.mas_left).with.offset(SCREENWIDTH/10);
-            make.right.equalTo(self.topImageView.mas_right);
-            make.height.equalTo(self.topImageView.mas_height);
+            make.top.equalTo(self.topImageView.snp.top).offset(0);
+            make.left.equalTo(self.topImageView.snp.left).offset(SCREENWIDTH/10);
+            make.right.equalTo(self.topImageView.snp.right);
+            make.height.equalTo(self.topImageView.snp.height);
             
         }
         
-        secondeTopLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        secondeTopLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.topTitleLabel.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.topTitleLabel.snp.bottom);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(30);
             
         }
         
-        bottomLineLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        bottomLineLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.secondeTopLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.secondeTopLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
@@ -95,38 +95,38 @@ class QuantityImportBaseView: BaseView {
     }
     
     func addBaseImportConstraint(){
-        topImageView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        topImageView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.mas_top);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.snp.top);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(109);
             
         }
         
-        topTitleLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        topTitleLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.topImageView.mas_top).with.offset(0);
-            make.left.equalTo(self.topImageView.mas_left).with.offset(111);
-            make.right.equalTo(self.topImageView.mas_right);
-            make.height.equalTo(self.topImageView.mas_height);
+            make.top.equalTo(self.topImageView.snp.top).offset(0);
+            make.left.equalTo(self.topImageView.snp.left).offset(111);
+            make.right.equalTo(self.topImageView.snp.right);
+            make.height.equalTo(self.topImageView.snp.height);
             
         }
         
-        secondeTopLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        secondeTopLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.topTitleLabel.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(111);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.topTitleLabel.snp.bottom);
+            make.left.equalTo(self.snp.left).offset(111);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(62.5);
             
         }
         
-        bottomLineLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        bottomLineLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.secondeTopLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.secondeTopLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }

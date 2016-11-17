@@ -16,8 +16,8 @@ class CameraScanViewController: BaseViewController,UITableViewDelegate,UITableVi
         super.viewDidLoad()
         previousRow = 7;
         dataArray = NSMutableArray();
-        self.view.backgroundColor = UIColor.whiteColor();
-        cameraView = CameraView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        self.view.backgroundColor = UIColor.white;
+        cameraView = CameraView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.cameraView.tableView.delegate = self;
         self.cameraView.tableView.dataSource = self;
         self.view.addSubview(cameraView);
@@ -32,11 +32,11 @@ class CameraScanViewController: BaseViewController,UITableViewDelegate,UITableVi
 
     //MARK:- TableView代理
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell :BluetoothScannerCell?;
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? BluetoothScannerCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? BluetoothScannerCell;
         if cell == nil {
-            cell = BluetoothScannerCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = BluetoothScannerCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
         
 //        let fileModel: FileDataModel = self.dataArray[indexPath.row] as! FileDataModel;
@@ -49,13 +49,13 @@ class CameraScanViewController: BaseViewController,UITableViewDelegate,UITableVi
         return cell!;
         
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
        // return self.dataArray.count;
         return 2;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if DEVICE == .Phone{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DEVICE == .phone{
             return 50/1024.0 * SCREENHEIGHT
         }
         return 50
