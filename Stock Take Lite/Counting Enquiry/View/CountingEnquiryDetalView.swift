@@ -64,10 +64,10 @@ class CountingEnquiryDetalView: CountingEntryView {
 //            make.width.equalTo(285);
 //            make.height.equalTo(40);
 //        }
-        self.fileNameLabel.snp.makeConstraints { (make) in
+        self.fileNameLabel.snp.updateConstraints { (make) in
             make.top.equalTo(self.middelView.snp.top).offset(25);
             make.left.equalTo(self.middelView.snp.left).offset(111);
-            make.width.equalTo(285);
+            make.width.equalTo(150);//285
             make.height.equalTo(40);
         }
 

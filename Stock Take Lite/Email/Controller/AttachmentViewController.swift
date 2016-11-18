@@ -30,7 +30,7 @@ class AttachmentViewController: QuantityExportViewController {
             if MFMailComposeViewController.canSendMail(){
                 let emailVC = EmailViewController()
                 let enquiryModel:EnquiryModel = self.dataArray[currenrow] as! EnquiryModel;
-                print(enquiryModel.date)
+                //print(enquiryModel.date)
                 
                 
                 emailVC.fileDate = enquiryModel.date;
