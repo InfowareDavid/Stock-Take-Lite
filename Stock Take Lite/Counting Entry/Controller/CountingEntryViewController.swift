@@ -271,7 +271,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
 
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as NSIndexPath?)?.row)----------")
+        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
         print("\(lastcell.countQtyTextField.text)000");
         
         let  myIndex :IndexPath! = self.countingEntryView.tableView.indexPath(for: lastcell);
@@ -286,7 +286,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
             self.showAnimation()
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as NSIndexPath?)?.row)----------")
+        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
         print("\(lastcell.countQtyTextField.text)000");
         print("text=====\(textField.text!)");
         if didcell != nil{

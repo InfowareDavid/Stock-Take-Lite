@@ -148,6 +148,8 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
         return true;
     }
     
+    //MARK:--修改过的
+    
     func createNewAlertView(){
        
         let alertView = UIAlertController(title: localString("warning"), message: localString("aiSamePrompt"), preferredStyle: UIAlertControllerStyle.alert);

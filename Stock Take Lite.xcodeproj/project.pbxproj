@@ -1189,7 +1189,7 @@
 					};
 					BF3A39181C27E01F0009A89F = {
 						DevelopmentTeam = U837TW5R38;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 					BFA04A581BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1872,7 +1872,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1892,7 +1892,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

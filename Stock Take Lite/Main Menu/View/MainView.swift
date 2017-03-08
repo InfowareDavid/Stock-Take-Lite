@@ -173,28 +173,28 @@ class MainView: BaseView {
         self.addSubview(emailButton)
         
         #if ENTERPRISE_VERSION
-            cameraScanButton = UIButton(type: .Custom);
-            cameraScanButton.setImage(UIImage(named: "camera"), forState: .Normal);
+            cameraScanButton = UIButton(type: .custom);
+            cameraScanButton.setImage(UIImage(named: "camera"), for: .normal);
             self.addSubview(cameraScanButton);
             
             cameraScanLabel = UILabel();
             cameraScanLabel.text = localString("mCamera");
             cameraScanLabel.textColor = self.colorWithString("#231F20");
-            cameraScanLabel.textAlignment = NSTextAlignment.Center;
+            cameraScanLabel.textAlignment = NSTextAlignment.center;
             cameraScanLabel.font = FONT20();
             cameraScanLabel.numberOfLines = 0;
             self.addSubview(cameraScanLabel);
            
             
-            bluetoothButton = UIButton(type: UIButtonType.Custom);
-            bluetoothButton.setImage(UIImage(named: "bluetooth"), forState: UIControlState.Normal);
+            bluetoothButton = UIButton(type: UIButtonType.custom);
+            bluetoothButton.setImage(UIImage(named: "bluetooth"), for: UIControlState.normal);
             self.addSubview(bluetoothButton);
            
             
             bluetoothLabel = UILabel();
             bluetoothLabel.text = localString("mBluetooth");
             bluetoothLabel.textColor = self.colorWithString("#231F20");
-            bluetoothLabel.textAlignment = NSTextAlignment.Center;
+            bluetoothLabel.textAlignment = NSTextAlignment.center;
             bluetoothLabel.font = FONT20();
             bluetoothLabel.numberOfLines = 0;
             self.addSubview(bluetoothLabel);

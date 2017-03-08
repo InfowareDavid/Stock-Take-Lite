@@ -59,6 +59,7 @@ class INFOViewController: UIViewController,UIGestureRecognizerDelegate{
     var     drawerState:                    INFODrawewControllerState?;
     var     centerView:                     INFODropShadowView!;
     
+    @discardableResult
     func initWithLeftViewController(_ leftViewController:UIViewController,centerViewController:BaseViewController)->AnyObject{
         self.drawerState = INFODrawewControllerState.closed;
         self.leftViewController = leftViewController;

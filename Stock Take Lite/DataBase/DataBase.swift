@@ -195,7 +195,7 @@ class DataBase: NSObject ,UIAlertViewDelegate{
      *
      *
      */
-    
+    @discardableResult
     func addFileData(_ fileModel:FileDataModel)->Bool{
        
         if self.isfileDataExists(fileModel.skuCode as! String){

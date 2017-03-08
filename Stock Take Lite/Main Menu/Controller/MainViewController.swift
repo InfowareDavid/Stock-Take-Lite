@@ -40,7 +40,7 @@ class MainViewController: BaseViewController,UIPopoverControllerDelegate {
         self.mainView.bluetoothButton.addTarget(self, action: #selector(MainViewController.bluetoothButtonAction), for: UIControlEvents.touchUpInside);
         #if ENTERPRISE_VERSION
             
-            self.mainView.cameraScanButton.addTarget(self, action: "cameraButtonAction", forControlEvents: .TouchUpInside);
+            self.mainView.cameraScanButton.addTarget(self, action: #selector(MainViewController.cameraButtonAction), for: .touchUpInside);
             
         #endif
         self.mainView.userAccountsSetupButton.addTarget(self, action: #selector(MainViewController.userAccountsSetupButtonAction), for: UIControlEvents.touchUpInside);
