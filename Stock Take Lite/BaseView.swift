@@ -63,7 +63,7 @@ class BaseView: UIView {
         if DEVICE == .phone{
             return UIFont.systemFont(ofSize: 9, weight: 0.15)
         }
-        return UIFont.systemFont(ofSize: 20, weight: 0.3)
+        return UIFont.systemFont(ofSize: 19, weight: 0.3)
     }
     func FONT20WEIGHT02()->UIFont{
         if DEVICE == .phone{

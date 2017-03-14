@@ -61,17 +61,33 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
     }
     
     /**
-    检测记录条数
-    */
+     检测记录条数
+     */
     
     func checkTheRecode(){
-        
-        if self.writeFileToDataBase(){
-            self.setRecodeLabelName();
-        }else{
-          
-            self.createAlertView(localString("warning"), message: localString("numOfRecodes"));
-        }
+        // 50条数据的限制，只有企业版没有限制
+        #if LITE_VERSION
+            if self.writeFileToDataBase(){
+                self.setRecodeLabelName();
+            }else{
+                
+                self.createAlertView(localString("warning"), message: localString("numOfRecodes"));
+            }
+        #elseif PRO_VERSION
+            if self.writeFileToDataBase(){
+                self.setRecodeLabelName();
+            }else{
+                
+                self.createAlertView(localString("warning"), message: localString("numOfRecodes"));
+            }
+        #elseif ENTERPRISE_VERSION
+            if self.enterpriseWriteFileToDataBase(){
+                self.setRecodeLabelName();
+            }else{
+                
+                self.createAlertView(localString("warning"), message: localString("numOfRecodes"));
+            }
+        #endif
         
     }
     
@@ -80,8 +96,8 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
     }
     
     /**
-    导入记录的条数
-    */
+     导入记录的条数
+     */
     
     func setRecodeLabelName(){
         
@@ -90,6 +106,20 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
         self.successView.onhandQuantityTextLabel.text = "\(self.recodes!)";
         
     }
+    
+    /*
+     
+     
+     #if LITE_VERSION
+     topViewLabel.text = localString("mTitle");
+     #elseif PRO_VERSION
+     topViewLabel.text = localString("mTitle_pro");
+     #elseif ENTERPRISE_VERSION
+     topViewLabel.text = localString("mTitle_ent");
+     #endif
+     
+     
+     */
     
     func writeFileToDataBase()->Bool{
         
@@ -119,14 +149,14 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
                     filedataModel.skuCode = subArr[0] as NSString?
                     filedataModel.skuName = subArr[1] as NSString?;
                     filedataModel.onhandQty = subArr[2] as NSString?;
-//                    //是否有第四列，如有第四列为盘点数量
-//                    if subArr.count >= 4{
-//                        filedataModel.countQty = subArr[3];
-//                    }
-//                    //判断是否有第五列，如果第五列为相差数量
-//                    if subArr.count >= 5{
-//                        filedataModel.varianceQty = subArr[4];
-//                    }
+                    //                    //是否有第四列，如有第四列为盘点数量
+                    //                    if subArr.count >= 4{
+                    //                        filedataModel.countQty = subArr[3];
+                    //                    }
+                    //                    //判断是否有第五列，如果第五列为相差数量
+                    //                    if subArr.count >= 5{
+                    //                        filedataModel.varianceQty = subArr[4];
+                    //                    }
                     //是否有第四列，若有第四列为条码
                     if subArr.count >= 4{
                         filedataModel.barcode = (subArr[3] as String ).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) as NSString?;
@@ -141,17 +171,60 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
         }else{
             return false;
         }
-
+        
         if sameDataArray.count != 0{
             self.createNewAlertView();
         }
         return true;
     }
     
-    //MARK:--修改过的
+    func enterpriseWriteFileToDataBase()->Bool{
+        
+        let filePath = "\(CSVFILEPATH)/\(self.downloadFileName!)";
+        print("\(filePath)");
+        fileHandel = FileHandle(forUpdatingAtPath:filePath)
+        let fileData:Data = fileHandel.readDataToEndOfFile();
+        
+        let fileStr:NSString = NSString(data: fileData, encoding: String.Encoding.utf16.rawValue)!;
+        print("\(fileStr)");
+        var strArr = fileStr.components(separatedBy: "\n");
+        if strArr.count == 1{
+            strArr = fileStr.components(separatedBy: "\r");
+        }
+        recodes = strArr.count;
+        print("recodes.count=====\(strArr.count)");
+        sameDataArray.removeAllObjects();
+        for item in strArr{
+            let subArr = item.components(separatedBy: ",");
+            print("sub ---------\(subArr.count)");
+            if subArr.count < 3 {
+                recodes = recodes - 1;
+            }else{
+                let filedataModel:FileDataModel = FileDataModel();
+                filedataModel.fileName = self.downloadFileName;
+                filedataModel.skuCode = subArr[0] as NSString?
+                filedataModel.skuName = subArr[1] as NSString?;
+                filedataModel.onhandQty = subArr[2] as NSString?;
+                //是否有第四列，若有第四列为条码
+                if subArr.count >= 4{
+                    filedataModel.barcode = (subArr[3] as String ).trimmingCharacters(in: CharacterSet.whitespacesAndNewlines) as NSString?;
+                }
+                
+                filedataModel.fileDate = self.getCurrentTime();
+                if !dbManager.addFileData(filedataModel){
+                    sameDataArray.add(filedataModel);
+                };
+            }
+        }
+        
+        if sameDataArray.count != 0{
+            self.createNewAlertView();
+        }
+        return true;
+    }
     
     func createNewAlertView(){
-       
+        
         let alertView = UIAlertController(title: localString("warning"), message: localString("aiSamePrompt"), preferredStyle: UIAlertControllerStyle.alert);
         let cancelAction:UIAlertAction = UIAlertAction(title: localString("cancel"), style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
         });
@@ -164,7 +237,7 @@ class ImportSuccessViewController: BaseViewController,UIAlertViewDelegate {
         alertView.addAction(cancelAction);
         alertView.addAction(OkAction);
         self.present(alertView, animated: true, completion: nil);
-
+        
     }
     
     func getCurrentTime()->NSString{

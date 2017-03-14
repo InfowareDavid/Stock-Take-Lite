@@ -14,7 +14,7 @@ class CameraView: CountingEntryView {
     override init(frame: CGRect) {
         super.init(frame: frame);
         self.secondeTopLabel.text = localString("icTitle");
-        
+        self.saveButton.isHidden = true 
         cameraButton = UIButton(type: UIButtonType.system);
         cameraButton.setTitle(localString("camera"), for: UIControlState());
         cameraButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());

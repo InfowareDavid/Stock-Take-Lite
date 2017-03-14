@@ -203,6 +203,8 @@
 		BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		BF9421171BBBDD6F0045F300 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */; };
 		BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
+		BF98785C1E70FC12001F7537 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98785B1E70FC12001F7537 /* ScannerViewController.swift */; };
+		BF98785F1E7138C8001F7537 /* tip.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF98785E1E7138C7001F7537 /* tip.wav */; };
 		BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
 		BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
 		BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
@@ -236,9 +238,14 @@
 		BFA04B4F1BBA8BF00019C604 /* INFODrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */; };
 		BFA04B501BBA8BF00019C604 /* INFODropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */; };
 		BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */; };
+		BFA082D61E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
+		BFA082D71E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
+		BFA082D81E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
 		BFABF0871BD0B4E700CBF593 /* CountingEnquiryDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */; };
 		BFABF0891BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */; };
 		BFAC20F21BEC900E00ED909C /* INFOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */; };
+		BFB1323C1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */; };
+		BFB1323E1E72504F00F31CF3 /* ScannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */; };
 		BFBD41721BDF4FFB00BC37CE /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41711BDF4FFB00BC37CE /* FTPManager.m */; };
 		BFBD41741BDF50BF00BC37CE /* CurrentFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */; };
 		BFC7E7051C22A10F007AEA2B /* CameraScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */; };
@@ -246,6 +253,7 @@
 		BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE5D021BC66D1300DD0C90 /* BaseView.swift */; };
 		BFDFDD641BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */; };
 		BFE0B4171BE1D64300470545 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0B4161BE1D64300470545 /* FileDataModel.swift */; };
+		BFED9E5B1E713CFE00473D60 /* tip.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF98785E1E7138C7001F7537 /* tip.wav */; };
 		BFFBADC91BC75DDD00026817 /* QuantityImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */; };
 		BFFBADCB1BC75E0A00026817 /* QuantityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */; };
 		BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */; };
@@ -336,6 +344,8 @@
 		BF9596DF1BF1EF9D004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BF9596E31BF1F03E004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BF9596E51BF1F043004DE3B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF98785B1E70FC12001F7537 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		BF98785E1E7138C7001F7537 /* tip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tip.wav; sourceTree = "<group>"; };
 		BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPServerConnectionView.swift; sourceTree = "<group>"; };
 		BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsAddView.swift; sourceTree = "<group>"; };
 		BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupView.swift; sourceTree = "<group>"; };
@@ -383,9 +393,12 @@
 		BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODrawerViewController.swift; sourceTree = "<group>"; };
 		BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODropShadowView.swift; sourceTree = "<group>"; };
 		BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOViewController.swift; sourceTree = "<group>"; };
+		BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
 		BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalView.swift; sourceTree = "<group>"; };
 		BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalViewController.swift; sourceTree = "<group>"; };
 		BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOTableViewCell.swift; sourceTree = "<group>"; };
+		BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScannerVCTableview+Extention.swift"; sourceTree = "<group>"; };
+		BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerTableViewCell.swift; sourceTree = "<group>"; };
 		BFBD41701BDF4FFB00BC37CE /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
 		BFBD41711BDF4FFB00BC37CE /* FTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPManager.m; sourceTree = "<group>"; };
 		BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentFTP.swift; sourceTree = "<group>"; };
@@ -594,6 +607,14 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		BF98785D1E7138C7001F7537 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BF98785E1E7138C7001F7537 /* tip.wav */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		BFA04A501BBA70650019C604 = {
 			isa = PBXGroup;
 			children = (
@@ -624,6 +645,7 @@
 		BFA04A5B1BBA70650019C604 /* Stock Take Lite */ = {
 			isa = PBXGroup;
 			children = (
+				BF98785D1E7138C7001F7537 /* Resource */,
 				BF7F4D551DB0C80F00FB4FA0 /* NetWork */,
 				BF33F4D91D20E4AA00A49C0B /* Email */,
 				BFC7E7001C2294D6007AEA2B /* iPad Camera Scan */,
@@ -672,6 +694,7 @@
 		BFA04A8A1BBA72480019C604 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BFA082D41E763AE3002B65A8 /* Extensions */,
 				BFBD416F1BDF4FFB00BC37CE /* FTPManager */,
 				BF9420FA1BBBDD6F0045F300 /* Masonry */,
 				BFA04B481BBA8BF00019C604 /* INFORESideMenu */,
@@ -777,6 +800,14 @@
 			path = INFORESideMenu;
 			sourceTree = "<group>";
 		};
+		BFA082D41E763AE3002B65A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BFBD416F1BDF4FFB00BC37CE /* FTPManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -800,6 +831,8 @@
 			isa = PBXGroup;
 			children = (
 				BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */,
+				BF98785B1E70FC12001F7537 /* ScannerViewController.swift */,
+				BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -815,6 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC7E7061C22A120007AEA2B /* CameraView.swift */,
+				BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1247,6 +1281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFED9E5B1E713CFE00473D60 /* tip.wav in Resources */,
 				BF3A39621C27E01F0009A89F /* LaunchScreen.storyboard in Resources */,
 				BF3A39631C27E01F0009A89F /* Localizable.strings in Resources */,
 				BF3A39641C27E01F0009A89F /* Assets.xcassets in Resources */,
@@ -1261,6 +1296,7 @@
 				BFA04A671BBA70650019C604 /* LaunchScreen.storyboard in Resources */,
 				BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */,
 				BF3A39151C27DE0E0009A89F /* Stock Take Pro-Info.plist in Resources */,
+				BF98785F1E7138C8001F7537 /* tip.wav in Resources */,
 				BFA04A641BBA70650019C604 /* Assets.xcassets in Resources */,
 				BFA04A621BBA70650019C604 /* Main.storyboard in Resources */,
 				BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */,
@@ -1574,6 +1610,7 @@
 				BF3A38F51C27DCC50009A89F /* BluetoothScannerViewController.swift in Sources */,
 				BF3A38F61C27DCC50009A89F /* MainViewController.swift in Sources */,
 				BF3A38F71C27DCC50009A89F /* UserAccountsSetupViewController.swift in Sources */,
+				BFA082D71E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF3A38F81C27DCC50009A89F /* FTPServerConnectionView.swift in Sources */,
 				BF3A38F91C27DCC50009A89F /* BaseView.swift in Sources */,
 				BF3A38FA1C27DCC50009A89F /* HelpViewController.swift in Sources */,
@@ -1603,6 +1640,7 @@
 				BF3A391D1C27E01F0009A89F /* CountingEnquiryDetalView.swift in Sources */,
 				BF3A391E1C27E01F0009A89F /* ImportSuccessView.swift in Sources */,
 				BF3A391F1C27E01F0009A89F /* MASCompositeConstraint.m in Sources */,
+				BFB1323C1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift in Sources */,
 				BF3A39201C27E01F0009A89F /* DatePickerViewController.swift in Sources */,
 				BF3A39211C27E01F0009A89F /* ExportSuccessViewController.swift in Sources */,
 				BF3A39221C27E01F0009A89F /* FTPManager.m in Sources */,
@@ -1610,6 +1648,7 @@
 				BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */,
 				BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
+				BF98785C1E70FC12001F7537 /* ScannerViewController.swift in Sources */,
 				BF3A39251C27E01F0009A89F /* CountingEntryView.swift in Sources */,
 				BF3A39261C27E01F0009A89F /* CountingEntryViewController.swift in Sources */,
 				BF3A39271C27E01F0009A89F /* HelpView.swift in Sources */,
@@ -1650,6 +1689,7 @@
 				BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */,
 				BF3A39481C27E01F0009A89F /* EnquiryModel.swift in Sources */,
 				BF3A39491C27E01F0009A89F /* CameraScanViewController.swift in Sources */,
+				BFA082D81E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF3A394A1C27E01F0009A89F /* BluetoothScannerCell.swift in Sources */,
 				BF3A394B1C27E01F0009A89F /* LogonViewController.swift in Sources */,
 				BF3A394C1C27E01F0009A89F /* BluetoothScannerViewController.swift in Sources */,
@@ -1658,6 +1698,7 @@
 				BF3A394F1C27E01F0009A89F /* FTPServerConnectionView.swift in Sources */,
 				BF3A39501C27E01F0009A89F /* BaseView.swift in Sources */,
 				BF3A39511C27E01F0009A89F /* HelpViewController.swift in Sources */,
+				BFB1323E1E72504F00F31CF3 /* ScannerTableViewCell.swift in Sources */,
 				BF3A39521C27E01F0009A89F /* CountingEnquiryTableViewCell.swift in Sources */,
 				BF3A39531C27E01F0009A89F /* CountingEnquiryDetalViewController.swift in Sources */,
 				BF3A39541C27E01F0009A89F /* FMDatabasePool.m in Sources */,
@@ -1736,6 +1777,7 @@
 				BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */,
 				BFA04B3F1BBA8AE10019C604 /* MainViewController.swift in Sources */,
 				BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */,
+				BFA082D61E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */,
 				BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */,
 				BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */,

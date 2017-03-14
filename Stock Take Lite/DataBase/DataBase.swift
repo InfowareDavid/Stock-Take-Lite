@@ -8,6 +8,7 @@
 /// 数据库连接
 import UIKit
 
+
 class DataBase: NSObject ,UIAlertViewDelegate{
     
    static let manager = DataBase()
@@ -74,7 +75,7 @@ class DataBase: NSObject ,UIAlertViewDelegate{
      * UserTable ，增加用户，修改密码，用户查询，
      *
      */
-    
+    @discardableResult
     func addUser(_ user:UserModel)->Bool{
         
         if self.isUserExists(user){
@@ -373,6 +374,7 @@ class DataBase: NSObject ,UIAlertViewDelegate{
     - returns: true 删除成功  false 删除失败
     */
     
+    @discardableResult
     func deleteRecodeWithDate(_ date:NSString)->Bool{
         
         let sql = "delete from CSVFileTable where FileDate = ? ";

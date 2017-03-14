@@ -85,35 +85,32 @@ class LogonViewController: BaseViewController,UITextFieldDelegate,XMLParserDeleg
         user.password = logonView.passwordTextField?.text as NSString?;
         user.userName = nil;
         
-//        let app = AppDelegate()
-//        
-//        for index in 0..<1000{
-//            user.userID = "\(index)"
-//            user.password = "\(index+5)"
-//             self.postPassword(self.user)
-//            print("index-------------------->\(index)")
-//        }
-//        
-//        
-//        if ((app.reachManager?.isReachable) != nil){
-//        
-//            self.postPassword(self.user)
-//            self.activityIndicatorView.startAnimating()
-//        }
+        //        let app = AppDelegate()
+        //
+        //        for index in 0..<1000{
+        //            user.userID = "\(index)"
+        //            user.password = "\(index+5)"
+        //             self.postPassword(self.user)
+        //            print("index-------------------->\(index)")
+        //        }
+        //
+        //
+        //        if ((app.reachManager?.isReachable) != nil){
+        //
+        //            self.postPassword(self.user)
+        //            self.activityIndicatorView.startAnimating()
+        //        }
         
+        // MARK:- 之前FTP版本的密码校验
         
-        
-        
-               // MARK:- 之前FTP版本的密码校验
-        
-                if database.isUserPasswordright(user){
-                    let currentUser:CurrentUser = CurrentUser.current;
-                    currentUser.user = user;
-                    let mainVC:MainViewController = MainViewController();
-                    self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
-                }else{
-                    self.createAlertView("警告", message: "账户或密码有误！");
-                }
+        if database.isUserPasswordright(user){
+            let currentUser:CurrentUser = CurrentUser.current;
+            currentUser.user = user;
+            let mainVC:MainViewController = MainViewController();
+            self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
+        }else{
+            self.createAlertView("警告", message: "账户或密码有误！");
+        }
     }
     
     func logonToMainViewController(){
@@ -129,9 +126,9 @@ class LogonViewController: BaseViewController,UITextFieldDelegate,XMLParserDeleg
         
         networkManager.postRequest(Service.UserService.rawValue, action: ServiceAction.UserServiceAction.RegistAction.rawValue, paramValues: message, success:{
             data in
-//            self.parse = NSXMLParser(data: data)
-//            self.parse!.delegate = self
-//            self.parse!.parse()
+            //            self.parse = NSXMLParser(data: data)
+            //            self.parse!.delegate = self
+            //            self.parse!.parse()
             
             let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
             count+=1

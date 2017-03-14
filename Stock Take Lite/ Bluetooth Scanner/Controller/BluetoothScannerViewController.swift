@@ -248,7 +248,7 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         if string == "\n" {
             let str = self.barcodeString;
             if str != ""{
-                self.barcodeArray.add(str);
+                self.barcodeArray.add(str as Any);
             }
             if self.barcodeArray.count != 0{
                 self.loadDataFromDataBaseWithBarcode(self.barcodeArray.lastObject as! String);
