@@ -72,8 +72,6 @@ extension ScannerViewController:UITableViewDataSource,UITableViewDelegate,UIText
         self.present(alertView, animated: true, completion: nil)
     }
     
-    // MARK: - Delegate AlertViewController Action
-    
     // MARK: - UITextField Delegate 返回数字
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
         

@@ -59,6 +59,9 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     /// 展示盘点的条目
     var displayTableView:UITableView?
     
+    /// 矩形框
+    var rectView:RectView!
+    
     
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -90,6 +93,14 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     }
     
     func createUI(){
+        // draw Line
+        
+        rectView = RectView()
+        rectView.frame = CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT)
+        rectView.backgroundColor = UIColor.clear
+        self.scanBackgoundView.addSubview(rectView)
+        rectView.setNeedsDisplay()
+        
         
         backButton = UIButton(type: .system)
         backButton.setTitle("Back", for: .normal)
@@ -223,7 +234,8 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         scanBackgoundView.layer.insertSublayer(videoPreviewLayer!, at: 0)
         
         //设置扫描范围
-        output.rectOfInterest = CGRect(x: 0.2, y: 0.2, width: 0.6, height: 0.6)
+   
+        output.rectOfInterest = CGRect(x: 1/4.0, y: 1/3.0, width: 1/2.0, height: 1/3.0)
         
     }
     

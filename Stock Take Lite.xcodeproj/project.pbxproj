@@ -205,6 +205,9 @@
 		BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
 		BF98785C1E70FC12001F7537 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98785B1E70FC12001F7537 /* ScannerViewController.swift */; };
 		BF98785F1E7138C8001F7537 /* tip.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF98785E1E7138C7001F7537 /* tip.wav */; };
+		BF98D07C1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
+		BF98D07D1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
+		BF98D07E1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
 		BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
 		BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
 		BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
@@ -346,6 +349,7 @@
 		BF9596E51BF1F043004DE3B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BF98785B1E70FC12001F7537 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		BF98785E1E7138C7001F7537 /* tip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tip.wav; sourceTree = "<group>"; };
+		BF98D07B1E778D6300A566AF /* RectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RectView.swift; sourceTree = "<group>"; };
 		BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPServerConnectionView.swift; sourceTree = "<group>"; };
 		BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsAddView.swift; sourceTree = "<group>"; };
 		BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupView.swift; sourceTree = "<group>"; };
@@ -849,6 +853,7 @@
 			children = (
 				BFC7E7061C22A120007AEA2B /* CameraView.swift */,
 				BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */,
+				BF98D07B1E778D6300A566AF /* RectView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1558,6 +1563,7 @@
 				BF3A38C61C27DCC50009A89F /* CountingEnquiryDetalView.swift in Sources */,
 				BF3A38C71C27DCC50009A89F /* ImportSuccessView.swift in Sources */,
 				BF3A38C81C27DCC50009A89F /* MASCompositeConstraint.m in Sources */,
+				BF98D07D1E778D6300A566AF /* RectView.swift in Sources */,
 				BF3A38C91C27DCC50009A89F /* DatePickerViewController.swift in Sources */,
 				BF3A38CA1C27DCC50009A89F /* ExportSuccessViewController.swift in Sources */,
 				BF3A38CB1C27DCC50009A89F /* FTPManager.m in Sources */,
@@ -1645,6 +1651,7 @@
 				BF3A39211C27E01F0009A89F /* ExportSuccessViewController.swift in Sources */,
 				BF3A39221C27E01F0009A89F /* FTPManager.m in Sources */,
 				BF33F4EE1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
+				BF98D07E1E778D6300A566AF /* RectView.swift in Sources */,
 				BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */,
 				BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
@@ -1725,6 +1732,7 @@
 				BFABF0871BD0B4E700CBF593 /* CountingEnquiryDetalView.swift in Sources */,
 				BF83AC491BC8DE3200451902 /* ImportSuccessView.swift in Sources */,
 				BF9421101BBBDD6F0045F300 /* MASCompositeConstraint.m in Sources */,
+				BF98D07C1E778D6300A566AF /* RectView.swift in Sources */,
 				BF922BA21BD60F3900C97B30 /* DatePickerViewController.swift in Sources */,
 				BF886B411BD0D8A3000FDAF1 /* ExportSuccessViewController.swift in Sources */,
 				BFBD41721BDF4FFB00BC37CE /* FTPManager.m in Sources */,
