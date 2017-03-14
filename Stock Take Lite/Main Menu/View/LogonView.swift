@@ -33,7 +33,7 @@ class LogonView: BaseView {
         
         userIDLbel = UILabel();
         userIDLbel?.font = FONT25();
-        userIDLbel?.textAlignment = NSTextAlignment.Left;
+        userIDLbel?.textAlignment = NSTextAlignment.left;
         userIDLbel?.textColor = self.colorWithString("#000000");
         userIDLbel?.text = localString("mUserID");
         self.addSubview(userIDLbel!);
@@ -41,47 +41,47 @@ class LogonView: BaseView {
         
         passwordLabel = UILabel();
         passwordLabel?.font = FONT25();
-        passwordLabel?.textAlignment = NSTextAlignment.Left;
+        passwordLabel?.textAlignment = NSTextAlignment.left;
         passwordLabel?.textColor = self.colorWithString("#000000");
         passwordLabel?.text = localString("mPassword");
         self.addSubview(passwordLabel!);
         
         
         userIDTextField = UITextField();
-        userIDTextField?.clearButtonMode = UITextFieldViewMode.WhileEditing;
-        userIDTextField?.borderStyle = UITextBorderStyle.RoundedRect;
-        userIDTextField?.returnKeyType = .Done
+        userIDTextField?.clearButtonMode = UITextFieldViewMode.whileEditing;
+        userIDTextField?.borderStyle = UITextBorderStyle.roundedRect;
+        userIDTextField?.returnKeyType = .done
         userIDTextField?.font = FONT25();
         userIDTextField?.minimumFontSize = 0.8;
         self.addSubview(userIDTextField!);
         
         
         passwordTextField = UITextField();
-        passwordTextField?.clearButtonMode = UITextFieldViewMode.WhileEditing;
-        passwordTextField?.borderStyle = UITextBorderStyle.RoundedRect;
+        passwordTextField?.clearButtonMode = UITextFieldViewMode.whileEditing;
+        passwordTextField?.borderStyle = UITextBorderStyle.roundedRect;
         passwordTextField?.font = FONT25();
-        passwordTextField?.returnKeyType = .Done
-        passwordTextField?.secureTextEntry = true;
+        passwordTextField?.returnKeyType = .done
+        passwordTextField?.isSecureTextEntry = true;
         passwordTextField?.minimumFontSize = 0.8;
         self.addSubview(passwordTextField!);
         
         
-        logonButton = UIButton(type: UIButtonType.System);
+        logonButton = UIButton(type: UIButtonType.system);
         logonButton?.titleLabel?.font = FONT22();
-        logonButton?.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
-        logonButton?.setBackgroundImage(UIImage(named: "buttom_1") ,forState:UIControlState.Normal );
-        logonButton?.setTitle(localString("logon"), forState: UIControlState.Normal);
+        logonButton?.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
+        logonButton?.setBackgroundImage(UIImage(named: "buttom_1") ,for:UIControlState() );
+        logonButton?.setTitle(localString("logon"), for: UIControlState());
         self.addSubview(logonButton!);
         
         
-        userAccountSetupButton = UIButton(type: UIButtonType.System);
+        userAccountSetupButton = UIButton(type: UIButtonType.system);
         userAccountSetupButton?.titleLabel?.font = FONT22();
-        userAccountSetupButton?.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
-        userAccountSetupButton?.setTitle(localString("userAccountSetup"), forState: UIControlState.Normal);
-        userAccountSetupButton?.setBackgroundImage(UIImage(named: "buttom_2"), forState: UIControlState.Normal);
+        userAccountSetupButton?.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
+        userAccountSetupButton?.setTitle(localString("userAccountSetup"), for: UIControlState());
+        userAccountSetupButton?.setBackgroundImage(UIImage(named: "buttom_2"), for: UIControlState());
         self.addSubview(userAccountSetupButton!);
         
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             self.addPhoneContraint()
         }else{
             self.addLogonContraint()
@@ -91,124 +91,124 @@ class LogonView: BaseView {
     
     func addPhoneContraint(){
         
-        logoImageView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/5);
-            make.top.equalTo(self.mas_top).with.offset(SCREENHEIGHT/5);
+        logoImageView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/5);
+            make.top.equalTo(self.snp.top).offset(SCREENHEIGHT/5);
             make.width.equalTo(SCREENWIDTH/5 * 3);
             make.height.equalTo(SCREENWIDTH/5 * 3);
         }
         
-        userIDLbel?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        userIDLbel?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/20 * 3);
-            make.top.equalTo(self.mas_top).with.offset(SCREENHEIGHT/5 * 3);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/20 * 3);
+            make.top.equalTo(self.snp.top).offset(SCREENHEIGHT/5 * 3);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(35);
             
         })
         
-        passwordLabel?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        passwordLabel?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.userIDLbel!.mas_left)
-            make.top.equalTo(self.userIDLbel!.mas_bottom).offset(15);
-            make.width.equalTo(self.userIDLbel!.mas_width);
-            make.height.equalTo(self.userIDLbel!.mas_height);
+            make.left.equalTo(self.userIDLbel!.snp.left)
+            make.top.equalTo(self.userIDLbel!.snp.bottom).offset(15);
+            make.width.equalTo(self.userIDLbel!.snp.width);
+            make.height.equalTo(self.userIDLbel!.snp.height);
             
         })
         
-        userIDTextField?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        userIDTextField?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.userIDLbel!.mas_right).with.offset(10);
-            make.centerY.equalTo(self.userIDLbel!.mas_centerY);
+            make.left.equalTo(self.userIDLbel!.snp.right).offset(10);
+            make.centerY.equalTo(self.userIDLbel!.snp.centerY);
             make.width.equalTo(SCREENWIDTH/5 * 2);
-            make.height.equalTo(self.userIDLbel!.mas_height).offset(-10);
+            make.height.equalTo(self.userIDLbel!.snp.height).offset(-10);
             
         })
         
-        passwordTextField?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        passwordTextField?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.userIDTextField!.mas_left);
-            make.centerY.equalTo(self.passwordLabel!.mas_centerY);
-            make.width.equalTo(self.userIDTextField!.mas_width);
-            make.height.equalTo(self.userIDTextField!.mas_height);
-            
-        })
-        
-        logonButton?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
-            make.left.equalTo(self.userIDLbel!.mas_left);
-            make.top.equalTo(self.passwordLabel!.mas_bottom).with.offset(15);
-            make.width.equalTo(self.userIDLbel!.mas_width);
-            make.height.equalTo(self.userIDLbel!.mas_height).offset(-10);
+            make.left.equalTo(self.userIDTextField!.snp.left);
+            make.centerY.equalTo(self.passwordLabel!.snp.centerY);
+            make.width.equalTo(self.userIDTextField!.snp.width);
+            make.height.equalTo(self.userIDTextField!.snp.height);
             
         })
         
-        userAccountSetupButton?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        logonButton?.snp.makeConstraints({ (make) in
+            make.left.equalTo(self.userIDLbel!.snp.left);
+            make.top.equalTo(self.passwordLabel!.snp.bottom).offset(15);
+            make.width.equalTo(self.userIDLbel!.snp.width);
+            make.height.equalTo(self.userIDLbel!.snp.height).offset(-10);
             
-            make.left.equalTo(self.userIDTextField!.mas_left)
-            make.centerY.equalTo(self.logonButton!.mas_centerY);
-            make.width.equalTo(self.userIDTextField!.mas_width);
-            make.height.equalTo(self.userIDLbel!.mas_height).offset(-10);
+        })
+        
+        userAccountSetupButton?.snp.makeConstraints({ (make) in
+            
+            make.left.equalTo(self.userIDTextField!.snp.left)
+            make.centerY.equalTo(self.logonButton!.snp.centerY);
+            make.width.equalTo(self.userIDTextField!.snp.width);
+            make.height.equalTo(self.userIDLbel!.snp.height).offset(-10);
             
         })
         
     }
     
     func addLogonContraint(){
-        logoImageView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.left.equalTo(self.mas_left).with.offset(204);
-            make.top.equalTo(self.mas_top).with.offset(180);
+        logoImageView.snp.makeConstraints { (make) in
+            make.left.equalTo(self.snp.left).offset(204);
+            make.top.equalTo(self.snp.top).offset(180);
             make.width.equalTo(402);
             make.height.equalTo(352);
         }
         
-        userIDLbel?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        userIDLbel?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(205);
-            make.top.equalTo(self.mas_top).with.offset(592);
+            make.left.equalTo(self.snp.left).offset(205);
+            make.top.equalTo(self.snp.top).offset(592);
             make.width.equalTo(120);
             make.height.equalTo(34);
             
         })
         
-        passwordLabel?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        passwordLabel?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(205);
-            make.top.equalTo(self.mas_top).with.offset(667);
+            make.left.equalTo(self.snp.left).offset(205);
+            make.top.equalTo(self.snp.top).offset(667);
             make.width.equalTo(120);
             make.height.equalTo(34);
             
         })
         
-        userIDTextField?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        userIDTextField?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(350);
-            make.top.equalTo(self.mas_top).with.offset(592);
+            make.left.equalTo(self.snp.left).offset(350);
+            make.top.equalTo(self.snp.top).offset(592);
             make.width.equalTo(210);
             make.height.equalTo(34);
             
         })
         
-        passwordTextField?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        passwordTextField?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(350);
-            make.top.equalTo(self.mas_top).with.offset(667);
+            make.left.equalTo(self.snp.left).offset(350);
+            make.top.equalTo(self.snp.top).offset(667);
             make.width.equalTo(210);
             make.height.equalTo(34);
             
         })
         
-        logonButton?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
-            make.left.equalTo(self.mas_left).with.offset(205);
-            make.top.equalTo(self.mas_top).with.offset(749);
+        logonButton?.snp.makeConstraints({ (make) in
+            make.left.equalTo(self.snp.left).offset(205);
+            make.top.equalTo(self.snp.top).offset(749);
             make.width.equalTo(112);
             make.height.equalTo(32);
             
         })
         
-        userAccountSetupButton?.mas_makeConstraints({ (make:MASConstraintMaker!) -> Void in
+        userAccountSetupButton?.snp.makeConstraints({ (make) in
             
-            make.left.equalTo(self.mas_left).with.offset(327);
-            make.top.equalTo(self.mas_top).with.offset(749);
+            make.left.equalTo(self.snp.left).offset(327);
+            make.top.equalTo(self.snp.top).offset(749);
             make.width.equalTo(236);
             make.height.equalTo(32);
             

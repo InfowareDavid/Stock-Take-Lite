@@ -15,18 +15,18 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
     var     server:                                 FMServer!;
     var     manager:                                FTPManager!;
     var     successed:                              Bool = false;
-    var     currentIndexPath:                       NSIndexPath!;
+    var     currentIndexPath:                       IndexPath!;
     var     isSelectedIndexPath:                    Bool = false;
     var     quantityAlertView:                              UIAlertView!;
     
     override func viewDidLoad() {
         super.viewDidLoad()
         previousRow = 1;
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor.white;
         dataArray = NSArray();
         quantityAlertView = UIAlertView(title: localString("warning"), message: localString("imSetFTPServer"), delegate: self, cancelButtonTitle: localString("ok"));
-        currentIndexPath = NSIndexPath();
-        quantityImportView = QuantityImportView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        currentIndexPath = IndexPath();
+        quantityImportView = QuantityImportView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         quantityImportView.tableView.delegate = self;
         quantityImportView.tableView.dataSource = self;
         quantityImportView.tableView.reloadData();
@@ -36,31 +36,31 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
     }
     
     func checkFTPIsSetup(){
-        let currentFTP = CurrentFTP.current();
+        let currentFTP = CurrentFTP.current;
         if currentFTP.ftpServer == nil{
             quantityAlertView.show();
             self.view.addSubview(quantityAlertView);
         }else{
             self.setupFTP();
             self.setupFTPLabelName();
-            MBProgressHUD.showHUDAddedTo(self.view , animated: true);
-            self.performSelectorInBackground(#selector(QuantityImportViewController.loadData), withObject: nil);
+            MBProgressHUD.showAdded(to: self.view , animated: true);
+            self.performSelector(inBackground: #selector(QuantityImportViewController.loadData), with: nil);
         }
     }
     
     func setupFTP(){
-        let currentFTP = CurrentFTP.current();
+        let currentFTP = CurrentFTP.current;
         server = FMServer(destination: currentFTP.ftpServer! as String, username: currentFTP.ftpUser! as String, password: currentFTP.ftpPassword! as String);
         manager = FTPManager();
     }
     
     func loadData(){
-        dataArray = manager.contentsOfServer(server);
-        self.performSelectorOnMainThread(#selector(QuantityImportViewController.reloadMyTableView), withObject: nil, waitUntilDone: true);
+        dataArray = manager.contents(of: server) as NSArray!;
+        self.performSelector(onMainThread: #selector(QuantityImportViewController.reloadMyTableView), with: nil, waitUntilDone: true);
     }
     
     func reloadMyTableView(){
-        MBProgressHUD.hideHUDForView(self.view , animated: true);
+        MBProgressHUD.hide(for: self.view , animated: true);
         if dataArray == nil{
             self.quantityImportView.promptLabel.text = localString("imprompt");
         }
@@ -69,7 +69,7 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
     
     func setupFTPLabelName(){
         
-        let currentFTP = CurrentFTP.current();
+        let currentFTP = CurrentFTP.current;
         self.quantityImportView.ftpServerTextLabel.text = currentFTP.ftpServer as String;
         self.quantityImportView.ftpUserTextLabel.text = currentFTP.ftpUser as String;
         
@@ -84,14 +84,19 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
     
     func addButtonActions(){
         
-        self.quantityImportView.okButton.addTarget(self, action: #selector(QuantityImportViewController.okButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.quantityImportView.okButton.addTarget(self, action: #selector(QuantityImportViewController.okButtonAction), for: UIControlEvents.touchUpInside);
         
-        self.quantityImportView.returnButton.addTarget(self, action: #selector(QuantityImportViewController.returnButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.quantityImportView.returnButton.addTarget(self, action: #selector(QuantityImportViewController.returnButtonAction), for: UIControlEvents.touchUpInside);
     }
     
     func okButtonAction(){
         if isSelectedIndexPath {
-            let fileName:NSString = dataArray[currentIndexPath.row]["kCFFTPResourceName"] as! NSString;
+            let arr:Array = dataArray as Array
+            let dic = arr[currentIndexPath.row]
+            let dicstr = dic["kCFFTPResourceName"]as!String
+            let fileName:NSString = dicstr as NSString
+            
+            //let fileName:NSString = dataArray[currentIndexPath.row]["kCFFTPResourceName"] as! NSString;
             self.setLatestFileName(fileName);
             
             let successVC = ImportSuccessViewController();
@@ -109,9 +114,9 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
     - parameter fileName: 最后导入文件的名字
     */
     
-    func setLatestFileName(fileName:NSString){
+    func setLatestFileName(_ fileName:NSString){
         
-        let defaults:NSUserDefaults = NSUserDefaults();
+        let defaults:UserDefaults = UserDefaults();
         defaults.setValue(fileName, forKey: "DefaultsFileName");
         defaults.synchronize();
         
@@ -128,54 +133,61 @@ class QuantityImportViewController: BaseViewController,UITableViewDataSource,UIT
         super.didReceiveMemoryWarning()
     }
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell :QuantityImportTableViewCell?;
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? QuantityImportTableViewCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? QuantityImportTableViewCell;
         if cell == nil {
-            cell = QuantityImportTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = QuantityImportTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
-        cell?.fileNameLabel.text = dataArray[indexPath.row]["kCFFTPResourceName"] as? String;
-        let date:NSDate = dataArray[indexPath.row]["kCFFTPResourceModDate"] as! NSDate;
+        let arr:Array = dataArray as Array
+        let dic = arr[(indexPath as NSIndexPath).row]
+        let dicstr = dic["kCFFTPResourceName"]as!String
+        let fileName:NSString = dicstr as NSString
+        cell?.fileNameLabel.text = fileName as String
+       // cell?.fileNameLabel.text = dataArray[(indexPath as NSIndexPath).row]["kCFFTPResourceName"] as? String;
+        let dateFromFTP = dic["kCFFTPResourceModDate"] as! Date
+        let date:Date  = dateFromFTP
+        //let date:Date = dataArray[(indexPath as NSIndexPath).row]["kCFFTPResourceModDate"] as! Date;
         print("\(date)")
-        let dataFromate:NSDateFormatter = NSDateFormatter();
-        dataFromate.dateStyle = NSDateFormatterStyle.NoStyle;
-        dataFromate.timeStyle = NSDateFormatterStyle.NoStyle;
-        dataFromate.locale = NSLocale.currentLocale();
+        let dataFromate:DateFormatter = DateFormatter();
+        dataFromate.dateStyle = DateFormatter.Style.none;
+        dataFromate.timeStyle = DateFormatter.Style.none;
+        dataFromate.locale = Locale.current;
         
-        let zone:NSTimeZone = NSTimeZone(name: "UTC")!;
+        let zone:TimeZone = TimeZone(identifier: "UTC")!;
         dataFromate.timeZone = zone;
         dataFromate.dateFormat = "dd-MMM-yyyy HH:mm";
-        dataFromate.stringFromDate(date);
-        cell?.fileTimeLabel.text = dataFromate.stringFromDate(date);
+        dataFromate.string(from: date);
+        cell?.fileTimeLabel.text = dataFromate.string(from: date);
         return cell!;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if dataArray == nil{
             return 0;
         }
         return dataArray.count;
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if DEVICE == .Phone{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DEVICE == .phone{
             return 50/1024.0 * SCREENHEIGHT
         }
         return 50
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isSelectedIndexPath = true;
         currentIndexPath = indexPath;
         
     }
     
-    override func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    override func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if alertView == self.quantityAlertView{
             let ftpServerVC = FTPServerConnectionViewController();
             self.drawer?.repleaceCenterViewControllerWithViewController(ftpServerVC);

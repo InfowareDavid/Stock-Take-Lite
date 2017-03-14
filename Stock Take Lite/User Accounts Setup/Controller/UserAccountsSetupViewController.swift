@@ -14,15 +14,15 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     var            userAccountsSetupView:                   UserAccountsSetupView!;
     var            userArray:                               NSMutableArray!;
     var            dbManager:                               DataBase!;
-    var            currentIndexpath:                        NSIndexPath!;
+    var            currentIndexpath:                        IndexPath!;
     var            isSelected:                              Bool = false;
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        dbManager = DataBase.manager();
-        currentIndexpath = NSIndexPath(forRow: 0, inSection: 0);
-        self.view.backgroundColor = UIColor.whiteColor();
-        userAccountsSetupView = UserAccountsSetupView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        dbManager = DataBase.manager;
+        currentIndexpath = IndexPath(row: 0, section: 0);
+        self.view.backgroundColor = UIColor.white;
+        userAccountsSetupView = UserAccountsSetupView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.view.addSubview(userAccountsSetupView);
         self.userAccountsSetupView.tableView.delegate = self;
         self.userAccountsSetupView.tableView.dataSource = self;
@@ -45,9 +45,9 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     添加按钮处理事件 Add,Ok,Cancel
     */
     func addButtonActions(){
-        self.userAccountsSetupView.addButton.addTarget(self, action: #selector(UserAccountsSetupViewController.addButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.userAccountsSetupView.okButton.addTarget(self, action: #selector(UserAccountsSetupViewController.okButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.userAccountsSetupView.cancelButton.addTarget(self, action: #selector(UserAccountsSetupViewController.cancelButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.userAccountsSetupView.addButton.addTarget(self, action: #selector(UserAccountsSetupViewController.addButtonAction), for: UIControlEvents.touchUpInside);
+        self.userAccountsSetupView.okButton.addTarget(self, action: #selector(UserAccountsSetupViewController.okButtonAction), for: UIControlEvents.touchUpInside);
+        self.userAccountsSetupView.cancelButton.addTarget(self, action: #selector(UserAccountsSetupViewController.cancelButtonAction), for: UIControlEvents.touchUpInside);
     }
     
     /**
@@ -65,7 +65,7 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     
     func okButtonAction(){
         if isSelected {
-            let currentUser = CurrentUser.current();
+            let currentUser = CurrentUser.current;
             currentUser.user = userArray[currentIndexpath.row] as? UserModel;
             dbManager.addCurrentUser(currentUser);
             let mainVC = MainViewController();
@@ -84,7 +84,7 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     */
     
     func cancelButtonAction(){
-        currentIndexpath = NSIndexPath(forRow: 0, inSection: 0);
+        currentIndexpath = IndexPath(row: 0, section: 0);
         isSelected = false;
         if self.lastVC == nil {
             let mainVC = MainViewController();
@@ -96,17 +96,17 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     
     //MARK: - tableView delegate
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell :UserAccountsSetupTableViewCell?;
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? UserAccountsSetupTableViewCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? UserAccountsSetupTableViewCell;
         if cell == nil {
-            cell = UserAccountsSetupTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = UserAccountsSetupTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
-        let user = userArray[indexPath.row] as? UserModel;
+        let user = userArray[(indexPath as NSIndexPath).row] as? UserModel;
         cell?.userIDLabel.text = user?.userID as? String;
         cell?.userNameLabel.text = user?.userName as? String;
-        if (user?.administrator?.isEqualToString("1") != false) {
+        if (user?.administrator?.isEqual(to: "1") != false) {
             cell?.administratorLabel.text = "YES";
         }else{
             cell?.administratorLabel.text = "NO";
@@ -114,22 +114,22 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
         return cell!;
     }
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return userArray.count;
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         currentIndexpath = indexPath;
         isSelected = true;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if DEVICE == .Phone{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DEVICE == .phone{
             return 50 / 1024.0 * SCREENHEIGHT
         }
         
@@ -138,15 +138,15 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
     
     //MARK:- ViewController 周期
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         if !CurrentUser.isAdmin(){
             self.createNewAlertView(localString("warning"), message: localString("aucheck"))
         }
     }
-     func createNewAlertView(title:String,message:String?) {
+     func createNewAlertView(_ title:String,message:String?) {
         
-        let alertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
-        let cancelAction:UIAlertAction = UIAlertAction(title: localString("cancel"), style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+        let alertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert);
+        let cancelAction:UIAlertAction = UIAlertAction(title: localString("cancel"), style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
             if self.lastVC != nil{
                 self.drawer?.repleaceCenterViewControllerWithViewController(self.lastVC);
             }else{
@@ -154,31 +154,31 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
                 self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
             }
         });
-        let OkAction:UIAlertAction = UIAlertAction(title: localString("ok"), style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+        let OkAction:UIAlertAction = UIAlertAction(title: localString("ok"), style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
             //这是一个空的代码块
-            let textFieldArray:NSArray = alertView.textFields!;
+            let textFieldArray:NSArray = alertView.textFields! as NSArray;
             let userNameTextField = textFieldArray[0] as?UITextField;
             let passwordTextField = textFieldArray[1] as? UITextField;
             
             let userModel = UserModel();
-            userModel.userID = userNameTextField?.text;
-            userModel.password = passwordTextField?.text;
+            userModel.userID = userNameTextField?.text as NSString?;
+            userModel.password = passwordTextField?.text as NSString?;
             if !self.dbManager.isAdmin(userModel){
                 self.createNewAlertView(self.localString("warning"), message: self.localString("auUserID"));
             }
         });
         alertView.addAction(cancelAction);
         alertView.addAction(OkAction);
-        alertView.addTextFieldWithConfigurationHandler { (textField:UITextField) -> Void in
+        alertView.addTextField { (textField:UITextField) -> Void in
             textField.placeholder = self.localString("auAdminName");
         }
-        alertView.addTextFieldWithConfigurationHandler { (textField:UITextField) -> Void in
+        alertView.addTextField { (textField:UITextField) -> Void in
             textField.placeholder = self.localString("auPassword");
         }
-        self.presentViewController(alertView, animated: true, completion: nil);
+        self.present(alertView, animated: true, completion: nil);
     }
     
-    override func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    override func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         
     }
     

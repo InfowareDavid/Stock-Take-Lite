@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		079FD9008C543A865763F1FE /* Pods_Stock_Take_Pro.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */; };
+		1D32690B4E11EFCB50C2C981 /* Pods_Stock_Take_Enterprise.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */; };
+		29ACBB86251EBDC2AA20C790 /* Pods_Stock_Take_Lite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */; };
+		438696DDA6BA8E4B25D74483 /* Pods_Stock_Take_LiteUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */; };
+		BCACAC2C0C8F691DECB0A964 /* Pods_Stock_Take_LiteTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */; };
 		BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
 		BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */; };
@@ -168,6 +173,9 @@
 		BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */; };
 		BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */; };
 		BF3B44301C11827200D85339 /* BluetoothScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */; };
+		BF3BD0611DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
+		BF3BD0621DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
+		BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */; };
 		BF41DA591CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
 		BF41DA5A1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
 		BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF41DA581CD352C200AFA721 /* DatePickerView.swift */; };
@@ -175,6 +183,9 @@
 		BF6625EB1BCF516200BF2BD7 /* CountingEnquiryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */; };
 		BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */; };
 		BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6BC1B91BF5B243007542B4 /* HelpView.swift */; };
+		BF7F4D5B1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */; };
+		BF7F4D5C1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */; };
+		BF7F4D5D1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */; };
 		BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */; };
 		BF838E311BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */; };
 		BF83AC471BC8DDD600451902 /* ImportSuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */; };
@@ -192,6 +203,8 @@
 		BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210C1BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m */; };
 		BF9421171BBBDD6F0045F300 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BF94210E1BBBDD6F0045F300 /* View+MASAdditions.m */; };
 		BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF9596E41BF1F03E004DE3B9 /* Localizable.strings */; };
+		BF98785C1E70FC12001F7537 /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98785B1E70FC12001F7537 /* ScannerViewController.swift */; };
+		BF98785F1E7138C8001F7537 /* tip.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF98785E1E7138C7001F7537 /* tip.wav */; };
 		BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
 		BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
 		BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
@@ -225,9 +238,14 @@
 		BFA04B4F1BBA8BF00019C604 /* INFODrawerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */; };
 		BFA04B501BBA8BF00019C604 /* INFODropShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */; };
 		BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */; };
+		BFA082D61E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
+		BFA082D71E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
+		BFA082D81E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */; };
 		BFABF0871BD0B4E700CBF593 /* CountingEnquiryDetalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */; };
 		BFABF0891BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */; };
 		BFAC20F21BEC900E00ED909C /* INFOTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */; };
+		BFB1323C1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */; };
+		BFB1323E1E72504F00F31CF3 /* ScannerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */; };
 		BFBD41721BDF4FFB00BC37CE /* FTPManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41711BDF4FFB00BC37CE /* FTPManager.m */; };
 		BFBD41741BDF50BF00BC37CE /* CurrentFTP.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */; };
 		BFC7E7051C22A10F007AEA2B /* CameraScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */; };
@@ -235,6 +253,7 @@
 		BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDE5D021BC66D1300DD0C90 /* BaseView.swift */; };
 		BFDFDD641BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDFDD631BCFB2F700CD987A /* CountingEnquiryTableViewCell.swift */; };
 		BFE0B4171BE1D64300470545 /* FileDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE0B4161BE1D64300470545 /* FileDataModel.swift */; };
+		BFED9E5B1E713CFE00473D60 /* tip.wav in Resources */ = {isa = PBXBuildFile; fileRef = BF98785E1E7138C7001F7537 /* tip.wav */; };
 		BFFBADC91BC75DDD00026817 /* QuantityImportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADC81BC75DDD00026817 /* QuantityImportViewController.swift */; };
 		BFFBADCB1BC75E0A00026817 /* QuantityImportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCA1BC75E0A00026817 /* QuantityImportView.swift */; };
 		BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFFBADCC1BC75F4B00026817 /* CountingEntryViewController.swift */; };
@@ -265,6 +284,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.release.xcconfig"; sourceTree = "<group>"; };
+		2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.debug.xcconfig"; sourceTree = "<group>"; };
+		43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Enterprise.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Pro.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.debug.xcconfig"; sourceTree = "<group>"; };
+		760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests.debug.xcconfig"; sourceTree = "<group>"; };
+		868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_Lite.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Enterprise.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise.release.xcconfig"; sourceTree = "<group>"; };
+		B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.debug.xcconfig"; sourceTree = "<group>"; };
 		BF33F4DD1D20E4D700A49C0B /* EmailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmailViewController.swift; sourceTree = "<group>"; };
 		BF33F4E11D20E82800A49C0B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		BF33F4EB1D211BEC00A49C0B /* AttachmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AttachmentViewController.swift; sourceTree = "<group>"; };
@@ -275,11 +304,13 @@
 		BF3A396D1C27E43F0009A89F /* Stock Take Enterprise-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Stock Take Enterprise-Info.plist"; sourceTree = "<group>"; };
 		BF3B442D1C11823E00D85339 /* BluetoothScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerViewController.swift; sourceTree = "<group>"; };
 		BF3B442F1C11827200D85339 /* BluetoothScannerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerView.swift; sourceTree = "<group>"; };
+		BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetWorkManager.swift; sourceTree = "<group>"; };
 		BF41DA581CD352C200AFA721 /* DatePickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatePickerView.swift; sourceTree = "<group>"; };
 		BF45DB081C15291A00CB3401 /* BluetoothScannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothScannerCell.swift; sourceTree = "<group>"; };
 		BF6625EA1BCF516200BF2BD7 /* CountingEnquiryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryView.swift; sourceTree = "<group>"; };
 		BF6BC1B71BF585E1007542B4 /* HelpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		BF6BC1B91BF5B243007542B4 /* HelpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpView.swift; sourceTree = "<group>"; };
+		BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetAddressFile.swift; sourceTree = "<group>"; };
 		BF838E2E1BCCB77A00BEFC1A /* CountingEntryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryView.swift; sourceTree = "<group>"; };
 		BF838E301BCCE68B00BEFC1A /* CountingEntryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEntryTableViewCell.swift; sourceTree = "<group>"; };
 		BF83AC461BC8DDD600451902 /* ImportSuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImportSuccessViewController.swift; sourceTree = "<group>"; };
@@ -313,6 +344,8 @@
 		BF9596DF1BF1EF9D004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BF9596E31BF1F03E004DE3B9 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BF9596E51BF1F043004DE3B9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BF98785B1E70FC12001F7537 /* ScannerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
+		BF98785E1E7138C7001F7537 /* tip.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = tip.wav; sourceTree = "<group>"; };
 		BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FTPServerConnectionView.swift; sourceTree = "<group>"; };
 		BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsAddView.swift; sourceTree = "<group>"; };
 		BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupView.swift; sourceTree = "<group>"; };
@@ -360,9 +393,12 @@
 		BFA04B4A1BBA8BF00019C604 /* INFODrawerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODrawerViewController.swift; sourceTree = "<group>"; };
 		BFA04B4B1BBA8BF00019C604 /* INFODropShadowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFODropShadowView.swift; sourceTree = "<group>"; };
 		BFA04B4D1BBA8BF00019C604 /* INFOViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOViewController.swift; sourceTree = "<group>"; };
+		BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertViewController+Extension.swift"; sourceTree = "<group>"; };
 		BFABF0861BD0B4E700CBF593 /* CountingEnquiryDetalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalView.swift; sourceTree = "<group>"; };
 		BFABF0881BD0B65B00CBF593 /* CountingEnquiryDetalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountingEnquiryDetalViewController.swift; sourceTree = "<group>"; };
 		BFAC20F11BEC900E00ED909C /* INFOTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = INFOTableViewCell.swift; sourceTree = "<group>"; };
+		BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ScannerVCTableview+Extention.swift"; sourceTree = "<group>"; };
+		BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannerTableViewCell.swift; sourceTree = "<group>"; };
 		BFBD41701BDF4FFB00BC37CE /* FTPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FTPManager.h; sourceTree = "<group>"; };
 		BFBD41711BDF4FFB00BC37CE /* FTPManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FTPManager.m; sourceTree = "<group>"; };
 		BFBD41731BDF50BF00BC37CE /* CurrentFTP.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentFTP.swift; sourceTree = "<group>"; };
@@ -381,6 +417,11 @@
 		BFFBADD61BC75FC300026817 /* UserAccountsSetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserAccountsSetupViewController.swift; sourceTree = "<group>"; };
 		BFFBADD81BC7666F00026817 /* QuantityImportBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportBaseView.swift; sourceTree = "<group>"; };
 		BFFBADDA1BC7A10F00026817 /* QuantityImportTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuantityImportTableViewCell.swift; sourceTree = "<group>"; };
+		C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stock_Take_LiteUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Lite.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite.release.xcconfig"; sourceTree = "<group>"; };
+		EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take LiteUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stock Take Pro.release.xcconfig"; path = "Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -390,6 +431,7 @@
 			files = (
 				BF33F4E31D20E84800A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39091C27DCC50009A89F /* libsqlite3.tbd in Frameworks */,
+				079FD9008C543A865763F1FE /* Pods_Stock_Take_Pro.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +441,7 @@
 			files = (
 				BF33F4E41D20E85200A49C0B /* MessageUI.framework in Frameworks */,
 				BF3A39601C27E01F0009A89F /* libsqlite3.tbd in Frameworks */,
+				1D32690B4E11EFCB50C2C981 /* Pods_Stock_Take_Enterprise.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,6 +451,7 @@
 			files = (
 				BF33F4E21D20E82800A49C0B /* MessageUI.framework in Frameworks */,
 				BFA04AAD1BBA782E0019C604 /* libsqlite3.tbd in Frameworks */,
+				29ACBB86251EBDC2AA20C790 /* Pods_Stock_Take_Lite.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,6 +459,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCACAC2C0C8F691DECB0A964 /* Pods_Stock_Take_LiteTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,12 +467,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				438696DDA6BA8E4B25D74483 /* Pods_Stock_Take_LiteUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B1735774076CAC845DCC3750 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D9F036284FF38A245F1350 /* Pods_Stock_Take_Enterprise.framework */,
+				868A58E143D6560EC7407F92 /* Pods_Stock_Take_Lite.framework */,
+				170DF26E499C0B1C1DD607C0 /* Pods_Stock_Take_LiteTests.framework */,
+				C32AD0F9697D9050F68B6572 /* Pods_Stock_Take_LiteUITests.framework */,
+				59ED02B7BC3E192F4E8F5F9D /* Pods_Stock_Take_Pro.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BB8503C27997E329A85E6EC7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */,
+				95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */,
+				2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */,
+				E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */,
+				760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */,
+				26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */,
+				EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */,
+				C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */,
+				B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */,
+				F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		BF33F4D91D20E4AA00A49C0B /* Email */ = {
 			isa = PBXGroup;
 			children = (
@@ -495,6 +570,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BF7F4D551DB0C80F00FB4FA0 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				BF7F4D5A1DB0D7B500FB4FA0 /* NetAddressFile.swift */,
+				BF3BD0601DB0E8BB00C639C5 /* NetWorkManager.swift */,
+			);
+			path = NetWork;
+			sourceTree = "<group>";
+		};
 		BF9420FA1BBBDD6F0045F300 /* Masonry */ = {
 			isa = PBXGroup;
 			children = (
@@ -523,6 +607,14 @@
 			path = Masonry;
 			sourceTree = "<group>";
 		};
+		BF98785D1E7138C7001F7537 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				BF98785E1E7138C7001F7537 /* tip.wav */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 		BFA04A501BBA70650019C604 = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +625,8 @@
 				BFA04A701BBA70650019C604 /* Stock Take LiteTests */,
 				BFA04A7B1BBA70650019C604 /* Stock Take LiteUITests */,
 				BFA04A5A1BBA70650019C604 /* Products */,
+				BB8503C27997E329A85E6EC7 /* Pods */,
+				B1735774076CAC845DCC3750 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -551,6 +645,8 @@
 		BFA04A5B1BBA70650019C604 /* Stock Take Lite */ = {
 			isa = PBXGroup;
 			children = (
+				BF98785D1E7138C7001F7537 /* Resource */,
+				BF7F4D551DB0C80F00FB4FA0 /* NetWork */,
 				BF33F4D91D20E4AA00A49C0B /* Email */,
 				BFC7E7001C2294D6007AEA2B /* iPad Camera Scan */,
 				BF3B44291C11818F00D85339 /*  Bluetooth Scanner */,
@@ -598,6 +694,7 @@
 		BFA04A8A1BBA72480019C604 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				BFA082D41E763AE3002B65A8 /* Extensions */,
 				BFBD416F1BDF4FFB00BC37CE /* FTPManager */,
 				BF9420FA1BBBDD6F0045F300 /* Masonry */,
 				BFA04B481BBA8BF00019C604 /* INFORESideMenu */,
@@ -703,6 +800,14 @@
 			path = INFORESideMenu;
 			sourceTree = "<group>";
 		};
+		BFA082D41E763AE3002B65A8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFA082D51E763BA3002B65A8 /* UIAlertViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		BFBD416F1BDF4FFB00BC37CE /* FTPManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +831,8 @@
 			isa = PBXGroup;
 			children = (
 				BFC7E7041C22A10F007AEA2B /* CameraScanViewController.swift */,
+				BF98785B1E70FC12001F7537 /* ScannerViewController.swift */,
+				BFB1323B1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -741,6 +848,7 @@
 			isa = PBXGroup;
 			children = (
 				BFC7E7061C22A120007AEA2B /* CameraView.swift */,
+				BFB1323D1E72504F00F31CF3 /* ScannerTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1002,9 +1110,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A390F1C27DCC50009A89F /* Build configuration list for PBXNativeTarget "Stock Take Pro" */;
 			buildPhases = (
+				4DB3E1332A0182D6D5261F2F /* [CP] Check Pods Manifest.lock */,
 				BF3A38C21C27DCC50009A89F /* Sources */,
 				BF3A39081C27DCC50009A89F /* Frameworks */,
 				BF3A390A1C27DCC50009A89F /* Resources */,
+				989CCF4FEC126AE4DAA3C8C1 /* [CP] Embed Pods Frameworks */,
+				95517E22B8589810B4BDE3B9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1019,9 +1130,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BF3A39661C27E01F0009A89F /* Build configuration list for PBXNativeTarget "Stock Take Enterprise" */;
 			buildPhases = (
+				911F32A3182C077A83E64A3B /* [CP] Check Pods Manifest.lock */,
 				BF3A39191C27E01F0009A89F /* Sources */,
 				BF3A395F1C27E01F0009A89F /* Frameworks */,
 				BF3A39611C27E01F0009A89F /* Resources */,
+				BA51FC88A70EFBAD8CF9EE9F /* [CP] Embed Pods Frameworks */,
+				31E9672C086A6DC7CF3482BD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1036,9 +1150,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A811BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take Lite" */;
 			buildPhases = (
+				3907E03DE8496DE56F9918D0 /* [CP] Check Pods Manifest.lock */,
 				BFA04A551BBA70650019C604 /* Sources */,
 				BFA04A561BBA70650019C604 /* Frameworks */,
 				BFA04A571BBA70650019C604 /* Resources */,
+				9521EE9548E64A97DFCA1AC1 /* [CP] Embed Pods Frameworks */,
+				8E641DC81DFAFC115ED98096 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1053,9 +1170,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A841BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteTests" */;
 			buildPhases = (
+				DAE65ADB57B614A0FA73740C /* [CP] Check Pods Manifest.lock */,
 				BFA04A691BBA70650019C604 /* Sources */,
 				BFA04A6A1BBA70650019C604 /* Frameworks */,
 				BFA04A6B1BBA70650019C604 /* Resources */,
+				0ED85448E93E7063A935AFB1 /* [CP] Embed Pods Frameworks */,
+				D9BCF3E2835D774E24D585AD /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1071,9 +1191,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BFA04A871BBA70650019C604 /* Build configuration list for PBXNativeTarget "Stock Take LiteUITests" */;
 			buildPhases = (
+				EF1B5D3C09B9FD6278284310 /* [CP] Check Pods Manifest.lock */,
 				BFA04A741BBA70650019C604 /* Sources */,
 				BFA04A751BBA70650019C604 /* Frameworks */,
 				BFA04A761BBA70650019C604 /* Resources */,
+				210F4EDBD6766EC7FEEA474F /* [CP] Embed Pods Frameworks */,
+				FD4735314686A7DA70FD1B33 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1091,19 +1214,22 @@
 		BFA04A511BBA70650019C604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = infoware;
 				TargetAttributes = {
 					BF3A38C11C27DCC50009A89F = {
 						DevelopmentTeam = U837TW5R38;
+						LastSwiftMigration = 0800;
 					};
 					BF3A39181C27E01F0009A89F = {
 						DevelopmentTeam = U837TW5R38;
+						LastSwiftMigration = 0820;
 					};
 					BFA04A581BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
 						DevelopmentTeam = U837TW5R38;
 						LastSwiftMigration = 0800;
+						ProvisioningStyle = Manual;
 					};
 					BFA04A6C1BBA70650019C604 = {
 						CreatedOnToolsVersion = 7.0;
@@ -1155,6 +1281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFED9E5B1E713CFE00473D60 /* tip.wav in Resources */,
 				BF3A39621C27E01F0009A89F /* LaunchScreen.storyboard in Resources */,
 				BF3A39631C27E01F0009A89F /* Localizable.strings in Resources */,
 				BF3A39641C27E01F0009A89F /* Assets.xcassets in Resources */,
@@ -1169,6 +1296,7 @@
 				BFA04A671BBA70650019C604 /* LaunchScreen.storyboard in Resources */,
 				BF9596E21BF1F03E004DE3B9 /* Localizable.strings in Resources */,
 				BF3A39151C27DE0E0009A89F /* Stock Take Pro-Info.plist in Resources */,
+				BF98785F1E7138C8001F7537 /* tip.wav in Resources */,
 				BFA04A641BBA70650019C604 /* Assets.xcassets in Resources */,
 				BFA04A621BBA70650019C604 /* Main.storyboard in Resources */,
 				BF3A396E1C27E43F0009A89F /* Stock Take Enterprise-Info.plist in Resources */,
@@ -1191,6 +1319,234 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0ED85448E93E7063A935AFB1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		210F4EDBD6766EC7FEEA474F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		31E9672C086A6DC7CF3482BD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3907E03DE8496DE56F9918D0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4DB3E1332A0182D6D5261F2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8E641DC81DFAFC115ED98096 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		911F32A3182C077A83E64A3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9521EE9548E64A97DFCA1AC1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Lite/Pods-Stock Take Lite-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95517E22B8589810B4BDE3B9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		989CCF4FEC126AE4DAA3C8C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Pro/Pods-Stock Take Pro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA51FC88A70EFBAD8CF9EE9F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take Enterprise/Pods-Stock Take Enterprise-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D9BCF3E2835D774E24D585AD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteTests/Pods-Stock Take LiteTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE65ADB57B614A0FA73740C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EF1B5D3C09B9FD6278284310 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FD4735314686A7DA70FD1B33 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Stock Take LiteUITests/Pods-Stock Take LiteUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BF3A38C21C27DCC50009A89F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -1208,6 +1564,7 @@
 				BF33F4ED1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF3A38CC1C27DCC50009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A38CD1C27DCC50009A89F /* QuantityImportTableViewCell.swift in Sources */,
+				BF3BD0621DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
 				BF3A38CE1C27DCC50009A89F /* CountingEntryView.swift in Sources */,
 				BF3A38CF1C27DCC50009A89F /* CountingEntryViewController.swift in Sources */,
 				BF3A38D01C27DCC50009A89F /* HelpView.swift in Sources */,
@@ -1224,6 +1581,7 @@
 				BF3A38DB1C27DCC50009A89F /* View+MASAdditions.m in Sources */,
 				BF3A38DC1C27DCC50009A89F /* UserAccountsSetupView.swift in Sources */,
 				BF3A38DD1C27DCC50009A89F /* BaseViewController.swift in Sources */,
+				BF7F4D5C1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */,
 				BF33F4DF1D20E4D700A49C0B /* EmailViewController.swift in Sources */,
 				BF3A38DE1C27DCC50009A89F /* INFOViewController.swift in Sources */,
 				BF3A38DF1C27DCC50009A89F /* UserAccountsAddViewController.swift in Sources */,
@@ -1252,6 +1610,7 @@
 				BF3A38F51C27DCC50009A89F /* BluetoothScannerViewController.swift in Sources */,
 				BF3A38F61C27DCC50009A89F /* MainViewController.swift in Sources */,
 				BF3A38F71C27DCC50009A89F /* UserAccountsSetupViewController.swift in Sources */,
+				BFA082D71E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF3A38F81C27DCC50009A89F /* FTPServerConnectionView.swift in Sources */,
 				BF3A38F91C27DCC50009A89F /* BaseView.swift in Sources */,
 				BF3A38FA1C27DCC50009A89F /* HelpViewController.swift in Sources */,
@@ -1281,12 +1640,15 @@
 				BF3A391D1C27E01F0009A89F /* CountingEnquiryDetalView.swift in Sources */,
 				BF3A391E1C27E01F0009A89F /* ImportSuccessView.swift in Sources */,
 				BF3A391F1C27E01F0009A89F /* MASCompositeConstraint.m in Sources */,
+				BFB1323C1E724CE900F31CF3 /* ScannerVCTableview+Extention.swift in Sources */,
 				BF3A39201C27E01F0009A89F /* DatePickerViewController.swift in Sources */,
 				BF3A39211C27E01F0009A89F /* ExportSuccessViewController.swift in Sources */,
 				BF3A39221C27E01F0009A89F /* FTPManager.m in Sources */,
 				BF33F4EE1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF3A39231C27E01F0009A89F /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BF3A39241C27E01F0009A89F /* QuantityImportTableViewCell.swift in Sources */,
+				BF3BD0631DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
+				BF98785C1E70FC12001F7537 /* ScannerViewController.swift in Sources */,
 				BF3A39251C27E01F0009A89F /* CountingEntryView.swift in Sources */,
 				BF3A39261C27E01F0009A89F /* CountingEntryViewController.swift in Sources */,
 				BF3A39271C27E01F0009A89F /* HelpView.swift in Sources */,
@@ -1303,6 +1665,7 @@
 				BF3A39321C27E01F0009A89F /* View+MASAdditions.m in Sources */,
 				BF3A39331C27E01F0009A89F /* UserAccountsSetupView.swift in Sources */,
 				BF3A39341C27E01F0009A89F /* BaseViewController.swift in Sources */,
+				BF7F4D5D1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */,
 				BF33F4E01D20E4D700A49C0B /* EmailViewController.swift in Sources */,
 				BF3A39351C27E01F0009A89F /* INFOViewController.swift in Sources */,
 				BF3A39361C27E01F0009A89F /* UserAccountsAddViewController.swift in Sources */,
@@ -1326,6 +1689,7 @@
 				BF41DA5B1CD352C200AFA721 /* DatePickerView.swift in Sources */,
 				BF3A39481C27E01F0009A89F /* EnquiryModel.swift in Sources */,
 				BF3A39491C27E01F0009A89F /* CameraScanViewController.swift in Sources */,
+				BFA082D81E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF3A394A1C27E01F0009A89F /* BluetoothScannerCell.swift in Sources */,
 				BF3A394B1C27E01F0009A89F /* LogonViewController.swift in Sources */,
 				BF3A394C1C27E01F0009A89F /* BluetoothScannerViewController.swift in Sources */,
@@ -1334,6 +1698,7 @@
 				BF3A394F1C27E01F0009A89F /* FTPServerConnectionView.swift in Sources */,
 				BF3A39501C27E01F0009A89F /* BaseView.swift in Sources */,
 				BF3A39511C27E01F0009A89F /* HelpViewController.swift in Sources */,
+				BFB1323E1E72504F00F31CF3 /* ScannerTableViewCell.swift in Sources */,
 				BF3A39521C27E01F0009A89F /* CountingEnquiryTableViewCell.swift in Sources */,
 				BF3A39531C27E01F0009A89F /* CountingEnquiryDetalViewController.swift in Sources */,
 				BF3A39541C27E01F0009A89F /* FMDatabasePool.m in Sources */,
@@ -1366,6 +1731,7 @@
 				BF33F4EC1D211BEC00A49C0B /* AttachmentViewController.swift in Sources */,
 				BF9421161BBBDD6F0045F300 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BFFBADDB1BC7A10F00026817 /* QuantityImportTableViewCell.swift in Sources */,
+				BF3BD0611DB0E8BB00C639C5 /* NetWorkManager.swift in Sources */,
 				BF838E2F1BCCB77A00BEFC1A /* CountingEntryView.swift in Sources */,
 				BFFBADCD1BC75F4B00026817 /* CountingEntryViewController.swift in Sources */,
 				BF6BC1BA1BF5B243007542B4 /* HelpView.swift in Sources */,
@@ -1382,6 +1748,7 @@
 				BF9421171BBBDD6F0045F300 /* View+MASAdditions.m in Sources */,
 				BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */,
 				BFA04B4E1BBA8BF00019C604 /* BaseViewController.swift in Sources */,
+				BF7F4D5B1DB0D7B500FB4FA0 /* NetAddressFile.swift in Sources */,
 				BF33F4DE1D20E4D700A49C0B /* EmailViewController.swift in Sources */,
 				BFA04B521BBA8BF00019C604 /* INFOViewController.swift in Sources */,
 				BF9E85F81BD4F5480091CE82 /* UserAccountsAddViewController.swift in Sources */,
@@ -1410,6 +1777,7 @@
 				BF3B442E1C11823E00D85339 /* BluetoothScannerViewController.swift in Sources */,
 				BFA04B3F1BBA8AE10019C604 /* MainViewController.swift in Sources */,
 				BFFBADD71BC75FC300026817 /* UserAccountsSetupViewController.swift in Sources */,
+				BFA082D61E763BA3002B65A8 /* UIAlertViewController+Extension.swift in Sources */,
 				BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */,
 				BFDE5D031BC66D1300DD0C90 /* BaseView.swift in Sources */,
 				BF6BC1B81BF585E1007542B4 /* HelpViewController.swift in Sources */,
@@ -1493,7 +1861,9 @@
 /* Begin XCBuildConfiguration section */
 		BF3A39101C27DCC50009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3435E56C85DE9F211FF9E35 /* Pods-Stock Take Pro.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1504,13 +1874,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BF3A39111C27DCC50009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1C3029AE7D9E688BAA9E562 /* Pods-Stock Take Pro.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1521,13 +1894,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		BF3A39671C27E01F0009A89F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6A4527CFBA28ABA1251C0A21 /* Pods-Stock Take Enterprise.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1538,13 +1914,16 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BF3A39681C27E01F0009A89F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 95A0FD1E6A6BB55E1ABEC33E /* Pods-Stock Take Enterprise.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -1555,6 +1934,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Enterprise";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1563,6 +1943,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1572,12 +1953,14 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1610,6 +1993,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1619,12 +2003,14 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -1641,6 +2027,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -1648,78 +2035,92 @@
 		};
 		BFA04A821BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2D58DF551C490C29C91A3E4D /* Pods-Stock Take Lite.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U837TW5R38;
 				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D LITE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0fac8145-30fa-4c97-8066-e08106a08060";
+				PROVISIONING_PROFILE_SPECIFIER = StockTake;
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		BFA04A831BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4CA40E989EC9BF997F9D7D5 /* Pods-Stock Take Lite.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				DEVELOPMENT_TEAM = U837TW5R38;
 				INFOPLIST_FILE = "Stock Take Lite/Stock Take Lite-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_SWIFT_FLAGS = "-D LITE_VERSION";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Lite";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "0fac8145-30fa-4c97-8066-e08106a08060";
+				PROVISIONING_PROFILE_SPECIFIER = StockTake;
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
 		BFA04A851BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 760987FE1BE339483515170C /* Pods-Stock Take LiteTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Debug;
 		};
 		BFA04A861BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 26E1A63EBC120003039B5255 /* Pods-Stock Take LiteTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Stock Take LiteTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stock Take Lite.app/Stock Take Lite";
 			};
 			name = Release;
 		};
 		BFA04A881BBA70650019C604 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EF137055CA870D2642EC1BC0 /* Pods-Stock Take LiteUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};
@@ -1727,12 +2128,14 @@
 		};
 		BFA04A891BBA70650019C604 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C9A1018D0DD202F76C8868A5 /* Pods-Stock Take LiteUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = "Stock Take LiteUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "infoware.Stock-Take-LiteUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Stock Take Lite";
 				USES_XCTRUNNER = YES;
 			};

@@ -20,26 +20,26 @@ class DatePickerViewController: UIViewController {
         super.viewDidLoad();
         
         datePicView = UIDatePicker();
-        datePicView.frame = CGRectMake(0, 0, 260, 216);
-        datePicView.backgroundColor = UIColor.groupTableViewBackgroundColor();
-        datePicView.datePickerMode = UIDatePickerMode.Date;
-        datePicView.addTarget(self, action: #selector(DatePickerViewController.datePicViewAction(_:)), forControlEvents: UIControlEvents.ValueChanged);
+        datePicView.frame = CGRect(x: 0, y: 0, width: 260, height: 216);
+        datePicView.backgroundColor = UIColor.groupTableViewBackground;
+        datePicView.datePickerMode = UIDatePickerMode.date;
+        datePicView.addTarget(self, action: #selector(DatePickerViewController.datePicViewAction(_:)), for: UIControlEvents.valueChanged);
         self.view.addSubview(datePicView);
         
     }
     
-    func datePicViewAction(dataPic:UIDatePicker){
+    func datePicViewAction(_ dataPic:UIDatePicker){
         
         if saveBlock != nil {
-            let dataFromate:NSDateFormatter = NSDateFormatter();
-            dataFromate.dateStyle = NSDateFormatterStyle.NoStyle;
-            dataFromate.timeStyle = NSDateFormatterStyle.NoStyle;
-            dataFromate.locale = NSLocale.currentLocale();
+            let dataFromate:DateFormatter = DateFormatter();
+            dataFromate.dateStyle = DateFormatter.Style.none;
+            dataFromate.timeStyle = DateFormatter.Style.none;
+            dataFromate.locale = Locale.current;
             
-            let zone:NSTimeZone = NSTimeZone(name: "UTC")!;
+            let zone:TimeZone = TimeZone(identifier: "UTC")!;
             dataFromate.timeZone = zone;
             dataFromate.dateFormat = "dd-MMM-yyyy";
-            let dataString:NSString = dataFromate.stringFromDate(dataPic.date);
+            let dataString:NSString = dataFromate.string(from: dataPic.date) as NSString;
             //MARK: - CHANGE 3
             saveBlock!(dataString);
         }

@@ -21,21 +21,21 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
     override func viewDidLoad() {
         super.viewDidLoad()
         previousRow = 3;
-        self.view.backgroundColor = UIColor.whiteColor();
+        self.view.backgroundColor = UIColor.white;
         dbManager = DataBase();
         dataArray = NSMutableArray();
         nameArray = NSArray();
         chooseAlert = UIAlertView(title: localString("warning"), message: localString("inchoose"), delegate: self, cancelButtonTitle: localString("ok"));
         self.loadMyView();
-        MBProgressHUD.showHUDAddedTo(self.view , animated: true);
+        MBProgressHUD.showAdded(to: self.view , animated: true);
         self.loadDataFromDataBase();
         self.countingEnquiryView.tableView.reloadData();
-        MBProgressHUD.hideAllHUDsForView(self.view , animated: true);
+        MBProgressHUD.hideAllHUDs(for: self.view , animated: true);
 
     }
     
     func loadMyView(){
-        countingEnquiryView = CountingEnquiryView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        countingEnquiryView = CountingEnquiryView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.view.addSubview(countingEnquiryView);
         self.countingEnquiryView.tableView.delegate = self;
         self.countingEnquiryView.tableView.dataSource = self;
@@ -50,18 +50,18 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
                 let enquiryModel:EnquiryModel = EnquiryModel();
                 let itemArray:NSMutableArray = dbManager.recodesWithDate(item as! NSString);
                 enquiryModel.date = item as? NSString;
-                enquiryModel.skuNum = "\(itemArray.count)";
+                enquiryModel.skuNum = "\(itemArray.count)" as NSString?;
                 var temOnhandNum = 0;
                 var temcountedNum = 0;
                 //MARK: CHANGE 4
-                for i in 0 ... itemArray.count {
+                for i in 0 ..< itemArray.count {
                     let fileModel:FileDataModel = itemArray[i] as!FileDataModel;
                     temOnhandNum = temOnhandNum + (fileModel.onhandQty?.integerValue)!;
                     temcountedNum = temcountedNum + (fileModel.countQty?.integerValue)!;
                 }
-                enquiryModel.onhandQty = "\(temOnhandNum)";
-                enquiryModel.countedQty = "\(temcountedNum)";
-                self.dataArray.addObject(enquiryModel);
+                enquiryModel.onhandQty = "\(temOnhandNum)" as NSString?;
+                enquiryModel.countedQty = "\(temcountedNum)" as NSString?;
+                self.dataArray.add(enquiryModel);
             }
         }else{
             self.createAlertView(localString("warning"), message: localString("aeAlert"));
@@ -72,14 +72,14 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
     
     func  addButtonAction(){
         
-        self.countingEnquiryView.okButton.addTarget(self, action: #selector(CountingEnquiryViewController.okButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.countingEnquiryView.returnButton.addTarget(self, action: #selector(CountingEnquiryViewController.returnButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.countingEnquiryView.logoutButton.addTarget(self, action: #selector(CountingEnquiryViewController.logoutAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.countingEnquiryView.okButton.addTarget(self, action: #selector(CountingEnquiryViewController.okButtonAction), for: UIControlEvents.touchUpInside);
+        self.countingEnquiryView.returnButton.addTarget(self, action: #selector(CountingEnquiryViewController.returnButtonAction), for: UIControlEvents.touchUpInside);
+        self.countingEnquiryView.logoutButton.addTarget(self, action: #selector(CountingEnquiryViewController.logoutAction), for: UIControlEvents.touchUpInside);
     }
     
     func logoutAction(){
         
-        let currentUser:CurrentUser = CurrentUser.current();
+        let currentUser:CurrentUser = CurrentUser.current;
         currentUser.user = nil;
         let logonVC = LogonViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(logonVC);
@@ -108,16 +108,16 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
     
     // MARK: - tableView delegate -
     
-    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         var cell :CountingEnquiryTableViewCell?;
         
-        cell = tableView.dequeueReusableCellWithIdentifier("cellid") as? CountingEnquiryTableViewCell;
+        cell = tableView.dequeueReusableCell(withIdentifier: "cellid") as? CountingEnquiryTableViewCell;
         
         if cell == nil {
-            cell = CountingEnquiryTableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "cellid");
+            cell = CountingEnquiryTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
-        let enquiryModel:EnquiryModel = self.dataArray[indexPath.row] as!EnquiryModel;
+        let enquiryModel:EnquiryModel = self.dataArray[(indexPath as NSIndexPath).row] as!EnquiryModel;
         
         cell?.dataAndTimeLabel.text = enquiryModel.date as? String;
         cell?.onhandQtyLabel.text = enquiryModel.onhandQty as? String;
@@ -128,32 +128,32 @@ class CountingEnquiryViewController: BaseViewController,UITableViewDelegate,UITa
     }
     
     
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.dataArray.count;
     }
     
-    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return 1;
     }
     
-    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        if DEVICE == .Phone{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if DEVICE == .phone{
             return 50/1024.0 * SCREENHEIGHT
         }
         return 50
     }
     
-    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         isSelected = true;
-        currenrow = indexPath.row;
+        currenrow = (indexPath as NSIndexPath).row;
     }
     
     
-    override func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    override func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if alertView == chooseAlert{
             
         }else{
-            super.alertView(alertView, clickedButtonAtIndex: buttonIndex);
+            super.alertView(alertView, clickedButtonAt: buttonIndex);
         }
         
     }

@@ -20,13 +20,13 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     var             userModel:                                  UserModel!;
     override func viewDidLoad() {
         super.viewDidLoad();
-        self.view.backgroundColor = UIColor.whiteColor();
-        userAccountAddView = UserAccountsAddView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        self.view.backgroundColor = UIColor.white;
+        userAccountAddView = UserAccountsAddView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.userAccountAddView.userIDTextField.delegate = self ;
         self.userAccountAddView.userNameTextField.delegate = self;
         self.userAccountAddView.passwordTextField.delegate = self;
         self.view.addSubview(userAccountAddView);
-        dbmanager = DataBase.manager();
+        dbmanager = DataBase.manager;
         self.addButtonAction();
         
     }
@@ -37,10 +37,10 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     
     func addButtonAction(){
         
-        self.userAccountAddView.saveButton.addTarget(self, action: #selector(UserAccountsAddViewController.saveAction(_:)), forControlEvents: UIControlEvents.TouchUpInside);
-        self.userAccountAddView.deletButton.addTarget(self, action: #selector(UserAccountsAddViewController.deleteAction(_:)), forControlEvents: UIControlEvents.TouchUpInside);
-        self.userAccountAddView.cancelButton.addTarget(self, action: #selector(UserAccountsAddViewController.cancelAction(_:)), forControlEvents: UIControlEvents.TouchUpInside);
-        self.userAccountAddView.administratorButton.addTarget(self, action: #selector(UserAccountsAddViewController.administratorAction(_:)), forControlEvents: UIControlEvents.ValueChanged);
+        self.userAccountAddView.saveButton.addTarget(self, action: #selector(UserAccountsAddViewController.saveAction(_:)), for: UIControlEvents.touchUpInside);
+        self.userAccountAddView.deletButton.addTarget(self, action: #selector(UserAccountsAddViewController.deleteAction(_:)), for: UIControlEvents.touchUpInside);
+        self.userAccountAddView.cancelButton.addTarget(self, action: #selector(UserAccountsAddViewController.cancelAction(_:)), for: UIControlEvents.touchUpInside);
+        self.userAccountAddView.administratorButton.addTarget(self, action: #selector(UserAccountsAddViewController.administratorAction(_:)), for: UIControlEvents.valueChanged);
         
     }
     
@@ -50,7 +50,7 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     - parameter btn:
     */
     
-    func saveAction(btn:UIButton!){
+    func saveAction(_ btn:UIButton!){
         
         self.getInputText();
         if userModel.userID?.length != 0 && userModel.userName?.length != 0 && userModel.password?.length != 0{
@@ -70,10 +70,10 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     func getInputText(){
         
         userModel = UserModel();
-        userModel.userID = self.userAccountAddView.userIDTextField.text;
-        userModel.userName = self.userAccountAddView.userNameTextField.text;
-        userModel.password = self.userAccountAddView.passwordTextField.text;
-        userModel.administrator = "\(self.userAccountAddView.administratorButton.selectedSegmentIndex)";
+        userModel.userID = self.userAccountAddView.userIDTextField.text as NSString?;
+        userModel.userName = self.userAccountAddView.userNameTextField.text as NSString?;
+        userModel.password = self.userAccountAddView.passwordTextField.text as NSString?;
+        userModel.administrator = "\(self.userAccountAddView.administratorButton.selectedSegmentIndex)" as NSString?;
     }
     
     
@@ -83,7 +83,7 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     - parameter btn:
     */
     
-    func deleteAction(btn:UIButton!){
+    func deleteAction(_ btn:UIButton!){
         
         self.getInputText();
         if userModel.userID?.length != 0 && userModel.userName?.length != 0 && userModel.password?.length != 0{
@@ -99,7 +99,7 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     - parameter btn:
     */
     
-    func cancelAction(btn:UIButton!){
+    func cancelAction(_ btn:UIButton!){
         
         let userAccountVC = UserAccountsSetupViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(userAccountVC);
@@ -110,27 +110,27 @@ class UserAccountsAddViewController: BaseViewController,UITextFieldDelegate {
     
     - parameter administrator:
     */
-    func administratorAction(administrator:UISegmentedControl!){
+    func administratorAction(_ administrator:UISegmentedControl!){
         
         if administrator.selectedSegmentIndex == 0{
             
-            administrator.setTitle(localString("off"), forSegmentAtIndex: 0);
-            administrator.setTitle("", forSegmentAtIndex: 1);
+            administrator.setTitle(localString("off"), forSegmentAt: 0);
+            administrator.setTitle("", forSegmentAt: 1);
             
         }else{
             
-            administrator.setTitle(localString("on"), forSegmentAtIndex: 1);
-            administrator.setTitle("", forSegmentAtIndex: 0);
+            administrator.setTitle(localString("on"), forSegmentAt: 1);
+            administrator.setTitle("", forSegmentAt: 0);
         }
         
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }
     
-    override func createAlertView(title:String,message:String?) {
+    override func createAlertView(_ title:String,message:String?) {
         var alertView:              UIAlertView!;
         
         alertView = UIAlertView(title: title, message: message!, delegate: nil, cancelButtonTitle: localString("cancel"), otherButtonTitles: localString("ok"));

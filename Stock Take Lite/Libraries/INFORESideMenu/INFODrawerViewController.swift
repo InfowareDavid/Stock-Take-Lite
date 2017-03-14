@@ -20,9 +20,9 @@ class INFODrawerViewController: UITableViewController ,INFODrawerControllerChild
     
     init(){
         
-        super.init(style: UITableViewStyle.Plain);
-        self.tableView.registerClass(INFOTableViewCell.classForCoder(), forCellReuseIdentifier: reusedID);
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        super.init(style: UITableViewStyle.plain);
+        self.tableView.register(INFOTableViewCell.classForCoder(), forCellReuseIdentifier: reusedID);
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         
     }
 
@@ -48,40 +48,40 @@ class INFODrawerViewController: UITableViewController ,INFODrawerControllerChild
 
     // MARK: - Table view data source
 
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.nameArray.count;
     }
 
-   override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-    if DEVICE == .Phone{
+   override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+    if DEVICE == .phone{
         return 64
     }
     return 108;
     }
    
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier(reusedID, forIndexPath: indexPath) as? INFOTableViewCell;
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: reusedID, for: indexPath) as? INFOTableViewCell;
         
-        cell?.infocellTextLabel.text = self.nameArray[indexPath.row] as? String;
+        cell?.infocellTextLabel.text = self.nameArray[(indexPath as NSIndexPath).row] as? String;
 
         return cell!
     }
     
-   override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-    if DEVICE == .Phone{
+   override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    if DEVICE == .phone{
         return 50/1024.0 * SCREENHEIGHT
     }
         return 50;
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        print("\(indexPath.row) -------- \(previousRow)");
-        if indexPath.row == previousRow{
+        print("\((indexPath as NSIndexPath).row) -------- \(previousRow)");
+        if (indexPath as NSIndexPath).row == previousRow{
             self.drawer?.close();
         }else{
             #if ENTERPRISE_VERSION
@@ -123,7 +123,7 @@ class INFODrawerViewController: UITableViewController ,INFODrawerControllerChild
                 self.drawer?.repleaceCenterViewControllerWithViewController(emailVC);
             }
             #else
-                switch indexPath.row {
+                switch (indexPath as NSIndexPath).row {
                 case 0:
                     let mainVC = MainViewController();
                     self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
@@ -177,32 +177,32 @@ class INFODrawerViewController: UITableViewController ,INFODrawerControllerChild
             
             
         }
-        previousRow = indexPath.row;
+        previousRow = (indexPath as NSIndexPath).row;
         
     }
     
     
 
-    func drawerControllerDidClose(drawerController: INFOViewController) {
-        self.view.userInteractionEnabled = true;
+    func drawerControllerDidClose(_ drawerController: INFOViewController) {
+        self.view.isUserInteractionEnabled = true;
 
     }
     
-    func drawerControllerWillClose(drawerController: INFOViewController) {
-        self.view.userInteractionEnabled = false;
+    func drawerControllerWillClose(_ drawerController: INFOViewController) {
+        self.view.isUserInteractionEnabled = false;
 
     }
-    func drawerControllerDidOpen(drawerController: INFOViewController) {
-        self.view.userInteractionEnabled = true;
+    func drawerControllerDidOpen(_ drawerController: INFOViewController) {
+        self.view.isUserInteractionEnabled = true;
 
     }
-    func drawerControllerWillOpen(drawerController: INFOViewController) {
-        self.view.userInteractionEnabled = false;
+    func drawerControllerWillOpen(_ drawerController: INFOViewController) {
+        self.view.isUserInteractionEnabled = false;
 
     }
 /******************************************************/
     
-    func localString(aString:String)->String{
+    func localString(_ aString:String)->String{
         return NSLocalizedString(aString, comment: "");
     }
 

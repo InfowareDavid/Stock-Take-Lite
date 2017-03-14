@@ -64,37 +64,37 @@ class UserAccountsSetupView: QuantityImportBaseView {
         self.addSubview(tableViewTopLine);
         
         tableView = UITableView();
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.addSubview(tableView);
         
         tableViewBottomLine = UILabel();
         tableViewBottomLine.backgroundColor = self.colorWithString("#2A9CAB");
         self.addSubview(tableViewBottomLine);
         
-        addButton = UIButton(type: UIButtonType.System);
-        addButton.setTitle(localString("add"), forState: UIControlState.Normal);
-        addButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        addButton = UIButton(type: UIButtonType.system);
+        addButton.setTitle(localString("add"), for: UIControlState());
+        addButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         addButton.titleLabel?.font = FONT20()
-        addButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        addButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(addButton);
         
         
-        okButton = UIButton(type: UIButtonType.System);
-        okButton.setTitle(localString("ok"), forState: UIControlState.Normal);
-        okButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        okButton = UIButton(type: UIButtonType.system);
+        okButton.setTitle(localString("ok"), for: UIControlState());
+        okButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         okButton.titleLabel?.font =  FONT20()
-        okButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        okButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(okButton);
         
         
-        cancelButton = UIButton(type: UIButtonType.System);
-        cancelButton.setTitle(localString("cancel"), forState: UIControlState.Normal);
-        cancelButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        cancelButton = UIButton(type: UIButtonType.system);
+        cancelButton.setTitle(localString("cancel"), for: UIControlState());
+        cancelButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         cancelButton.titleLabel?.font = FONT20()
-        cancelButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        cancelButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(cancelButton);
        
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
            addPhoneUserAccountsConstraint()
         }else{
            addUserAccountsConstraint()
@@ -103,101 +103,101 @@ class UserAccountsSetupView: QuantityImportBaseView {
     }
     
     func addPhoneUserAccountsConstraint(){
-        promptView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT/9);
             
         }
 
-        promptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
-            make.right.equalTo(self.mas_right);
-            make.bottom.equalTo(self.promptView.mas_bottom);
+            make.top.equalTo(self.promptView.snp.top);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
+            make.right.equalTo(self.snp.right);
+            make.bottom.equalTo(self.promptView.snp.bottom);
         }
 
-        tableViewTitleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTitleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(30);
             
         }
 
-        self.userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.userIDLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
 
-        self.userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.userNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(0);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
 
-        self.administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.administratorLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(0);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/10 * 3.0);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
 
-        tableViewTopLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTopLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableViewTitleView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
 
-        tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableViewTopLine.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.tableViewTopLine.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(50/1024.0 * SCREENHEIGHT * 5);
         }
 
-        tableViewBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
 
-        addButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        addButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(15);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(15);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10);
             make.height.equalTo(25);
         }
 
-        okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        okButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(15);
-            make.left.equalTo(self.addButton.mas_right).with.offset(15);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(15);
+            make.left.equalTo(self.addButton.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH/10);
             make.height.equalTo(25);
         }
 
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cancelButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(15);
-            make.left.equalTo(self.okButton.mas_right).with.offset(15);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(15);
+            make.left.equalTo(self.okButton.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
@@ -205,101 +205,101 @@ class UserAccountsSetupView: QuantityImportBaseView {
     }
     
     func addUserAccountsConstraint(){
-        promptView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(105);
             
         }
         
-        promptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(111);
-            make.right.equalTo(self.mas_right);
-            make.bottom.equalTo(self.promptView.mas_bottom);
+            make.top.equalTo(self.promptView.snp.top);
+            make.left.equalTo(self.snp.left).offset(111);
+            make.right.equalTo(self.snp.right);
+            make.bottom.equalTo(self.promptView.snp.bottom);
         }
         
-        tableViewTitleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTitleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(50);
             
         }
         
-        self.userIDLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.userIDLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(111);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(111);
             make.width.equalTo(100);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
         
-        self.userNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.userNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.userIDLabel.mas_right).with.offset(100);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.userIDLabel.snp.right).offset(100);
             make.width.equalTo(100);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
         
-        self.administratorLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        self.administratorLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.userNameLabel.mas_right).with.offset(100);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.userNameLabel.snp.right).offset(100);
             make.width.equalTo(160);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
         }
         
-        tableViewTopLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTopLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableViewTitleView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
         
-        tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableViewTopLine.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        tableView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.tableViewTopLine.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(240);
         }
         
-        tableViewBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
         
-        addButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        addButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(42);
             make.height.equalTo(32);
         }
         
-        okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        okButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(35);
-            make.left.equalTo(self.addButton.mas_right).with.offset(50);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(35);
+            make.left.equalTo(self.addButton.snp.right).offset(50);
             make.width.equalTo(42);
             make.height.equalTo(32);
         }
         
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cancelButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(35);
-            make.left.equalTo(self.okButton.mas_right).with.offset(50);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(35);
+            make.left.equalTo(self.okButton.snp.right).offset(50);
             make.width.equalTo(136);
             make.height.equalTo(32);
             

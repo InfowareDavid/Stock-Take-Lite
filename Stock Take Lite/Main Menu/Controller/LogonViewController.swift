@@ -6,87 +6,105 @@
 //  Copyright © 2015年 infoware. All rights reserved.
 //
 /*
-
-#if LITE_VERSION
-print("lite")
-
-#elseif PRO_VERSION
-print("pro")
-
-#elseif ENTERPRISE_VERSION
-print("enterprise")
-
-#endif
-
-*/
+ 
+ #if LITE_VERSION
+ print("lite")
+ 
+ #elseif PRO_VERSION
+ print("pro")
+ 
+ #elseif ENTERPRISE_VERSION
+ print("enterprise")
+ 
+ #endif
+ 
+ */
 
 
 /// 登陆页面
 
 import UIKit
 
-let SCREENWIDTH = UIScreen.mainScreen().bounds.width;
-let SCREENHEIGHT = UIScreen.mainScreen().bounds.height;
-let CSVFILEPATH = NSHomeDirectory().stringByAppendingString("/Documents/CSVfile")
-//Documents
 
-class LogonViewController: BaseViewController,UITextFieldDelegate {
+let SCREENWIDTH = UIScreen.main.bounds.width;
+let SCREENHEIGHT = UIScreen.main.bounds.height;
+let CSVFILEPATH = NSHomeDirectory() + "/Documents/CSVfile"
+//Documents
+var count = 0
+class LogonViewController: BaseViewController,UITextFieldDelegate,XMLParserDelegate {
     var         logonView:                               LogonView!;
-    var         database:                                DataBase = DataBase.manager();
-    var         fileManager:                             NSFileManager!;
+    var         database:                                DataBase = DataBase.manager;
+    var         fileManager:                             FileManager!;
+    var         currentElement:                          String=""
+    var         statusString:                            String=""
+    let         user:                                    UserModel = UserModel();
     
-    
+    var parse:XMLParser? = nil
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        fileManager = NSFileManager();
+        fileManager = FileManager();
         self.cteateUI();
         self.createDirectorAtCSVPath();
-       
+        
     }
     
     
     
     func cteateUI(){
         
-        logonView = LogonView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        logonView = LogonView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         logonView.userIDTextField?.delegate = self
-        logonView.passwordTextField?.delegate = self 
+        logonView.passwordTextField?.delegate = self
         self.view.addSubview(logonView);
-        logonView.userAccountSetupButton?.addTarget(self, action: #selector(LogonViewController.userAccountSetupButtonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside);
-        logonView.logonButton?.addTarget(self, action: #selector(LogonViewController.logonAction(_:)), forControlEvents: UIControlEvents.TouchUpInside);
+        logonView.userAccountSetupButton?.addTarget(self, action: #selector(LogonViewController.userAccountSetupButtonAction(_:)), for: UIControlEvents.touchUpInside);
+        logonView.logonButton?.addTarget(self, action: #selector(LogonViewController.logonAction(_:)), for: UIControlEvents.touchUpInside);
         self.setUserAccountButtonState();
     }
     
-    func userAccountSetupButtonAction(regist:UIButton){
+    func userAccountSetupButtonAction(_ regist:UIButton){
         
         let userAccountSetupVC = UserAccountsSetupViewController();
         userAccountSetupVC.lastVC = self;
         
-       self.drawer?.repleaceCenterViewControllerWithViewController(userAccountSetupVC);
+        self.drawer?.repleaceCenterViewControllerWithViewController(userAccountSetupVC);
         
     }
     
     func createDirectorAtCSVPath(){
         
-        try! self.fileManager.createDirectoryAtPath(CSVFILEPATH, withIntermediateDirectories: true, attributes: nil);
+        try! self.fileManager.createDirectory(atPath: CSVFILEPATH, withIntermediateDirectories: true, attributes: nil);
         
     }
     
-    func logonAction(logon:UIButton){
+    func logonAction(_ logon:UIButton){
+        
+        
         self.hiddenAnimation()
-        let user:UserModel = UserModel();
-        user.userID = logonView.userIDTextField?.text;
-        user.password = logonView.passwordTextField?.text;
-//        user.userID = "admin";
-//        user.password = "admin";
+        user.userID = logonView.userIDTextField?.text as NSString?;
+        user.password = logonView.passwordTextField?.text as NSString?;
         user.userName = nil;
-//        let mainVC = MainViewController();
-//        
-//        self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
+        
+        //        let app = AppDelegate()
+        //
+        //        for index in 0..<1000{
+        //            user.userID = "\(index)"
+        //            user.password = "\(index+5)"
+        //             self.postPassword(self.user)
+        //            print("index-------------------->\(index)")
+        //        }
+        //
+        //
+        //        if ((app.reachManager?.isReachable) != nil){
+        //
+        //            self.postPassword(self.user)
+        //            self.activityIndicatorView.startAnimating()
+        //        }
+        
+        // MARK:- 之前FTP版本的密码校验
         
         if database.isUserPasswordright(user){
-            let currentUser:CurrentUser = CurrentUser.current();
+            let currentUser:CurrentUser = CurrentUser.current;
             currentUser.user = user;
             let mainVC:MainViewController = MainViewController();
             self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
@@ -94,49 +112,105 @@ class LogonViewController: BaseViewController,UITextFieldDelegate {
             self.createAlertView("警告", message: "账户或密码有误！");
         }
     }
-
+    
+    func logonToMainViewController(){
+        let currentUser:CurrentUser = CurrentUser.current;
+        currentUser.user = user;
+        let mainVC:MainViewController = MainViewController();
+        self.drawer?.repleaceCenterViewControllerWithViewController(mainVC);
+    }
+    
+    func postPassword(_ user:UserModel){
+        
+        let message = "<userName>\(user.userID!)</userName><password>\(user.password!)</password>"
+        
+        networkManager.postRequest(Service.UserService.rawValue, action: ServiceAction.UserServiceAction.RegistAction.rawValue, paramValues: message, success:{
+            data in
+            //            self.parse = NSXMLParser(data: data)
+            //            self.parse!.delegate = self
+            //            self.parse!.parse()
+            
+            let string = NSString(data: data, encoding: String.Encoding.utf8.rawValue)
+            count+=1
+            print("count------------>\(count)")
+            print("\(string!)")
+        })
+    }
+    
     
     /**
-    设置按钮的状态
-    */
+     设置按钮的状态
+     */
+    
     func setUserAccountButtonState(){
         if database.isAnyCurrentUserExists(){
-            self.logonView.userAccountSetupButton?.highlighted = true;
-            self.logonView.userAccountSetupButton?.enabled = false;
+            self.logonView.userAccountSetupButton?.isHighlighted = true;
+            self.logonView.userAccountSetupButton?.isEnabled = false;
         }else{
-            self.logonView.userAccountSetupButton?.enabled = true;
+            self.logonView.userAccountSetupButton?.isEnabled = true;
         }
     }
     //MARK: - TextField Delegate
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        if DEVICE == .Phone{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if DEVICE == .phone{
             showAnimation()
-
+            
         }
         return true
     }
     
-       
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        if DEVICE == .Phone{
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if DEVICE == .phone{
             textField.resignFirstResponder()
             hiddenAnimation()
         }
         return true
     }
     
-       
-    override func createAlertView(title:String,message:String?) {
+    
+    override func createAlertView(_ title:String,message:String?) {
         
-      let  alertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert);
-        let cancelAction:UIAlertAction = UIAlertAction(title: localString("cancel"), style: UIAlertActionStyle.Default, handler: nil);
-        let OkAction:UIAlertAction = UIAlertAction(title: localString("ok"), style: UIAlertActionStyle.Default, handler: { (UIAlertAction) -> Void in
+        let  alertView = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert);
+        let cancelAction:UIAlertAction = UIAlertAction(title: localString("cancel"), style: UIAlertActionStyle.default, handler: nil);
+        let OkAction:UIAlertAction = UIAlertAction(title: localString("ok"), style: UIAlertActionStyle.default, handler: { (UIAlertAction) -> Void in
             //这是一个空的代码块
-            });
+        });
         alertView.addAction(cancelAction);
         alertView.addAction(OkAction);
-        self.presentViewController(alertView, animated: true, completion: nil);
+        self.present(alertView, animated: true, completion: nil);
+    }
+    
+    
+    //MARK: - XMLParseDelegate
+    func parser(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) {
+        currentElement = elementName
+    }
+    
+    func parser(_ parser: XMLParser, foundCharacters string: String) {
+        if currentElement == "LogonResult"{
+            statusString = string
+        }
+        
+    }
+    func parser(_ parser: XMLParser, didEndElement elementName: String, namespaceURI: String?, qualifiedName qName: String?) {
+        if statusString=="ok"{
+            print("登录成功")
+            parser.abortParsing()
+            activityIndicatorView.stopAnimating()
+            logonToMainViewController()
+            
+        }else if statusString=="no"{
+            print("登录失败")
+            parser.abortParsing()
+            activityIndicatorView.stopAnimating()
+            self.createAlertView("警告", message: "账户或密码有误！");
+        }
+    }
+    func parserDidEndDocument(_ parser: XMLParser) {
+        print("statusString---->\(statusString)")
+        print("endendend")
     }
     
     override func didReceiveMemoryWarning() {

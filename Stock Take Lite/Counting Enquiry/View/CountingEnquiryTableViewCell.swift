@@ -27,7 +27,7 @@ class CountingEnquiryTableViewCell: UITableViewCell {
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier);
         
-        self.selectionStyle = UITableViewCellSelectionStyle.None;
+        self.selectionStyle = UITableViewCellSelectionStyle.none;
         
         dataAndTimeLabel = UILabel();
         dataAndTimeLabel.text = "DD MMM YY HH:MM";
@@ -68,10 +68,10 @@ class CountingEnquiryTableViewCell: UITableViewCell {
         cellBottomLine = UILabel();
         cellBottomLine.backgroundColor = self.colorWithString("#2A9CAB");
         self.contentView.addSubview(cellBottomLine);
-        if DEVICE == .Phone{
-            numberOfSKULabel.textAlignment = .Right
-            onhandQtyLabel.textAlignment = .Right
-            countedQtyLabel.textAlignment = .Right
+        if DEVICE == .phone{
+            numberOfSKULabel.textAlignment = .right
+            onhandQtyLabel.textAlignment = .right
+            countedQtyLabel.textAlignment = .right
             addPhoneCountingEnquiryConstraint()
         }else{
             addCountingEnquiryConstraint()
@@ -79,158 +79,158 @@ class CountingEnquiryTableViewCell: UITableViewCell {
     }
     
     func addPhoneCountingEnquiryConstraint(){
-        dataAndTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left).with.offset(15);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.contentView.snp.left).offset(15);
             make.width.equalTo(SCREENWIDTH/2);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
 
-        dataAndTimeRightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeRightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.dataAndTimeLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.dataAndTimeLabel.snp.right).offset(5);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
 
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.dataAndTimeLabel.mas_right).with.offset(0);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.dataAndTimeLabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/7);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        numberOfSKURightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKURightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.numberOfSKULabel.mas_right).with.offset(5);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.numberOfSKULabel.snp.right).offset(5);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
 
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.numberOfSKULabel.mas_right).with.offset(0);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.numberOfSKULabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/7);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
 
-        onhandQtyRightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyRightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.onhandQtyLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.onhandQtyLabel.snp.right).offset(5);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
 
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.onhandQtyLabel.mas_right).with.offset(0);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.onhandQtyLabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/7);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
 
-        cellBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cellBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.top.equalTo(self.contentView.snp.bottom).offset(-1);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
     }
     
     func addCountingEnquiryConstraint(){
-        dataAndTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.contentView.mas_left).with.offset(35);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.contentView.snp.left).offset(35);
             make.width.equalTo(368);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        dataAndTimeRightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeRightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.dataAndTimeLabel.mas_right);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.dataAndTimeLabel.snp.right);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
         
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.dataAndTimeLabel.mas_right).with.offset(20);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.dataAndTimeLabel.snp.right).offset(20);
             make.width.equalTo(96);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        numberOfSKURightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKURightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.numberOfSKULabel.mas_right);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.numberOfSKULabel.snp.right);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
         
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.numberOfSKULabel.mas_right).with.offset(20);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.numberOfSKULabel.snp.right).offset(20);
             make.width.equalTo(96);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        onhandQtyRightLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyRightLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.onhandQtyLabel.mas_right);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.onhandQtyLabel.snp.right);
             make.width.equalTo(1);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
             
         }
         
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_top);
-            make.left.equalTo(self.onhandQtyLabel.mas_right).with.offset(20);
+            make.top.equalTo(self.contentView.snp.top);
+            make.left.equalTo(self.onhandQtyLabel.snp.right).offset(20);
             make.width.equalTo(96);
-            make.bottom.equalTo(self.contentView.mas_bottom);
+            make.bottom.equalTo(self.contentView.snp.bottom);
         }
         
-        cellBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cellBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.contentView.mas_bottom).with.offset(-1);
-            make.left.equalTo(self.contentView.mas_left);
-            make.right.equalTo(self.contentView.mas_right);
+            make.top.equalTo(self.contentView.snp.bottom).offset(-1);
+            make.left.equalTo(self.contentView.snp.left);
+            make.right.equalTo(self.contentView.snp.right);
             make.height.equalTo(1);
             
         }
     }
     
     func FONT20()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9)
         }
-        return UIFont.systemFontOfSize(20)
+        return UIFont.systemFont(ofSize: 20)
     }
 
     
-    func colorWithString(aString:String)->UIColor{
+    func colorWithString(_ aString:String)->UIColor{
         var aString = aString
-        aString.replaceRange(aString.rangeOfString("#")!, with: "0x");
+        aString.replaceSubrange(aString.range(of: "#")!, with: "0x");
         
-        let colorLong = strtoul(aString.cStringUsingEncoding(NSUTF8StringEncoding)!,
+        let colorLong = strtoul(aString.cString(using: String.Encoding.utf8)!,
                                 nil, 16);
         let R = Double((colorLong & 0xFF0000)>>16);
         let G = Double((colorLong & 0x00FF00)>>8);
@@ -244,13 +244,13 @@ class CountingEnquiryTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    override func setSelected(selected: Bool, animated: Bool) {
+    override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
         if selected {
             self.contentView.backgroundColor = self.colorWithString("#CBEAF1");
         }else{
-            self.contentView.backgroundColor = UIColor.whiteColor();
+            self.contentView.backgroundColor = UIColor.white;
         }
         
     }

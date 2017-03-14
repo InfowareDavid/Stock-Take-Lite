@@ -48,8 +48,8 @@ class FTPServerConnectionView: QuantityImportBaseView {
         
         ftpServerTextField = UITextField();
         ftpServerTextField.layer.borderWidth = 1;
-        ftpServerTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        ftpServerTextField.borderStyle = UITextBorderStyle.None;
+        ftpServerTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        ftpServerTextField.borderStyle = UITextBorderStyle.none;
         
         ftpServerTextField.font = FONT20();
         ftpServerTextField.minimumFontSize = 0.8;
@@ -58,8 +58,8 @@ class FTPServerConnectionView: QuantityImportBaseView {
         
         ftpuserTextField = UITextField();
         ftpuserTextField.layer.borderWidth = 1;
-        ftpuserTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        ftpuserTextField.borderStyle = UITextBorderStyle.None;
+        ftpuserTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        ftpuserTextField.borderStyle = UITextBorderStyle.none;
         ftpuserTextField.font = FONT20();
         ftpuserTextField.minimumFontSize = 0.8;
         ftpuserTextField.sizeToFit();
@@ -68,28 +68,28 @@ class FTPServerConnectionView: QuantityImportBaseView {
         
         passwordTextField = UITextField();
         passwordTextField.layer.borderWidth = 1;
-        passwordTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        passwordTextField.borderStyle = UITextBorderStyle.None;
+        passwordTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        passwordTextField.borderStyle = UITextBorderStyle.none;
         passwordTextField.font = FONT20();
         passwordTextField.minimumFontSize = 0.8;
         passwordTextField.sizeToFit();
         self.addSubview(passwordTextField);
         
-        saveButton = UIButton(type: UIButtonType.System);
-        saveButton.setTitle(localString("save"), forState: UIControlState.Normal);
-        saveButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        saveButton = UIButton(type: UIButtonType.system);
+        saveButton.setTitle(localString("save"), for: UIControlState());
+        saveButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         saveButton.titleLabel?.font = FONT25();
-        saveButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        saveButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(saveButton);
         
-        cancelButton = UIButton(type: UIButtonType.System);
-        cancelButton.setTitle(localString("cancel"), forState: UIControlState.Normal);
-        cancelButton.setBackgroundImage(UIImage(named:"buttom_1"), forState: UIControlState.Normal)
+        cancelButton = UIButton(type: UIButtonType.system);
+        cancelButton.setTitle(localString("cancel"), for: UIControlState());
+        cancelButton.setBackgroundImage(UIImage(named:"buttom_1"), for: UIControlState())
         cancelButton.titleLabel?.font = FONT25()
-        cancelButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        cancelButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(cancelButton);
         
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
             addPhoneFTPServerConstraint()
         }else{
             addFTPServerConstraint()
@@ -97,76 +97,76 @@ class FTPServerConnectionView: QuantityImportBaseView {
     }
     
     func addPhoneFTPServerConstraint(){
-        setupBackgroundView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        setupBackgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.23);
         }
         
-        ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.setupBackgroundView.mas_top).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        ftpServerLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.setupBackgroundView.snp.top).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(25);
         }
         
-        ftpuserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
-            make.width.equalTo(SCREENWIDTH/10 * 3);
-            make.height.equalTo(25);
-        }
-        
-        
-        passwordLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.ftpuserLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(SCREENWIDTH/10);
+        ftpuserLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(25);
         }
         
         
-        ftpServerTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        passwordLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.ftpuserLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(SCREENWIDTH/10);
+            make.width.equalTo(SCREENWIDTH/10 * 3);
+            make.height.equalTo(25);
+        }
+        
+        
+        ftpServerTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_top);
-            make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(15);
+            make.top.equalTo(self.ftpServerLabel.snp.top);
+            make.left.equalTo(self.ftpServerLabel.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH * 0.35);
             make.height.equalTo(25);
             
         }
         
-        ftpuserTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpuserTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpuserLabel.mas_top);
-            make.left.equalTo(self.ftpuserLabel.mas_right).with.offset(15);
+            make.top.equalTo(self.ftpuserLabel.snp.top);
+            make.left.equalTo(self.ftpuserLabel.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH * 0.35);
             make.height.equalTo(25);
             
         }
-        passwordTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        passwordTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.passwordLabel.mas_top);
-            make.left.equalTo(self.ftpuserLabel.mas_right).with.offset(15);
+            make.top.equalTo(self.passwordLabel.snp.top);
+            make.left.equalTo(self.ftpuserLabel.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH * 0.35);
             make.height.equalTo(25);
             
         }
         
         
-        saveButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(10);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(10);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH * 0.17);
             make.height.equalTo(25);
         }
         
         
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cancelButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(10);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(25);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(10);
+            make.left.equalTo(self.saveButton.snp.right).offset(25);
             make.width.equalTo(SCREENWIDTH * 0.17);
             make.height.equalTo(25);
         }
@@ -175,76 +175,76 @@ class FTPServerConnectionView: QuantityImportBaseView {
 
     
     func addFTPServerConstraint(){
-        setupBackgroundView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        setupBackgroundView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(240);
         }
 
-        ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.setupBackgroundView.mas_top).with.offset(25);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        ftpServerLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.setupBackgroundView.snp.top).offset(25);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(130);
             make.height.equalTo(40);
         }
 
-        ftpuserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(36);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        ftpuserLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(36);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(130);
             make.height.equalTo(40);
         }
         
 
-        passwordLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.ftpuserLabel.mas_bottom).with.offset(36);
-            make.left.equalTo(self.setupBackgroundView.mas_left).with.offset(111);
+        passwordLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.ftpuserLabel.snp.bottom).offset(36);
+            make.left.equalTo(self.setupBackgroundView.snp.left).offset(111);
             make.width.equalTo(160);
             make.height.equalTo(40);
         }
         
 
-        ftpServerTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_top);
-            make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(40);
+            make.top.equalTo(self.ftpServerLabel.snp.top);
+            make.left.equalTo(self.ftpServerLabel.snp.right).offset(40);
             make.width.equalTo(275);
             make.height.equalTo(35);
             
         }
 
-        ftpuserTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpuserTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpuserLabel.mas_top);
-            make.left.equalTo(self.ftpuserLabel.mas_right).with.offset(40);
+            make.top.equalTo(self.ftpuserLabel.snp.top);
+            make.left.equalTo(self.ftpuserLabel.snp.right).offset(40);
             make.width.equalTo(275);
             make.height.equalTo(35);
             
         }
-        passwordTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        passwordTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.passwordLabel.mas_top);
-            make.left.equalTo(self.ftpuserLabel.mas_right).with.offset(40);
+            make.top.equalTo(self.passwordLabel.snp.top);
+            make.left.equalTo(self.ftpuserLabel.snp.right).offset(40);
             make.width.equalTo(275);
             make.height.equalTo(35);
             
         }
         
 
-        saveButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        saveButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(118);
             make.height.equalTo(32);
         }
         
 
-        cancelButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        cancelButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.setupBackgroundView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.saveButton.mas_right).with.offset(50);
+            make.top.equalTo(self.setupBackgroundView.snp.bottom).offset(35);
+            make.left.equalTo(self.saveButton.snp.right).offset(50);
             make.width.equalTo(136);
             make.height.equalTo(32);
         }

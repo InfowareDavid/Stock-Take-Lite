@@ -18,15 +18,15 @@ class BaseView: UIView {
     }
     */
     
-    func localString(aString:String)->String{
+    func localString(_ aString:String)->String{
         return NSLocalizedString(aString, comment: "");
     }
     
-    func colorWithString(aString:String)->UIColor{
+    func colorWithString(_ aString:String)->UIColor{
         var aString = aString
-        aString.replaceRange(aString.rangeOfString("#")!, with: "0x");
+        aString.replaceSubrange(aString.range(of: "#")!, with: "0x");
         
-        let colorLong = strtoul(aString.cStringUsingEncoding(NSUTF8StringEncoding)!,
+        let colorLong = strtoul(aString.cString(using: String.Encoding.utf8)!,
             nil, 16);
         let R = Double((colorLong & 0xFF0000)>>16);
         let G = Double((colorLong & 0x00FF00)>>8);
@@ -34,48 +34,48 @@ class BaseView: UIView {
         return UIColor.init(red: CGFloat(R)/255.0, green: CGFloat(G)/255.0, blue: CGFloat(B)/255.0, alpha: 1.0);
     }
     func FONT25()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(14)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 14)
         }
-        return UIFont.systemFontOfSize(25)
+        return UIFont.systemFont(ofSize: 25)
     }
     func FONT25WEIGHT03()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(14, weight: 0.15)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 14, weight: 0.15)
         }
-        return UIFont.systemFontOfSize(25, weight: 0.3)
+        return UIFont.systemFont(ofSize: 25, weight: 0.3)
     }
     func FONT22()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(11)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 11)
         }
-        return UIFont.systemFontOfSize(22)
+        return UIFont.systemFont(ofSize: 22)
     }
 
     func FONT20()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9)
         }
-        return UIFont.systemFontOfSize(20)
+        return UIFont.systemFont(ofSize: 20)
     }
     
     func FONT20WEIGHT03()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9, weight: 0.15)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9, weight: 0.15)
         }
-        return UIFont.systemFontOfSize(20, weight: 0.3)
+        return UIFont.systemFont(ofSize: 19, weight: 0.3)
     }
     func FONT20WEIGHT02()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9, weight: 0.1)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9, weight: 0.1)
         }
-        return UIFont.systemFontOfSize(20, weight: 0.2)
+        return UIFont.systemFont(ofSize: 20, weight: 0.2)
     }
     func FONT15WEIGHT04()->UIFont{
-        if DEVICE == .Phone{
-            return UIFont.systemFontOfSize(9, weight: 0.2)
+        if DEVICE == .phone{
+            return UIFont.systemFont(ofSize: 9, weight: 0.2)
         }
-        return UIFont.systemFontOfSize(15, weight: 0.4)
+        return UIFont.systemFont(ofSize: 15, weight: 0.4)
     }
     
 }

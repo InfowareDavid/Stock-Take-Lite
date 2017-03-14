@@ -15,17 +15,17 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     var         skuNum:                             NSString!;
     var         dataArray:                          NSMutableArray!;
     var         dbManager:                          DataBase!;
-    var         fileManager:                        NSFileManager!;
+    var         fileManager:                        FileManager!;
     var         filePath:                           NSString!;
     var         fileName:                           NSString!;
     var         server:                             FMServer!;
     var         succesed:                           Bool = false;
     var         ftpManager:                         FTPManager!;
-    var         fileHandel:                         NSFileHandle!;
+    var         fileHandel:                         FileHandle!;
     var         exportAlertView:                    UIAlertView!;
   
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.checkFTPIsSetup();
         
@@ -35,10 +35,10 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
         super.viewDidLoad();
         dataArray = NSMutableArray();
         dbManager = DataBase();
-        fileManager = NSFileManager.defaultManager();
+        fileManager = FileManager.default;
        
-        self.view.backgroundColor = UIColor.whiteColor();
-        exportSuccessView = ExportSuccessView(frame: CGRectMake(0, 0, SCREENWIDTH, SCREENHEIGHT));
+        self.view.backgroundColor = UIColor.white;
+        exportSuccessView = ExportSuccessView(frame: CGRect(x: 0, y: 0, width: SCREENWIDTH, height: SCREENHEIGHT));
         self.exportSuccessView.fileNameTextField.delegate = self
         self.view.addSubview(exportSuccessView);
         self.updataPromptLabel();
@@ -50,7 +50,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     }
     
     func checkFTPIsSetup(){
-        let currentFTP = CurrentFTP.current();
+        let currentFTP = CurrentFTP.current;
         if currentFTP.ftpServer == nil{
              exportAlertView = UIAlertView(title: localString("warning"), message: localString("imSetFTPServer"), delegate: self, cancelButtonTitle: localString("ok"));
             exportAlertView.show();
@@ -61,7 +61,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     }
     
     func initFTPServer(){
-        let currentFTP = CurrentFTP.current();
+        let currentFTP = CurrentFTP.current;
         server = FMServer(destination: currentFTP.ftpServer! as String, username: currentFTP.ftpUser! as String, password: currentFTP.ftpPassword! as String);
         ftpManager = FTPManager();
     }
@@ -71,15 +71,15 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     */
     
     func updateCSVFileToServer(){
-        succesed = ftpManager.uploadFile(NSURL(string:self.filePath as String), toServer: server);
+        succesed = ftpManager.uploadFile(URL(string:self.filePath as String), to: server);
         if succesed {
             self.removeTempFile();
-            self.performSelectorOnMainThread(#selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), withObject: localString("exsExportSuccess") + " \(self.fileName)", waitUntilDone: true);
-            self.performSelectorOnMainThread(#selector(ExportSuccessViewController.progressHUDHiden), withObject: nil, waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with: localString("exsExportSuccess") + " \(self.fileName!)", waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.progressHUDHiden), with: nil, waitUntilDone: true);
         }else{
             self.removeTempFile();
-            self.performSelectorOnMainThread(#selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), withObject:localString("exsExportFailed") + " \(self.fileName)", waitUntilDone: true);
-            self.performSelectorOnMainThread(#selector(ExportSuccessViewController.progressHUDHiden), withObject: nil, waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.updateStatusLabelWithString(_:)), with:localString("exsExportFailed") + " \(self.fileName!)", waitUntilDone: true);
+            self.performSelector(onMainThread: #selector(ExportSuccessViewController.progressHUDHiden), with: nil, waitUntilDone: true);
         }
     }
     
@@ -100,14 +100,15 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
        // for var i = 0;i < self.dataArray.count; i = i+1{
         for i in 0..<self.dataArray.count{
             let fileDataModel:FileDataModel = self.dataArray[i] as! FileDataModel;
-            let str = "\(fileDataModel.skuName!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),\(fileDataModel.skuCode!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),\(fileDataModel.onhandQty!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),\(fileDataModel.countQty!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),\(fileDataModel.varianceQty!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())),\(fileDataModel.barcode!.stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet()))";
-            temArray.addObject(str);
+            let str = "\(fileDataModel.skuName!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.skuCode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.onhandQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.countQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.varianceQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.barcode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))";
+            temArray.add(str);
         }
-        let temStr = temArray.componentsJoinedByString("\n");
-        let fileData:NSData = temStr.dataUsingEncoding(NSUTF16StringEncoding)!;
-        self.filePath = CSVFILEPATH.stringByAppendingString("/\(self.fileName!)");
-        if  !fileManager.fileExistsAtPath(self.filePath as String){
-            self.fileManager.createFileAtPath(self.filePath as String, contents: fileData, attributes: nil);
+        let temStr = temArray.componentsJoined(by: "\n");
+        let fileData:Data = temStr.data(using: String.Encoding.utf16)!;
+        let string = CSVFILEPATH + "/\(self.fileName!)"
+        self.filePath = string as NSString!
+        if  !fileManager.fileExists(atPath: self.filePath as String){
+            self.fileManager.createFile(atPath: self.filePath as String, contents: fileData, attributes: nil);
         }
         self.updateCSVFileToServer();
     }
@@ -117,7 +118,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     */
     
     func removeTempFile(){
-        try! self.fileManager.removeItemAtPath(self.filePath as String);
+        try! self.fileManager.removeItem(atPath: self.filePath as String);
     }
     
     /**
@@ -127,7 +128,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     func updataPromptLabel(){
         self.exportSuccessView.dateTextLabel.text = self.fileDate as String;
         self.exportSuccessView.numberOfSKUTextLabel.text = self.skuNum as String;
-        let currentftp = CurrentFTP.current();
+        let currentftp = CurrentFTP.current;
         if currentftp.ftpServer != nil {
             self.exportSuccessView.ftpServerTextLabel.text = currentftp.ftpServer as String;
             self.exportSuccessView.ftpUserTextLabel.text = currentftp.ftpUser as String;
@@ -136,7 +137,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
         }
     }
     
-    func updateStatusLabelWithString(string :String){
+    func updateStatusLabelWithString(_ string :String){
         self.exportSuccessView.exportStateLabel.text = localString(string) ;
     }
     
@@ -164,9 +165,9 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     
     func addButtonAction(){
         
-        self.exportSuccessView.exprotButton.addTarget(self, action: #selector(ExportSuccessViewController.exprotButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.exportSuccessView.returnButton.addTarget(self, action: #selector(ExportSuccessViewController.returnButtonAction), forControlEvents: UIControlEvents.TouchUpInside);
-        self.exportSuccessView.logoutButton.addTarget(self, action: #selector(ExportSuccessViewController.logoutAction), forControlEvents: UIControlEvents.TouchUpInside);
+        self.exportSuccessView.exprotButton.addTarget(self, action: #selector(ExportSuccessViewController.exprotButtonAction), for: UIControlEvents.touchUpInside);
+        self.exportSuccessView.returnButton.addTarget(self, action: #selector(ExportSuccessViewController.returnButtonAction), for: UIControlEvents.touchUpInside);
+        self.exportSuccessView.logoutButton.addTarget(self, action: #selector(ExportSuccessViewController.logoutAction), for: UIControlEvents.touchUpInside);
     }
     
     /**
@@ -175,9 +176,10 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     
     func exprotButtonAction(){
         if self.exportSuccessView.fileNameTextField.text != ""{
-            self.fileName = self.exportSuccessView.fileNameTextField.text?.stringByAppendingString(".csv");
-            MBProgressHUD.showHUDAddedTo(self.view , animated: true);
-            self.performSelectorInBackground(#selector(ExportSuccessViewController.createTempCSVFile), withObject: nil);
+            let string = (self.exportSuccessView.fileNameTextField.text!) + ".csv"
+            self.fileName = string as NSString!
+            MBProgressHUD.showAdded(to: self.view , animated: true);
+            self.performSelector(inBackground: #selector(ExportSuccessViewController.createTempCSVFile), with: nil);
         }else{
             self.createAlertView(localString("warning"), message: localString("inputfileName"))
         }
@@ -186,7 +188,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     
     func logoutAction(){
         
-        let currentUser:CurrentUser = CurrentUser.current();
+        let currentUser:CurrentUser = CurrentUser.current;
         currentUser.user = nil;
         let logonVC = LogonViewController();
         self.drawer?.repleaceCenterViewControllerWithViewController(logonVC);
@@ -198,7 +200,7 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     */
     
     func progressHUDHiden(){
-        MBProgressHUD.hideHUDForView(self.view , animated: true);
+        MBProgressHUD.hide(for: self.view , animated: true);
     }
     
     func returnButtonAction(){
@@ -206,40 +208,40 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
         self.drawer?.repleaceCenterViewControllerWithViewController(quantityVC);
     }
     
-    override func alertView(alertView: UIAlertView, clickedButtonAtIndex buttonIndex: Int) {
+    override func alertView(_ alertView: UIAlertView, clickedButtonAt buttonIndex: Int) {
         if alertView == exportAlertView{
             let ftpServerVC = FTPServerConnectionViewController();
             self.drawer?.repleaceCenterViewControllerWithViewController(ftpServerVC);
         }
     }
     
-    func textFieldShouldBeginEditing(textField: UITextField) -> Bool {
-        if DEVICE == .Phone{
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if DEVICE == .phone{
             self.showAnimation()
         }
         return true
     }
     
-    func textFieldDidEndEditing(textField: UITextField) {
-        if DEVICE == .Phone{
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        if DEVICE == .phone{
             self.hiddenAnimation()
         }
     }
     
-    func textFieldShouldEndEditing(textField: UITextField) -> Bool {
-        if DEVICE == .Phone{
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if DEVICE == .phone{
             self.hiddenAnimation()
         }
         return true
     }
     
     override func showAnimation() {
-        UIView.animateWithDuration(0.25) { 
-            self.view.frame = CGRectMake(0, -100, SCREENWIDTH, SCREENHEIGHT)
-        }
+        UIView.animate(withDuration: 0.25, animations: { 
+            self.view.frame = CGRect(x: 0, y: -100, width: SCREENWIDTH, height: SCREENHEIGHT)
+        }) 
     }
     
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
     }

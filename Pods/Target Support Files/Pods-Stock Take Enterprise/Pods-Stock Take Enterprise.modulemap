@@ -1,0 +1,6 @@
+framework module Pods_Stock_Take_Enterprise {
+  umbrella header "Pods-Stock Take Enterprise-umbrella.h"
+
+  export *
+  module * { export * }
+}

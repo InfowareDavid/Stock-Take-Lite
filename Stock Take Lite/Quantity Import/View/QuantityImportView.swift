@@ -86,275 +86,275 @@ class QuantityImportView: QuantityImportBaseView {
         
         tableView = UITableView();
         tableView.separatorColor = self.colorWithString("#2A9CAB");
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.addSubview(tableView);
         
-        okButton = UIButton(type: UIButtonType.System);
-        okButton.setTitle(localString("ok"), forState: UIControlState.Normal);
+        okButton = UIButton(type: UIButtonType.system);
+        okButton.setTitle(localString("ok"), for: UIControlState());
         okButton.titleLabel?.font = FONT25()
-        okButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
-        okButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal);
+        okButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
+        okButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());
         self.addSubview(okButton);
         
-        returnButton = UIButton(type: UIButtonType.System);
-        returnButton.setTitle(localString("return"), forState: UIControlState.Normal);
-        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal);
+        returnButton = UIButton(type: UIButtonType.system);
+        returnButton.setTitle(localString("return"), for: UIControlState());
+        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());
         returnButton.titleLabel?.font = FONT25()
-        returnButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        returnButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(returnButton);
         
-        if DEVICE == .Phone{
-            promptLabel.font = UIFont.systemFontOfSize(11, weight: 0.15);
-            promptFileNameLabel.font = UIFont.systemFontOfSize(10, weight: 0.15);
-            promptFileTimeLabel.font = UIFont.systemFontOfSize(10, weight: 0.15);
+        if DEVICE == .phone{
+            promptLabel.font = UIFont.systemFont(ofSize: 11, weight: 0.15);
+            promptFileNameLabel.font = UIFont.systemFont(ofSize: 10, weight: 0.15);
+            promptFileTimeLabel.font = UIFont.systemFont(ofSize: 10, weight: 0.15);
 
             addPhoneImportConstrain()
         }else{
             
-            promptLabel.font = UIFont.systemFontOfSize(25, weight: 0.3);
-            promptFileNameLabel.font = UIFont.systemFontOfSize(23, weight: 0.3);
-            promptFileTimeLabel.font = UIFont.systemFontOfSize(23, weight: 0.3);
+            promptLabel.font = UIFont.systemFont(ofSize: 25, weight: 0.3);
+            promptFileNameLabel.font = UIFont.systemFont(ofSize: 23, weight: 0.3);
+            promptFileTimeLabel.font = UIFont.systemFont(ofSize: 23, weight: 0.3);
 
             addImportConstrain()
         }
     }
     
     func addPhoneImportConstrain(){
-        middleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        middleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.14);
         }
         
-        ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.middleView.mas_top).offset(10)
-            make.left.equalTo(self.middleView.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.middleView.snp.top).offset(10)
+            make.left.equalTo(self.middleView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(26);
             
         }
-        ftpServerTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_top);
-            make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(10);
+            make.top.equalTo(self.ftpServerLabel.snp.top);
+            make.left.equalTo(self.ftpServerLabel.snp.right).offset(10);
             make.width.equalTo(SCREENWIDTH/5.0 * 3);
-            make.height.equalTo(self.ftpServerLabel.mas_height);
+            make.height.equalTo(self.ftpServerLabel.snp.height);
             
         }
         
-        ftpUserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(5);
-            make.left.equalTo(self.ftpServerLabel.mas_left);
-            make.width.equalTo(self.ftpServerLabel.mas_width);
-            make.height.equalTo(self.ftpServerLabel.mas_height);
+            make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(5);
+            make.left.equalTo(self.ftpServerLabel.snp.left);
+            make.width.equalTo(self.ftpServerLabel.snp.width);
+            make.height.equalTo(self.ftpServerLabel.snp.height);
             
         }
-        ftpUserTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpUserLabel.mas_top);
-            make.left.equalTo(self.ftpServerTextLabel.mas_left);
-            make.width.equalTo(self.ftpServerTextLabel.mas_width);
-            make.height.equalTo(self.ftpServerTextLabel.mas_height);
+            make.top.equalTo(self.ftpUserLabel.snp.top);
+            make.left.equalTo(self.ftpServerTextLabel.snp.left);
+            make.width.equalTo(self.ftpServerTextLabel.snp.width);
+            make.height.equalTo(self.ftpServerTextLabel.snp.height);
             
         }
         
-        promptView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.middleView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        promptView.snp.makeConstraints { (make) in
+            make.top.equalTo(self.middleView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(30);
             
         }
         
-        promptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_top)
-            make.left.equalTo(self.promptView.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptView.snp.top)
+            make.left.equalTo(self.promptView.snp.left).offset(SCREENWIDTH/10.0);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(30);
             
         }
         
-        promptFileNameAndTimeView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptFileNameAndTimeView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(25);
         }
         
-        promptFileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptFileNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptView.mas_bottom);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.promptView.snp.bottom);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
         
-        promptFileTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.promptFileNameLabel.mas_top);
-            make.left.equalTo(self.promptFileNameLabel.mas_right).with.offset(SCREENWIDTH/5);
+        promptFileTimeLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.promptFileNameLabel.snp.top);
+            make.left.equalTo(self.promptFileNameLabel.snp.right).offset(SCREENWIDTH/5);
             make.width.equalTo(SCREENWIDTH/5.0);
             make.height.equalTo(25);
         }
         
-        promptLineLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptLineLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptFileNameAndTimeView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptFileNameAndTimeView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
         }
         
-        tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(50/1024.0 * SCREENHEIGHT * 8);
             
         }
         
-        okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        okButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableView.mas_bottom).with.offset(10);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.tableView.snp.bottom).offset(10);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
         
-        returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        returnButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.okButton.mas_top);
-            make.left.equalTo(self.okButton.mas_right).with.offset(SCREENWIDTH/5);
-            make.width.equalTo(self.okButton.mas_width);
-            make.height.equalTo(self.okButton.mas_height);
+            make.top.equalTo(self.okButton.snp.top);
+            make.left.equalTo(self.okButton.snp.right).offset(SCREENWIDTH/5);
+            make.width.equalTo(self.okButton.snp.width);
+            make.height.equalTo(self.okButton.snp.height);
             
         }
     }
     
         func addImportConstrain(){
-            middleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            middleView.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.bottomLineLabel.mas_bottom);
-                make.left.equalTo(self.mas_left);
-                make.right.equalTo(self.mas_right);
+                make.top.equalTo(self.bottomLineLabel.snp.bottom);
+                make.left.equalTo(self.snp.left);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(140.5);
             }
             
-            ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            ftpServerLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.middleView.mas_top).with.offset(25);
-                make.left.equalTo(self.middleView.mas_left).with.offset(111);
+                make.top.equalTo(self.middleView.snp.top).offset(25);
+                make.left.equalTo(self.middleView.snp.left).offset(111);
                 make.width.equalTo(130);
                 make.height.equalTo(40);
                 
             }
-            ftpServerTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            ftpServerTextLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.ftpServerLabel.mas_top);
-                make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(40);
+                make.top.equalTo(self.ftpServerLabel.snp.top);
+                make.left.equalTo(self.ftpServerLabel.snp.right).offset(40);
                 make.width.equalTo(300);
-                make.height.equalTo(self.ftpServerLabel.mas_height);
+                make.height.equalTo(self.ftpServerLabel.snp.height);
                 
             }
             
-            ftpUserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            ftpUserLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(10);
-                make.left.equalTo(self.ftpServerLabel.mas_left);
-                make.width.equalTo(self.ftpServerLabel.mas_width);
-                make.height.equalTo(self.ftpServerLabel.mas_height);
+                make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(10);
+                make.left.equalTo(self.ftpServerLabel.snp.left);
+                make.width.equalTo(self.ftpServerLabel.snp.width);
+                make.height.equalTo(self.ftpServerLabel.snp.height);
                 
             }
-            ftpUserTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            ftpUserTextLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.ftpUserLabel.mas_top);
-                make.left.equalTo(self.ftpServerTextLabel.mas_left);
-                make.width.equalTo(self.ftpServerTextLabel.mas_width);
-                make.height.equalTo(self.ftpServerTextLabel.mas_height);
+                make.top.equalTo(self.ftpUserLabel.snp.top);
+                make.left.equalTo(self.ftpServerTextLabel.snp.left);
+                make.width.equalTo(self.ftpServerTextLabel.snp.width);
+                make.height.equalTo(self.ftpServerTextLabel.snp.height);
                 
             }
             
-            promptView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-                make.top.equalTo(self.middleView.mas_bottom);
-                make.left.equalTo(self.mas_left);
-                make.right.equalTo(self.mas_right);
+            promptView.snp.makeConstraints { (make) in
+                make.top.equalTo(self.middleView.snp.bottom);
+                make.left.equalTo(self.snp.left);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(63);
                 
             }
             
-            promptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            promptLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.promptView.mas_top).with.offset(15);
-                make.left.equalTo(self.promptView.mas_left).with.offset(111);
-                make.right.equalTo(self.mas_right);
+                make.top.equalTo(self.promptView.snp.top).offset(15);
+                make.left.equalTo(self.promptView.snp.left).offset(111);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(30);
                 
             }
             
-            promptFileNameAndTimeView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            promptFileNameAndTimeView.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.promptView.mas_bottom);
-                make.left.equalTo(self.mas_left);
-                make.right.equalTo(self.mas_right);
+                make.top.equalTo(self.promptView.snp.bottom);
+                make.left.equalTo(self.snp.left);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(50);
             }
             
-            promptFileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            promptFileNameLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.promptView.mas_bottom);
-                make.left.equalTo(self.mas_left).with.offset(111);
+                make.top.equalTo(self.promptView.snp.bottom);
+                make.left.equalTo(self.snp.left).offset(111);
                 make.width.equalTo(150);
                 make.height.equalTo(50);
                 
             }
             
-            promptFileTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-                make.top.equalTo(self.promptFileNameLabel.mas_top);
-                make.left.equalTo(self.promptFileNameLabel.mas_right).with.offset(150);
+            promptFileTimeLabel.snp.makeConstraints { (make) in
+                make.top.equalTo(self.promptFileNameLabel.snp.top);
+                make.left.equalTo(self.promptFileNameLabel.snp.right).offset(150);
                 make.width.equalTo(120);
                 make.height.equalTo(49);
             }
             
-            promptLineLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            promptLineLabel.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.promptFileNameAndTimeView.mas_bottom);
-                make.left.equalTo(self.mas_left);
-                make.right.equalTo(self.mas_right);
+                make.top.equalTo(self.promptFileNameAndTimeView.snp.bottom);
+                make.left.equalTo(self.snp.left);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(1);
             }
             
-            tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            tableView.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.promptLineLabel.mas_bottom);
-                make.left.equalTo(self.mas_left);
-                make.right.equalTo(self.mas_right);
+                make.top.equalTo(self.promptLineLabel.snp.bottom);
+                make.left.equalTo(self.snp.left);
+                make.right.equalTo(self.snp.right);
                 make.height.equalTo(500);
                 
             }
             
-            okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            okButton.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.tableView.mas_bottom).with.offset(35);
-                make.left.equalTo(self.mas_left).with.offset(111);
+                make.top.equalTo(self.tableView.snp.bottom).offset(35);
+                make.left.equalTo(self.snp.left).offset(111);
                 make.width.equalTo(112);
                 make.height.equalTo(32);
                 
             }
             
-            returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+            returnButton.snp.makeConstraints { (make) in
                 
-                make.top.equalTo(self.okButton.mas_top);
-                make.left.equalTo(self.okButton.mas_right).with.offset(160);
-                make.width.equalTo(self.okButton.mas_width);
-                make.height.equalTo(self.okButton.mas_height);
+                make.top.equalTo(self.okButton.snp.top);
+                make.left.equalTo(self.okButton.snp.right).offset(160);
+                make.width.equalTo(self.okButton.snp.width);
+                make.height.equalTo(self.okButton.snp.height);
                 
             }
         

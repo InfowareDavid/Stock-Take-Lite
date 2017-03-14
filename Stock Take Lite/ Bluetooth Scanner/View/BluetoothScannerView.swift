@@ -26,14 +26,14 @@ class BluetoothScannerView: CountingEntryView {
         self.middelView.addSubview(barcodeLable);
         
         barcodeTextFiled = UITextField();
-        barcodeTextFiled.borderStyle = UITextBorderStyle.RoundedRect;
+        barcodeTextFiled.borderStyle = UITextBorderStyle.roundedRect;
        // fileNameTextLabel.text = "File 3";
        // fileNameTextLabel.textColor = self.colorWithString("#6D6E71");
         //fileNameTextLabel.font = FONT22()
         barcodeTextFiled.font = FONT25()
-        barcodeTextFiled.returnKeyType = .Search
+        barcodeTextFiled.returnKeyType = .search
         self.middelView.addSubview(barcodeTextFiled);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
           bluetoothPhoneConstraint()
         }else{
             bluetoothConstraint()
@@ -44,39 +44,39 @@ class BluetoothScannerView: CountingEntryView {
     
     func bluetoothPhoneConstraint(){
         
-        self.fileNameLabel.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.middelView.mas_top).with.offset(10);
-            make.left.equalTo(self.middelView.mas_left).with.offset(SCREENWIDTH/10);
+        self.fileNameLabel.snp.updateConstraints { (make) in
+            make.top.equalTo(self.middelView.snp.top).offset(10);
+            make.left.equalTo(self.middelView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(25);
         }
 
-        self.middelView.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        self.middelView.snp.updateConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.23);
         }
-        barcodeLable.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.skuNumberLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.skuNumberLabel.mas_left);
+        barcodeLable.snp.makeConstraints { (make) in
+            make.top.equalTo(self.skuNumberLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.skuNumberLabel.snp.left);
             make.width.equalTo(SCREENWIDTH/10 * 3);
             make.height.equalTo(25);
         }
 
-        barcodeTextFiled.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        barcodeTextFiled.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.barcodeLable.mas_top);
-            make.left.equalTo(self.barcodeLable.mas_right).with.offset(15);
+            make.top.equalTo(self.barcodeLable.snp.top);
+            make.left.equalTo(self.barcodeLable.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH * 0.4);
-            make.bottom.equalTo(self.barcodeLable.mas_bottom);
+            make.bottom.equalTo(self.barcodeLable.snp.bottom);
             
         }
 
-        self.tableView.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableViewTopLineLable.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        self.tableView.snp.updateConstraints { (make) in
+            make.top.equalTo(self.tableViewTopLineLable.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(50/1024.0 * SCREENHEIGHT * 7);
         }
 
@@ -84,39 +84,39 @@ class BluetoothScannerView: CountingEntryView {
     
     func bluetoothConstraint(){
         
-        self.fileNameLabel.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.middelView.mas_top).with.offset(25);
-            make.left.equalTo(self.middelView.mas_left).with.offset(111);
+        self.fileNameLabel.snp.updateConstraints { (make) in
+            make.top.equalTo(self.middelView.snp.top).offset(25);
+            make.left.equalTo(self.middelView.snp.left).offset(111);
             make.width.equalTo(135);
             make.height.equalTo(40);
         }
         
         
-        self.middelView.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        self.middelView.snp.updateConstraints { (make) in
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(190);
         }
-        barcodeLable.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.skuNumberLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.skuNumberLabel.mas_left);            make.width.equalTo(130);
+        barcodeLable.snp.makeConstraints { (make) in
+            make.top.equalTo(self.skuNumberLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.skuNumberLabel.snp.left);            make.width.equalTo(130);
             make.height.equalTo(40);
         }
         
-        barcodeTextFiled.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        barcodeTextFiled.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.barcodeLable.mas_top);
-            make.left.equalTo(self.barcodeLable.mas_right).with.offset(40);
+            make.top.equalTo(self.barcodeLable.snp.top);
+            make.left.equalTo(self.barcodeLable.snp.right).offset(40);
             make.width.equalTo(200);
-            make.bottom.equalTo(self.barcodeLable.mas_bottom);
+            make.bottom.equalTo(self.barcodeLable.snp.bottom);
             
         }
         
-        self.tableView.mas_updateConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableViewTopLineLable.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        self.tableView.snp.updateConstraints { (make) in
+            make.top.equalTo(self.tableViewTopLineLable.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(440);
         }
         

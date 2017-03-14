@@ -10,11 +10,11 @@ import UIKit
 
 class INFODropShadowView: UIView {
 
-    override func drawRect(rect: CGRect) {
-        self.layer.shadowOffset = CGSizeZero;
+    override func draw(_ rect: CGRect) {
+        self.layer.shadowOffset = CGSize.zero;
         self.layer.shadowOpacity = 0.7;//阴影的不透明度
         let shadowPath = UIBezierPath(rect: self.bounds);
-        self.layer.shadowPath = shadowPath.CGPath;
+        self.layer.shadowPath = shadowPath.cgPath;
     }
 
 }

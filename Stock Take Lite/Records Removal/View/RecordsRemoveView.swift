@@ -38,12 +38,12 @@ class RecordsRemoveView: QuantityImportBaseView {
         chooseRemovePromptLabel.textColor = self.colorWithString("#6D6E71");
         self.chooseRemoveDateView.addSubview(chooseRemovePromptLabel);
         
-        chooseRemoveDateButton = UIButton(type: UIButtonType.Custom);
-        chooseRemoveDateButton.setTitle("MM DDD YYY", forState: UIControlState.Normal);
+        chooseRemoveDateButton = UIButton(type: UIButtonType.custom);
+        chooseRemoveDateButton.setTitle("MM DDD YYY", for: UIControlState());
         chooseRemoveDateButton.layer.borderWidth = 1;
-        chooseRemoveDateButton.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
-        chooseRemoveDateButton.backgroundColor = UIColor.whiteColor();
-        chooseRemoveDateButton.setTitleColor(self.colorWithString("#6D6E71"), forState: UIControlState.Normal);
+        chooseRemoveDateButton.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        chooseRemoveDateButton.backgroundColor = UIColor.white;
+        chooseRemoveDateButton.setTitleColor(self.colorWithString("#6D6E71"), for: UIControlState());
         chooseRemoveDateButton.titleLabel?.font = FONT20()
         self.chooseRemoveDateView.addSubview(chooseRemoveDateButton);
         
@@ -85,7 +85,7 @@ class RecordsRemoveView: QuantityImportBaseView {
         
         tableView = UITableView();
         tableView.bounces = false;
-        tableView.separatorStyle = UITableViewCellSeparatorStyle.None;
+        tableView.separatorStyle = UITableViewCellSeparatorStyle.none;
         self.addSubview(tableView);
         
         tableViewBottomLine = UILabel();
@@ -98,24 +98,24 @@ class RecordsRemoveView: QuantityImportBaseView {
         removeStateLabel.text = "";
         self.addSubview(removeStateLabel);
         
-        okButton = UIButton(type: UIButtonType.System);
-        okButton.setTitle(localString("ok"), forState: UIControlState.Normal);
+        okButton = UIButton(type: UIButtonType.system);
+        okButton.setTitle(localString("ok"), for: UIControlState());
         okButton.titleLabel?.font = FONT25()
-        okButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
-        okButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal);
+        okButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
+        okButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());
         self.addSubview(okButton);
       
-        returnButton = UIButton(type: UIButtonType.System);
-        returnButton.setTitle(localString("return"), forState: UIControlState.Normal);
-        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal);
+        returnButton = UIButton(type: UIButtonType.system);
+        returnButton.setTitle(localString("return"), for: UIControlState());
+        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState());
         returnButton.titleLabel?.font = FONT25()
-        returnButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        returnButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(returnButton);
         
-        if DEVICE == .Phone{
-            numberOfSKULabel.textAlignment = .Right
-            onhandQtyLabel.textAlignment = .Right
-            countedQtyLabel.textAlignment = .Right
+        if DEVICE == .phone{
+            numberOfSKULabel.textAlignment = .right
+            onhandQtyLabel.textAlignment = .right
+            countedQtyLabel.textAlignment = .right
             addPhoneRecordRemoveConstraint()
         }else{
             addRecordRemoveConstraint()
@@ -123,250 +123,250 @@ class RecordsRemoveView: QuantityImportBaseView {
     }
     
     func addPhoneRecordRemoveConstraint(){
-        chooseRemoveDateView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemoveDateView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.09);
         }
 
-        chooseRemovePromptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemovePromptLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemoveDateView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.right.equalTo(self.mas_right);
-            make.bottom.equalTo(self.chooseRemoveDateView.mas_bottom).with.offset(-25);
+            make.top.equalTo(self.chooseRemoveDateView.snp.top);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10.0);
+            make.right.equalTo(self.snp.right);
+            make.bottom.equalTo(self.chooseRemoveDateView.snp.bottom).offset(-25);
             
         }
 
-        chooseRemoveDateButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemoveDateButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemovePromptLabel.mas_bottom);
-            make.left.equalTo(self.chooseRemoveDateView.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.chooseRemovePromptLabel.snp.bottom);
+            make.left.equalTo(self.chooseRemoveDateView.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH * 0.26);
             make.height.equalTo(20);
             
         }
 
-        tableViewTitleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTitleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemoveDateView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.chooseRemoveDateView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(30);
             
         }
 
-        promptBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableViewTitleView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
 
-        dataAndTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(5);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(5);
             make.width.equalTo(SCREENWIDTH/2);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
 
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.dataAndTimeLabel.mas_right).with.offset(5);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.dataAndTimeLabel.snp.right).offset(5);
             make.width.equalTo(SCREENWIDTH/6);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.numberOfSKULabel.mas_right).with.offset(-10);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.numberOfSKULabel.snp.right).offset(-10);
             make.width.equalTo(SCREENWIDTH/6);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
         
 
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.onhandQtyLabel.mas_right).with.offset(0);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.onhandQtyLabel.snp.right).offset(0);
             make.width.equalTo(SCREENWIDTH/6);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
 
-        tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptBottomLine.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptBottomLine.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(50/1024.0 * SCREENHEIGHT * 10);
             
         }
 
-        tableViewBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        tableViewBottomLine.snp.makeConstraints { (make) in
+            make.top.equalTo(self.tableView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
         }
 
-        removeStateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        removeStateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(5);
-            make.left.equalTo(self.mas_left).with.offset(5);
-            make.right.equalTo(self.mas_right).with.offset(5);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(5);
+            make.left.equalTo(self.snp.left).offset(5);
+            make.right.equalTo(self.snp.right).offset(5);
             make.height.equalTo(25);
             
         }
 
-        okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        okButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.removeStateLabel.mas_bottom).with.offset(5);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.removeStateLabel.snp.bottom).offset(5);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/5.0);
             make.height.equalTo(25);
             
         }
-        returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        returnButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.okButton.mas_top);
-            make.left.equalTo(self.okButton.mas_right).with.offset(15);
-            make.width.equalTo(self.okButton.mas_width);
-            make.height.equalTo(self.okButton.mas_height);
+            make.top.equalTo(self.okButton.snp.top);
+            make.left.equalTo(self.okButton.snp.right).offset(15);
+            make.width.equalTo(self.okButton.snp.width);
+            make.height.equalTo(self.okButton.snp.height);
             
         }
         
     }
     
     func addRecordRemoveConstraint(){
-        chooseRemoveDateView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemoveDateView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(90);
         }
         
-        chooseRemovePromptLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemovePromptLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemoveDateView.mas_top);
-            make.left.equalTo(self.mas_left).with.offset(111);
-            make.right.equalTo(self.mas_right);
-            make.bottom.equalTo(self.chooseRemoveDateView.mas_bottom).with.offset(-40);
+            make.top.equalTo(self.chooseRemoveDateView.snp.top);
+            make.left.equalTo(self.snp.left).offset(111);
+            make.right.equalTo(self.snp.right);
+            make.bottom.equalTo(self.chooseRemoveDateView.snp.bottom).offset(-40);
             
         }
         
-        chooseRemoveDateButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        chooseRemoveDateButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemovePromptLabel.mas_bottom);
-            make.left.equalTo(self.chooseRemoveDateView.mas_left).with.offset(111);
+            make.top.equalTo(self.chooseRemovePromptLabel.snp.bottom);
+            make.left.equalTo(self.chooseRemoveDateView.snp.left).offset(111);
             make.width.equalTo(200);
             make.height.equalTo(30);
             
         }
         
-        tableViewTitleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableViewTitleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.chooseRemoveDateView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.chooseRemoveDateView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(61);
             
         }
         
-        promptBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        promptBottomLine.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.tableViewTitleView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
             
         }
         
-        dataAndTimeLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dataAndTimeLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(35);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(35);
             make.width.equalTo(130);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
         
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(403);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(403);
             make.width.equalTo(60);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(519);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(519);
             make.width.equalTo(70);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
         
         
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewTitleView.mas_top);
-            make.left.equalTo(self.tableViewTitleView.mas_left).with.offset(635);
+            make.top.equalTo(self.tableViewTitleView.snp.top);
+            make.left.equalTo(self.tableViewTitleView.snp.left).offset(635);
             make.width.equalTo(85);
-            make.bottom.equalTo(self.tableViewTitleView.mas_bottom);
+            make.bottom.equalTo(self.tableViewTitleView.snp.bottom);
             
         }
         
-        tableView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        tableView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.promptBottomLine.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.promptBottomLine.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(566);
             
         }
         
-        tableViewBottomLine.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            make.top.equalTo(self.tableView.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+        tableViewBottomLine.snp.makeConstraints { (make) in
+            make.top.equalTo(self.tableView.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(1);
         }
         
-        removeStateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        removeStateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableViewBottomLine.mas_bottom).with.offset(10);
-            make.left.equalTo(self.mas_left).with.offset(35);
-            make.right.equalTo(self.mas_right).with.offset(35);
+            make.top.equalTo(self.tableViewBottomLine.snp.bottom).offset(10);
+            make.left.equalTo(self.snp.left).offset(35);
+            make.right.equalTo(self.snp.right).offset(35);
             make.height.equalTo(30);
             
         }
         
-        okButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        okButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.tableView.mas_bottom).with.offset(70);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.tableView.snp.bottom).offset(70);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(112);
             make.height.equalTo(32);
             
         }
-        returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        returnButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.okButton.mas_top);
-            make.left.equalTo(self.okButton.mas_right).with.offset(160);
-            make.width.equalTo(self.okButton.mas_width);
-            make.height.equalTo(self.okButton.mas_height);
+            make.top.equalTo(self.okButton.snp.top);
+            make.left.equalTo(self.okButton.snp.right).offset(160);
+            make.width.equalTo(self.okButton.snp.width);
+            make.height.equalTo(self.okButton.snp.height);
             
         }
         

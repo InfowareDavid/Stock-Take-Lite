@@ -36,9 +36,9 @@ class ExportSuccessView: QuantityImportBaseView {
     override init(frame: CGRect) {
         super.init(frame: frame);
         self.secondeTopLabel.text = localString("exsTitle");
-        logoutButton = UIButton(type: UIButtonType.Custom);
-        logoutButton.setImage(UIImage(named: "logout"), forState: UIControlState.Normal);
-        self.topImageView.userInteractionEnabled = true;
+        logoutButton = UIButton(type: UIButtonType.custom);
+        logoutButton.setImage(UIImage(named: "logout"), for: UIControlState());
+        self.topImageView.isUserInteractionEnabled = true;
         self.topImageView.addSubview(logoutButton);
         
         /**
@@ -138,7 +138,7 @@ class ExportSuccessView: QuantityImportBaseView {
      
         ftpServerTextLabel = UILabel();
         ftpServerTextLabel.text = "---------";
-        ftpServerTextLabel.textAlignment = NSTextAlignment.Right;
+        ftpServerTextLabel.textAlignment = NSTextAlignment.right;
         ftpServerTextLabel.textColor = self.colorWithString("#2A9CAB");
         ftpServerTextLabel.font = FONT20WEIGHT02();
         self.exprotBottomView.addSubview(ftpServerTextLabel);
@@ -146,14 +146,14 @@ class ExportSuccessView: QuantityImportBaseView {
        
         ftpUserTextLabel = UILabel();
         ftpUserTextLabel.text = "---------";
-        ftpUserTextLabel.textAlignment = NSTextAlignment.Right;
+        ftpUserTextLabel.textAlignment = NSTextAlignment.right;
         ftpUserTextLabel.textColor = self.colorWithString("#2A9CAB");
         ftpUserTextLabel.font = FONT20WEIGHT02();
         self.exprotBottomView.addSubview(ftpUserTextLabel);
         
         fileNameTextField = UITextField();
-        fileNameTextField.borderStyle = UITextBorderStyle.Line;
-        fileNameTextField.layer.borderColor = self.colorWithString("#2A9CAB").CGColor;
+        fileNameTextField.borderStyle = UITextBorderStyle.line;
+        fileNameTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
         fileNameTextField.layer.borderWidth = 1;
         fileNameTextField.textColor = self.colorWithString("#2A9CAB");
         fileNameTextField.font = FONT20WEIGHT02();
@@ -163,27 +163,27 @@ class ExportSuccessView: QuantityImportBaseView {
         
         exportStateLabel = UILabel();
         exportStateLabel.text = localString("exsState");//Counted Quantity data is successfully export to filename
-        exportStateLabel.textAlignment = NSTextAlignment.Center;
+        exportStateLabel.textAlignment = NSTextAlignment.center;
         exportStateLabel.textColor = self.colorWithString("#2A9CAB");
         exportStateLabel.font = FONT20WEIGHT02();
         self.exprotBottomView.addSubview(exportStateLabel);
         
         
-        exprotButton = UIButton(type: UIButtonType.System);
-        exprotButton.setTitle(localString("export"), forState: UIControlState.Normal);
-        exprotButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        exprotButton = UIButton(type: UIButtonType.system);
+        exprotButton.setTitle(localString("export"), for: UIControlState());
+        exprotButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         exprotButton.titleLabel?.font = FONT25();
-        exprotButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        exprotButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(exprotButton);
         
         
-        returnButton = UIButton(type: UIButtonType.System);
-        returnButton.setTitle(localString("return"), forState: UIControlState.Normal);
-        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), forState: UIControlState.Normal)
+        returnButton = UIButton(type: UIButtonType.system);
+        returnButton.setTitle(localString("return"), for: UIControlState());
+        returnButton.setBackgroundImage(UIImage(named: "buttom_1"), for: UIControlState())
         returnButton.titleLabel?.font = FONT25();
-        returnButton.setTitleColor(self.colorWithString("#007B83"), forState: UIControlState.Normal);
+        returnButton.setTitleColor(self.colorWithString("#007B83"), for: UIControlState());
         self.addSubview(returnButton);
-        if DEVICE == .Phone{
+        if DEVICE == .phone{
            addPhoneSuccessConstraint()
         }else{
             addSuccessConstraint()
@@ -191,396 +191,396 @@ class ExportSuccessView: QuantityImportBaseView {
     }
 
     func addPhoneSuccessConstraint(){
-        logoutButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        logoutButton.snp.makeConstraints { (make) in
             
-            make.centerY.equalTo(self.topImageView.mas_centerY)
-            make.right.equalTo(self.mas_right).with.offset(-60);
+            make.centerY.equalTo(self.topImageView.snp.centerY)
+            make.right.equalTo(self.snp.right).offset(-60);
             make.width.equalTo(34);
             make.height.equalTo(30);
             
         }
 
-        exprotMiddleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exprotMiddleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT*0.27);
             
         }
 
-        dateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_top).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(SCREENWIDTH/10);
+            make.top.equalTo(self.exprotMiddleView.snp.top).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(SCREENWIDTH/10);
             make.width.equalTo(SCREENWIDTH * 0.4);
             make.height.equalTo(SCREENHEIGHT*0.27/5);
             
         }
 
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.dateLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
-            
-        }
-
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.numberOfSKULabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
+            make.top.equalTo(self.dateLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(SCREENWIDTH/10.0);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
             
         }
 
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.onhandQtyLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
-            
-        }
-
-        varianceQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.countedQtyLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(SCREENWIDTH/10.0);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
+            make.top.equalTo(self.numberOfSKULabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(SCREENWIDTH/10.0);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
             
         }
 
-        dateTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_top).with.offset(0);
-            make.left.equalTo(self.dateLabel.mas_right).with.offset(10);
+            make.top.equalTo(self.onhandQtyLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(SCREENWIDTH/10.0);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
+            
+        }
+
+        varianceQtyLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.countedQtyLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(SCREENWIDTH/10.0);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
+            
+        }
+
+        dateTextLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.exprotMiddleView.snp.top).offset(0);
+            make.left.equalTo(self.dateLabel.snp.right).offset(10);
             make.width.equalTo(SCREENWIDTH * 0.4);
             make.height.equalTo(SCREENHEIGHT*0.27/5);
             
         }
 
-        numberOfSKUTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKUTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.dateTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
-            
-        }
-
-        onhandQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.numberOfSKUTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
+            make.top.equalTo(self.dateTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
             
         }
 
-        countedQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.onhandQtyTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
-            
-        }
-
-        varianceQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.countedQtyTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
+            make.top.equalTo(self.numberOfSKUTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
             
         }
 
-        exprotBottomView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_bottom).with.offset(0);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.onhandQtyTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
+            
+        }
+
+        varianceQtyTextLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.countedQtyTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
+            
+        }
+
+        exprotBottomView.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.exprotMiddleView.snp.bottom).offset(0);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(SCREENHEIGHT * 0.23);
             
         }
 
-        ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_top).with.offset(5);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.exprotBottomView.snp.top).offset(5);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
 
-        ftpUserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
 
-        fileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpUserLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.ftpUserLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/5);
             make.height.equalTo(25);
             
         }
 
-        ftpServerTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_top).with.offset(5);
-            make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(10);
+            make.top.equalTo(self.exprotBottomView.snp.top).offset(5);
+            make.left.equalTo(self.ftpServerLabel.snp.right).offset(10);
             make.width.equalTo(SCREENWIDTH/10.0 * 3);
             make.height.equalTo(25);
             
         }
 
-        ftpUserTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpUserLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.ftpUserLabel.mas_right).with.offset(15);
+            make.top.equalTo(self.ftpUserLabel.snp.top).offset(0);
+            make.left.equalTo(self.ftpUserLabel.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH/10.0 * 3);
             make.height.equalTo(25);
             
         }
 
-        fileNameTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.fileNameLabel.mas_top);
-            make.left.equalTo(self.fileNameLabel.mas_right).with.offset(15);
+            make.top.equalTo(self.fileNameLabel.snp.top);
+            make.left.equalTo(self.fileNameLabel.snp.right).offset(15);
             make.width.equalTo(SCREENWIDTH/10.0 * 3);
             make.height.equalTo(25);
             
         }
 
-        exportStateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exportStateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.fileNameLabel.mas_bottom).with.offset(5);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(0);
-            make.right.equalTo(self.exprotBottomView.mas_right);
+            make.top.equalTo(self.fileNameLabel.snp.bottom).offset(5);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(0);
+            make.right.equalTo(self.exprotBottomView.snp.right);
             make.height.equalTo(25);
             
         }
 
-        exprotButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exprotButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_bottom).with.offset(15);
-            make.left.equalTo(self.mas_left).with.offset(SCREENWIDTH/10.0);
+            make.top.equalTo(self.exprotBottomView.snp.bottom).offset(15);
+            make.left.equalTo(self.snp.left).offset(SCREENWIDTH/10.0);
             make.width.equalTo(SCREENWIDTH/10.0 * 3);
             make.height.equalTo(25);
         }
 
-        returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        returnButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_bottom).with.offset(15);
-            make.left.equalTo(self.exprotButton.mas_right).with.offset(SCREENWIDTH/5.0);
+            make.top.equalTo(self.exprotBottomView.snp.bottom).offset(15);
+            make.left.equalTo(self.exprotButton.snp.right).offset(SCREENWIDTH/5.0);
             make.width.equalTo(SCREENWIDTH/10.0 * 3);
             make.height.equalTo(25);
         }
 
     }
     func addSuccessConstraint(){
-        logoutButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        logoutButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.mas_top).with.offset(27);
-            make.left.equalTo(self.mas_left).with.offset(577);
+            make.top.equalTo(self.snp.top).offset(27);
+            make.left.equalTo(self.snp.left).offset(577);
             make.width.equalTo(68);
             make.height.equalTo(55);
             
         }
         
-        exprotMiddleView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exprotMiddleView.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.bottomLineLabel.mas_bottom);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.bottomLineLabel.snp.bottom);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(244);
             
         }
         
-        dateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        dateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_top).with.offset(25);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(111);
+            make.top.equalTo(self.exprotMiddleView.snp.top).offset(25);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(111);
             make.width.equalTo(280);
             make.height.equalTo(40);
             
         }
         
-        numberOfSKULabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKULabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.dateLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(111);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
-            
-        }
-        
-        onhandQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.numberOfSKULabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(111);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
+            make.top.equalTo(self.dateLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(111);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
             
         }
         
-        countedQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.onhandQtyLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(111);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
-            
-        }
-        
-        varianceQtyLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.countedQtyLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotMiddleView.mas_left).with.offset(111);
-            make.width.equalTo(self.dateLabel.mas_width);
-            make.height.equalTo(self.dateLabel.mas_height);
+            make.top.equalTo(self.numberOfSKULabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(111);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
             
         }
         
-        dateTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_top).with.offset(25);
-            make.left.equalTo(self.dateLabel.mas_right).with.offset(25);
+            make.top.equalTo(self.onhandQtyLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(111);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
+            
+        }
+        
+        varianceQtyLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.countedQtyLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotMiddleView.snp.left).offset(111);
+            make.width.equalTo(self.dateLabel.snp.width);
+            make.height.equalTo(self.dateLabel.snp.height);
+            
+        }
+        
+        dateTextLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.exprotMiddleView.snp.top).offset(25);
+            make.left.equalTo(self.dateLabel.snp.right).offset(25);
             make.width.equalTo(280);
             make.height.equalTo(40);
             
         }
         
-        numberOfSKUTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        numberOfSKUTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.dateTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
-            
-        }
-        
-        onhandQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.numberOfSKUTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
+            make.top.equalTo(self.dateTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
             
         }
         
-        countedQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        onhandQtyTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.onhandQtyTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
-            
-        }
-        
-        varianceQtyTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
-            
-            make.top.equalTo(self.countedQtyTextLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.dateTextLabel.mas_left);
-            make.width.equalTo(self.dateTextLabel.mas_width);
-            make.height.equalTo(self.dateTextLabel.mas_height);
+            make.top.equalTo(self.numberOfSKUTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
             
         }
         
-        exprotBottomView.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        countedQtyTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotMiddleView.mas_bottom).with.offset(0);
-            make.left.equalTo(self.mas_left);
-            make.right.equalTo(self.mas_right);
+            make.top.equalTo(self.onhandQtyTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
+            
+        }
+        
+        varianceQtyTextLabel.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.countedQtyTextLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.dateTextLabel.snp.left);
+            make.width.equalTo(self.dateTextLabel.snp.width);
+            make.height.equalTo(self.dateTextLabel.snp.height);
+            
+        }
+        
+        exprotBottomView.snp.makeConstraints { (make) in
+            
+            make.top.equalTo(self.exprotMiddleView.snp.bottom).offset(0);
+            make.left.equalTo(self.snp.left);
+            make.right.equalTo(self.snp.right);
             make.height.equalTo(210);
             
         }
         
-        ftpServerLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_top).with.offset(36);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(111);
+            make.top.equalTo(self.exprotBottomView.snp.top).offset(36);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(111);
             make.width.equalTo(140);
             make.height.equalTo(40);
             
         }
         
-        ftpUserLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpServerLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(111);
+            make.top.equalTo(self.ftpServerLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(111);
             make.width.equalTo(140);
             make.height.equalTo(40);
             
         }
         
-        fileNameLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpUserLabel.mas_bottom).with.offset(0);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(111);
+            make.top.equalTo(self.ftpUserLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(111);
             make.width.equalTo(140);
             make.height.equalTo(40);
             
         }
         
-        ftpServerTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpServerTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_top).with.offset(36);
-            make.left.equalTo(self.ftpServerLabel.mas_right).with.offset(65);
+            make.top.equalTo(self.exprotBottomView.snp.top).offset(36);
+            make.left.equalTo(self.ftpServerLabel.snp.right).offset(65);
             make.width.equalTo(235);
             make.height.equalTo(40);
             
         }
         
-        ftpUserTextLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        ftpUserTextLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.ftpUserLabel.mas_top).with.offset(0);
-            make.left.equalTo(self.ftpUserLabel.mas_right).with.offset(65);
+            make.top.equalTo(self.ftpUserLabel.snp.top).offset(0);
+            make.left.equalTo(self.ftpUserLabel.snp.right).offset(65);
             make.width.equalTo(235);
             make.height.equalTo(40);
             
         }
         
-        fileNameTextField.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        fileNameTextField.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.fileNameLabel.mas_top);
-            make.left.equalTo(self.fileNameLabel.mas_right).with.offset(65);
+            make.top.equalTo(self.fileNameLabel.snp.top);
+            make.left.equalTo(self.fileNameLabel.snp.right).offset(65);
             make.width.equalTo(235);
             make.height.equalTo(34);
             
         }
         
-        exportStateLabel.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exportStateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.fileNameLabel.mas_bottom).with.offset(10);
-            make.left.equalTo(self.exprotBottomView.mas_left).with.offset(0);
-            make.right.equalTo(self.exprotBottomView.mas_right);
+            make.top.equalTo(self.fileNameLabel.snp.bottom).offset(10);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(0);
+            make.right.equalTo(self.exprotBottomView.snp.right);
             make.height.equalTo(40);
             
         }
         
-        exprotButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        exprotButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.mas_left).with.offset(111);
+            make.top.equalTo(self.exprotBottomView.snp.bottom).offset(35);
+            make.left.equalTo(self.snp.left).offset(111);
             make.width.equalTo(112);
             make.height.equalTo(32);
         }
         
-        returnButton.mas_makeConstraints { (make:MASConstraintMaker!) -> Void in
+        returnButton.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.exprotBottomView.mas_bottom).with.offset(35);
-            make.left.equalTo(self.exprotButton.mas_right).with.offset(160);
+            make.top.equalTo(self.exprotBottomView.snp.bottom).offset(35);
+            make.left.equalTo(self.exprotButton.snp.right).offset(160);
             make.width.equalTo(112);
             make.height.equalTo(32);
         }
