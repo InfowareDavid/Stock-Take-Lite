@@ -72,8 +72,7 @@ class RecordsRemovalViewController: BaseViewController,UITableViewDelegate,UITab
                 dataBaseDate = dataFromate.date(from: self.datesArray[i] as! String)!;
                 if dataBaseDate.compare(seletedDate) == ComparisonResult.orderedAscending{
                     let tempArray = dbManager.recodesWithDate(self.datesArray[i] as! NSString);
-                    self.dataArray.add(tempArray);
-                    
+                    self.dataArray.add(tempArray)
                 }
             }
             

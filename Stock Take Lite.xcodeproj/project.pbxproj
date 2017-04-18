@@ -208,6 +208,8 @@
 		BF98D07C1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
 		BF98D07D1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
 		BF98D07E1E778D6300A566AF /* RectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98D07B1E778D6300A566AF /* RectView.swift */; };
+		BF98D07F1E77C6CC00A566AF /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98785B1E70FC12001F7537 /* ScannerViewController.swift */; };
+		BF98D0801E77C6CF00A566AF /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF98785B1E70FC12001F7537 /* ScannerViewController.swift */; };
 		BF9BBB491BDF490900ED16C1 /* FTPServerConnectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9BBB481BDF490900ED16C1 /* FTPServerConnectionView.swift */; };
 		BF9E85F21BD4A7B30091CE82 /* UserAccountsAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F11BD4A7B30091CE82 /* UserAccountsAddView.swift */; };
 		BF9E85F41BD4C8F10091CE82 /* UserAccountsSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF9E85F31BD4C8F10091CE82 /* UserAccountsSetupView.swift */; };
@@ -1219,12 +1221,12 @@
 		BFA04A511BBA70650019C604 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = infoware;
 				TargetAttributes = {
 					BF3A38C11C27DCC50009A89F = {
 						DevelopmentTeam = U837TW5R38;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0830;
 					};
 					BF3A39181C27E01F0009A89F = {
 						DevelopmentTeam = U837TW5R38;
@@ -1578,6 +1580,7 @@
 				BF3A38D21C27DCC50009A89F /* CountingEnquiryDetalCell.swift in Sources */,
 				BF3A38D31C27DCC50009A89F /* QuantityImportView.swift in Sources */,
 				BF3A38D41C27DCC50009A89F /* FMDatabaseQueue.m in Sources */,
+				BF98D0801E77C6CF00A566AF /* ScannerViewController.swift in Sources */,
 				BF3A38D51C27DCC50009A89F /* CameraView.swift in Sources */,
 				BF3A38D61C27DCC50009A89F /* UserAccountsSetupTableViewCell.swift in Sources */,
 				BF3A38D71C27DCC50009A89F /* CurrentUser.swift in Sources */,
@@ -1747,6 +1750,7 @@
 				BF9EFA5E1BE8A35600F43D4F /* CountingEnquiryDetalCell.swift in Sources */,
 				BFFBADCB1BC75E0A00026817 /* QuantityImportView.swift in Sources */,
 				BFA04AA11BBA77260019C604 /* FMDatabaseQueue.m in Sources */,
+				BF98D07F1E77C6CC00A566AF /* ScannerViewController.swift in Sources */,
 				BFC7E7071C22A120007AEA2B /* CameraView.swift in Sources */,
 				BF9E85F61BD4E1B20091CE82 /* UserAccountsSetupTableViewCell.swift in Sources */,
 				BFA04B331BBA86DF0019C604 /* CurrentUser.swift in Sources */,
@@ -1882,7 +1886,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1902,7 +1906,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.infoware.Stock-Take-Pro";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Stock Take LiteTests/Stock Take-Brigding-Header.h";
-				SWIFT_VERSION = 2.3;
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

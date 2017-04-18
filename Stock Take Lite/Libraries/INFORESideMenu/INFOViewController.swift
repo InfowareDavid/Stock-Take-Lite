@@ -64,7 +64,7 @@ class INFOViewController: UIViewController,UIGestureRecognizerDelegate{
         self.drawerState = INFODrawewControllerState.closed;
         self.leftViewController = leftViewController;
         self.centerViewController = centerViewController;
-        if self.leftViewController.responds(to: Selector("setDrawer:")){
+        if self.leftViewController.responds(to: Selector(("setDrawer:"))){
             (self.leftViewController as! INFODrawerControllerChild).drawer = self;
         }
         

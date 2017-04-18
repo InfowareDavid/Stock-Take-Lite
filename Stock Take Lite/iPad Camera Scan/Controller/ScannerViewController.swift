@@ -110,7 +110,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         scanButton = UIButton(type: .system)
         scanButton?.setTitle("Stop", for: .normal)
         scanButton.setTitle("Scan", for: .selected)
-        scanButton?.addTarget(self , action: #selector(stopScanButtonAction(button:)), for: .touchUpInside)
+        scanButton?.addTarget(self , action: #selector(self.stopScanButtonAction(_:)), for: .touchUpInside)
         self.view.addSubview(scanButton!)
         
         torchButton = UIButton(type: .system)
@@ -120,14 +120,14 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         torchButton?.setTitle("Flash Off", for: .selected)
         torchButton?.setTitle("NO Flash", for: .disabled)
 
-        torchButton?.addTarget(self , action: #selector(turnTorch(btn:)), for: .touchUpInside)
+        torchButton?.addTarget(self , action: #selector(self.turnTorch(_:)), for: .touchUpInside)
         self.view.addSubview(torchButton!)
         
         switCameraButton = UIButton(type: .system)
         switCameraButton?.setTitle("Front", for: .normal)
         switCameraButton?.setTitle("Rear", for: .selected)
 
-        switCameraButton?.addTarget(self , action: #selector(swapCamera(btn:)), for: .touchUpInside)
+        switCameraButton?.addTarget(self , action: #selector(self.swapCamera(_:)), for: .touchUpInside)
         self.view.addSubview(switCameraButton!)
         
         scanButton?.snp.makeConstraints({ (make) in
@@ -165,10 +165,9 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         displayTableView?.backgroundColor = UIColor.clear
         displayTableView?.separatorStyle = UITableViewCellSeparatorStyle.none;
 
-        displayTableView?.delegate = self
-        displayTableView?.dataSource = self
+        displayTableView?.delegate = self as? UITableViewDelegate
+        displayTableView?.dataSource = self as? UITableViewDataSource
         self.scanBackgoundView.addSubview(displayTableView!)
-        
         
        
     }
@@ -247,7 +246,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     }
     
     // MARK: - 切换扫描状态事件
-    func stopScanButtonAction(button:UIButton){
+    func stopScanButtonAction(_ button:UIButton){
         if button.isSelected{
             timer?.resume()
             startScan()
@@ -259,7 +258,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     }
     
     // MARK: - 切换摄像头
-    func swapCamera(btn:UIButton){
+    func swapCamera(_ btn:UIButton){
         
         btn.isSelected = !btn.isSelected
         ///确保对话已经开始
@@ -274,9 +273,9 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
                     var newInput:AVCaptureDeviceInput?
                     
                     if position == .front{
-                        newCamera = cameramPosition(position: .back)
+                        newCamera = cameramPosition(.back)
                     }else{
-                        newCamera = cameramPosition(position: .front)
+                        newCamera = cameramPosition(.front)
                     }
                     
                     newInput = try! AVCaptureDeviceInput(device: newCamera)
@@ -292,7 +291,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         }
     }
     
-    func cameramPosition(position:AVCaptureDevicePosition)->AVCaptureDevice?{
+    func cameramPosition(_ position:AVCaptureDevicePosition)->AVCaptureDevice?{
         let array:[AVCaptureDevice] = AVCaptureDevice.devices(withMediaType: AVMediaTypeVideo) as! [AVCaptureDevice]
         for device:AVCaptureDevice in array {
             if device.position == position{
@@ -303,7 +302,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     }
     
     // MARK: - 打开或者关闭闪光灯
-    func turnTorch(btn:UIButton){
+    func turnTorch(_ btn:UIButton){
         
         let device = self.captureDevice
         //设置前先锁定
@@ -377,7 +376,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
     }
     
     //加载扫描条码的商品的详细信息
-    func loadDataFromDataBase(barcode:String){
+    func loadDataFromDataBase(_ barcode:String){
         
         var fileDataModel :FileDataModel;
         fileDataModel =  dbManager.recodeWithBarcode(barcode);
@@ -484,7 +483,7 @@ class ScannerViewController: BaseViewController,AVCaptureMetadataOutputObjectsDe
         if metadataObjects != nil && metadataObjects.count > 0 {
             let metaData : AVMetadataMachineReadableCodeObject = metadataObjects.first as! AVMetadataMachineReadableCodeObject
             
-            self.loadDataFromDataBase(barcode: metaData.stringValue!)
+            self.loadDataFromDataBase(metaData.stringValue!)
             
             refreshTableviewOnMain()
             playSound()
