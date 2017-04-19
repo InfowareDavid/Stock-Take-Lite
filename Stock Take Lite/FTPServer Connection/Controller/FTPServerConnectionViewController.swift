@@ -82,9 +82,9 @@ class FTPServerConnectionViewController: BaseViewController,UITextFieldDelegate 
         currentFTP.ftpUser = self.ftpServerView.ftpuserTextField.text as NSString!;
         currentFTP.ftpPassword = self.ftpServerView.passwordTextField.text as NSString!;
       //MARK: --- 记得关闭
-//        currentFTP.ftpServer = "ns1.infoware.com.hk";
-//        currentFTP.ftpUser = "crmlite";
-//        currentFTP.ftpPassword = "FTP@dHe2015";
+        currentFTP.ftpServer = "ns1.infoware.com.hk";
+        currentFTP.ftpUser = "crmlite";
+        currentFTP.ftpPassword = "FTP@dHe2015";
         
     }
     

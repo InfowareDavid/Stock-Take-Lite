@@ -129,6 +129,7 @@ exsFileName = "文件名";
 exsState = "请输入导出文件的名称.";
 exsExportSuccess = "文件导出成功：";
 exsExportFailed = "文件导出失败：";
+branchNumber = "部门编码";
 
 /**
  *  Remove
@@ -208,7 +209,7 @@ auDeleteSuccess = "删除成功!";
 aiSamePrompt = "一些SKUCode已经存在，是否要继续更新？";
 auCheckInput = "请检查网络连接或输入是否有误.";
 numOfRecodes = "一次最多可以导入50条记录！";
-inputfileName = "请输入文件名！";
+inputfileNameAndBranchCode = "请输入文件名和部门编码！";
 /**
  *  left Menu
  */

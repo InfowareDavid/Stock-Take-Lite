@@ -129,7 +129,7 @@ exsFileName = "File Name";
 exsState = "Please enter the name of the export file.";
 exsExportSuccess = "Counted Quantity data  export success：";
 exsExportFailed = "Counted Quantity data  export failed：";
-
+branchNumber = "Branch Code";
 
 /**
  *  Remove
@@ -218,7 +218,7 @@ auDeleteSuccess = "Delete Success!";
 aiSamePrompt = "Some SKUCode already exists! Do you want to update ?";
 auCheckInput = "Please check the input or the network.";
 numOfRecodes = "A maximum of 50 records can be imported!";
-inputfileName = "Please input file name!";
+inputfileNameAndBranchCode = "Please input file name and branch code!";
 
 /**
  *  left Menu

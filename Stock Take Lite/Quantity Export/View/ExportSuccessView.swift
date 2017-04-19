@@ -29,6 +29,8 @@ class ExportSuccessView: QuantityImportBaseView {
     var     ftpUserTextLabel:                               UILabel!;
     var     fileNameLabel:                                  UILabel!;
     var     fileNameTextField:                              UITextField!;
+    var     branchNumberLabel:                              UILabel!;
+    var     branchTextField:                                UITextField!;
     var     exportStateLabel:                               UILabel!;
     var     exprotButton:                                   UIButton!;
     var     returnButton:                                   UIButton!;
@@ -160,6 +162,23 @@ class ExportSuccessView: QuantityImportBaseView {
         fileNameTextField.minimumFontSize = 0.7;
         fileNameTextField.sizeToFit();
         self.exprotBottomView.addSubview(fileNameTextField);
+        
+        branchNumberLabel = UILabel();
+        branchNumberLabel.text = localString("branchNumber");
+        branchNumberLabel.textColor = self.colorWithString("#2A9CAB");
+        branchNumberLabel.font = FONT20WEIGHT02();
+        self.exprotBottomView.addSubview(branchNumberLabel);
+
+        branchTextField = UITextField();
+        branchTextField.borderStyle = UITextBorderStyle.line;
+        branchTextField.layer.borderColor = self.colorWithString("#2A9CAB").cgColor;
+        branchTextField.layer.borderWidth = 1;
+        branchTextField.textColor = self.colorWithString("#2A9CAB");
+        branchTextField.font = FONT20WEIGHT02();
+        branchTextField.minimumFontSize = 0.7;
+        branchTextField.sizeToFit();
+        self.exprotBottomView.addSubview(branchTextField);
+
         
         exportStateLabel = UILabel();
         exportStateLabel.text = localString("exsState");//Counted Quantity data is successfully export to filename
@@ -388,6 +407,7 @@ class ExportSuccessView: QuantityImportBaseView {
         }
 
     }
+    
     func addSuccessConstraint(){
         logoutButton.snp.makeConstraints { (make) in
             
@@ -502,7 +522,7 @@ class ExportSuccessView: QuantityImportBaseView {
             make.top.equalTo(self.exprotMiddleView.snp.bottom).offset(0);
             make.left.equalTo(self.snp.left);
             make.right.equalTo(self.snp.right);
-            make.height.equalTo(210);
+            make.height.equalTo(250);
             
         }
         
@@ -533,6 +553,13 @@ class ExportSuccessView: QuantityImportBaseView {
             
         }
         
+        branchNumberLabel.snp.makeConstraints { (make) in
+            make.top.equalTo(self.fileNameLabel.snp.bottom).offset(0);
+            make.left.equalTo(self.exprotBottomView.snp.left).offset(111);
+            make.width.equalTo(140);
+            make.height.equalTo(40);
+        }
+        
         ftpServerTextLabel.snp.makeConstraints { (make) in
             
             make.top.equalTo(self.exprotBottomView.snp.top).offset(36);
@@ -560,9 +587,16 @@ class ExportSuccessView: QuantityImportBaseView {
             
         }
         
+        branchTextField.snp.makeConstraints { (make) in
+            make.top.equalTo(self.branchNumberLabel.snp.top);
+            make.left.equalTo(self.branchNumberLabel.snp.right).offset(65);
+            make.width.equalTo(235);
+            make.height.equalTo(34);
+        }
+        
         exportStateLabel.snp.makeConstraints { (make) in
             
-            make.top.equalTo(self.fileNameLabel.snp.bottom).offset(10);
+            make.top.equalTo(self.branchNumberLabel.snp.bottom).offset(10);
             make.left.equalTo(self.exprotBottomView.snp.left).offset(0);
             make.right.equalTo(self.exprotBottomView.snp.right);
             make.height.equalTo(40);

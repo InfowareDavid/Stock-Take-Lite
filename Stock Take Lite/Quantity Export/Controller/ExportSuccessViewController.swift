@@ -96,10 +96,13 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     
     func createTempCSVFile(){
         let temArray:NSMutableArray = NSMutableArray();
-       // for var i = 0;i < self.dataArray.count; i = i+1{
+        //MARK: - 最后一列
         for i in 0..<self.dataArray.count{
             let fileDataModel:FileDataModel = self.dataArray[i] as! FileDataModel;
-            let str = "\(fileDataModel.skuName!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.skuCode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.onhandQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.countQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.varianceQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.barcode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))";
+            let str = "\(fileDataModel.skuCode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.countQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(exportSuccessView.branchTextField.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))";
+            /*
+            let str = "\(fileDataModel.skuName!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.skuCode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.onhandQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.countQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.varianceQty!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(fileDataModel.barcode!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)),\(exportSuccessView.branchTextField.text!.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines))";
+            */
             temArray.add(str);
         }
         let temStr = temArray.componentsJoined(by: "\n");
@@ -174,13 +177,14 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
     */
     
     func exprotButtonAction(){
-        if self.exportSuccessView.fileNameTextField.text != ""{
-            let string = (self.exportSuccessView.fileNameTextField.text!) + ".csv"
+        //MARK: - 文件名格式 .csv -> .txt
+        if self.exportSuccessView.fileNameTextField.text != "" && self.exportSuccessView.branchTextField.text != ""{
+            let string = (self.exportSuccessView.fileNameTextField.text!) + ".txt"
             self.fileName = string as NSString!
             MBProgressHUD.showAdded(to: self.view , animated: true);
             self.performSelector(inBackground: #selector(ExportSuccessViewController.createTempCSVFile), with: nil);
         }else{
-            let alertView = UIAlertController.creatAlertView(localString("warning"), message: localString("inputfileName"), okAction: UIAlertAction(title: localString("ok"), style:UIAlertActionStyle.default, handler: nil ), cancelAction: nil , style: .alert)
+            let alertView = UIAlertController.creatAlertView(localString("warning"), message: localString("inputfileNameAndBranchCode"), okAction: UIAlertAction(title: localString("ok"), style:UIAlertActionStyle.default, handler: nil ), cancelAction: nil , style: .alert)
             present(alertView, animated: true , completion: nil )
         }
         
