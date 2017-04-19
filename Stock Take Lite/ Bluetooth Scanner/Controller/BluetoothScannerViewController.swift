@@ -177,14 +177,14 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         var         countQty = 0;
         var         varianceQty = 0;
 
-        self.bluetoothView.fileNameTextLabel.text = fileDataModel.fileName as? String;
+        self.bluetoothView.fileNameTextLabel.text = fileDataModel.fileName as String?;
         let contentArray:NSMutableArray = self.dbManager.contentWithFileName(fileDataModel.fileName!);
         self.bluetoothView.skuNumberTextLabel.text = "\(contentArray.count)";
        
        // for var index = 0; index < self.dataArray.count; index = index + 1{
             for index in 0 ..< self.dataArray.count{
             let model:FileDataModel = self.dataArray[index] as! FileDataModel;
-            print("\(model.skuCode)---\(model.countQty)");
+           // print("\(model.skuCode)---\(String(describing: model.countQty))");
             onhandQty = onhandQty + (model.onhandQty?.integerValue)!;
             countQty = countQty + (model.countQty?.integerValue)!;
             varianceQty = onhandQty - countQty;
@@ -224,11 +224,11 @@ class BluetoothScannerViewController: BaseViewController,UITableViewDelegate,UIT
         
         let fileModel: FileDataModel = self.dataArray[(indexPath as NSIndexPath).row] as! FileDataModel;
         
-        cell?.skuNameLabel.text = fileModel.skuName as? String;
-        cell?.skuCodeLabel.text = fileModel.skuCode as? String;
-        cell?.onhandeQtyLabel.text = fileModel.onhandQty as? String;
-        cell?.countQtyLabel.text = fileModel.countQty as? String;
-        cell?.varianceQtyLabel.text = fileModel.varianceQty as? String;
+        cell?.skuNameLabel.text = fileModel.skuName as String?;
+        cell?.skuCodeLabel.text = fileModel.skuCode as String?;
+        cell?.onhandeQtyLabel.text = fileModel.onhandQty as String?;
+        cell?.countQtyLabel.text = fileModel.countQty as String?;
+        cell?.varianceQtyLabel.text = fileModel.varianceQty as String?;
         return cell!;
 
     }

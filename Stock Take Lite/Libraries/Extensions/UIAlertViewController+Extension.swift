@@ -10,10 +10,14 @@ import Foundation
 
 
 extension UIAlertController{
-    class func creatAlertView(_ title:String ,message:String ,okAction:UIAlertAction,cancelAction:UIAlertAction,style:UIAlertControllerStyle = .alert) -> UIAlertController{
+    class func creatAlertView(_ title:String ,message:String ,okAction:UIAlertAction?,cancelAction:UIAlertAction?,style:UIAlertControllerStyle = .alert) -> UIAlertController{
         let alertView = UIAlertController(title: title, message: message, preferredStyle: style)
-        alertView.addAction(cancelAction)
-        alertView.addAction(okAction)
+        if let cancelAction = cancelAction{
+            alertView.addAction(cancelAction)
+        }
+        if let okAction = okAction{
+            alertView.addAction(okAction)
+        }
        return alertView
     }
 }

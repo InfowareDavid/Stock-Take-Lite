@@ -227,7 +227,7 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
         cell?.skuCodeLabel.text = fileModel.skuCode as? String;
         cell?.onhandeQtyLabel.text = fileModel.onhandQty as? String;
         cell?.countQtyTextField.text = self.countEntryArray[(indexPath as NSIndexPath).row] as? String;
-        cell?.varianceQtyLabel.text = fileModel.varianceQty as? String;
+        cell?.varianceQtyLabel.text = fileModel.varianceQty as String?;
         
         return cell!;
     }
@@ -271,9 +271,8 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
 
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
-        print("\(lastcell.countQtyTextField.text)000");
-        
+        //print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
+       // print("\(lastcell.countQtyTextField.text)000");
         let  myIndex :IndexPath! = self.countingEntryView.tableView.indexPath(for: lastcell);
         
         self.countEntryArray[myIndex.row] = lastcell.countQtyTextField.text!;
@@ -286,8 +285,8 @@ class CountingEntryViewController: BaseViewController,UITableViewDelegate,UITabl
             self.showAnimation()
         }
         lastcell = textField.superview?.superview as? CountingEntryTableViewCell;
-        print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
-        print("\(lastcell.countQtyTextField.text)000");
+       // print("\((self.countingEntryView.tableView.indexPath(for: lastcell) as IndexPath?)?.row)----------")
+       // print("\(lastcell.countQtyTextField.text)000");
         print("text=====\(textField.text!)");
         if didcell != nil{
             didcell.isSelected = false;

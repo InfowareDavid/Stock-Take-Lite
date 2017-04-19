@@ -104,8 +104,8 @@ class UserAccountsSetupViewController: BaseViewController,UITableViewDelegate,UI
             cell = UserAccountsSetupTableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "cellid");
         }
         let user = userArray[(indexPath as NSIndexPath).row] as? UserModel;
-        cell?.userIDLabel.text = user?.userID as? String;
-        cell?.userNameLabel.text = user?.userName as? String;
+        cell?.userIDLabel.text = user?.userID as String?;
+        cell?.userNameLabel.text = user?.userName as String?;
         if (user?.administrator?.isEqual(to: "1") != false) {
             cell?.administratorLabel.text = "YES";
         }else{

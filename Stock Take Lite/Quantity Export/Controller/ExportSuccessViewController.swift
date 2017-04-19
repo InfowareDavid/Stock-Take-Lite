@@ -54,7 +54,6 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
         if currentFTP.ftpServer == nil{
              exportAlertView = UIAlertView(title: localString("warning"), message: localString("imSetFTPServer"), delegate: self, cancelButtonTitle: localString("ok"));
             exportAlertView.show();
-           // self.view.addSubview(exportAlertView);
         }else{
             initFTPServer();
         }
@@ -181,7 +180,8 @@ class ExportSuccessViewController: BaseViewController,UIAlertViewDelegate,UIText
             MBProgressHUD.showAdded(to: self.view , animated: true);
             self.performSelector(inBackground: #selector(ExportSuccessViewController.createTempCSVFile), with: nil);
         }else{
-            self.createAlertView(localString("warning"), message: localString("inputfileName"))
+            let alertView = UIAlertController.creatAlertView(localString("warning"), message: localString("inputfileName"), okAction: UIAlertAction(title: localString("ok"), style:UIAlertActionStyle.default, handler: nil ), cancelAction: nil , style: .alert)
+            present(alertView, animated: true , completion: nil )
         }
         
     }
